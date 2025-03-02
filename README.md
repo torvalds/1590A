@@ -15,7 +15,7 @@ board kit builds, I decided I should try to make something from scratch.
 > So be aware that it probably doesn't work, or if it works it
 > does so mainly by luck.
 
->[NOTE!]
+> [!NOTE]
 > I'm not soldering wires together like some kind of animal ---
 > thus PCBs designed in KiCad.
 >
@@ -44,7 +44,7 @@ different ways: they do dual power rails, the input and output audio
 jacks, initial buffering of the signal, and the 3PDT stomp switch.
 
 The base boards connect to a separate "effects board" using pin headers,
-which is responsible for doign anything.
+which is responsible for doing anything.
 
 The base boards are supposed to be interchangeable, and only differ in
 the power rail generation:
@@ -61,7 +61,7 @@ the power rail generation:
 
 and then the "effects" boards can do whatever they want, including add
 extra input or output jacks.  Obviously the power rail details (in
-voltage, but also available power) migth limit them.
+voltage, but also available power) might limit them.
 
 The effects boards are random "Linus is testing things he doesn't know
 anything about".
@@ -105,7 +105,7 @@ Some pieces of this --- not all --- have been tested in isolation.
 For example, an earlier version of the headphone amplifier thing
 actually did work as a headphone amplifier.
 
->[!NOTE]
+> [!NOTE]
 > The boards are all 4-layer designs, because why not? With JLCPCB
 > prototyping, just the shipping is typically more expensive than
 > the boards themselves. And the one time I did a two-layer board,
@@ -164,7 +164,7 @@ with most of the actual SMD components from Mouser:
    jacks are a pain)
 
  - SMD resistors are all 0805, and the values generally don't matter,
-   but there's a couple of voltage refereces, so why would you ever get
+   but there's a couple of voltage references, so why would you ever get
    anything other than 1% stuff as a general kit?
 
  - Capacitors are typically 1206, with the occasional 0805 for small
@@ -190,5 +190,5 @@ with most of the actual SMD components from Mouser:
    guitar pedals you can just buy for cheap. This is to play around with
    making hardware.
 
- - Hammond 1590A enclosure. You're on your own when it comes to
-   drilling. I'll try to do a Tayda drill pattern one day.
+ - Hammond 1590A enclosure. I'm adding some Tayda drill patterns that
+   should be at least fairly close.
