@@ -67,16 +67,25 @@ The effects boards are random "Linus is testing things he doesn't know
 anything about".
 
  - There's a traditional boost pedal with the traditional switch for
-clipping diodes.  I think there's a law that you have to do an overdrive
-pedal with distortion.
+   clipping diodes. I think there's a law that you have to do an
+   overdrive pedal with distortion.
 
  - There's a Baxandall tone control with volume knob.
 
- - There's a "splitter-with-headphone-amplifier" that splits the incoming
-signal and you can use the second output either for headphones or for a
-second audio path.
+ - There's a "octave-up" board that is really just the Baxandall board
+   with an op-amp based precision rectifier of the signal in front.
+
+ - There's a "splitter-with-headphone-amplifier" that splits the
+   incoming signal and you can use the second output either for
+   headphones or for a second audio path.
 
  - And there's a "joiner" that takes two inputs and adds them together.
+
+> [!NOTE]
+> Both the Baxandall and the Octaver boards include the headphone
+> amplifier buffer on the output. So you can use them with your
+> wired headphones if you don't want to feed any further signal
+> chain and don't want to wake up the neighborhood.
 
 I honestly don't know what I'm doing, I'm learning as I go, and the
 effects boards in particular are mostly to test the concepts, and the
