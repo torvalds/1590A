@@ -1,0 +1,43 @@
+Note: Tayda drill 'Y' is opposite from KiCad 'Y': Tayda Y is positive
+going up, KiCad Y is positive going down.
+
+Tayda is also "zero at center" for all coordinates, while KiCad is zero
+at upper left.
+
+This is Tayda coordinates.  Everything in mm, and this is the "maximum
+holes" version.  I don't think you can reasonably fit any more, but you
+could certainly do fewer knobs and/or drop the mini-switch.
+
+Sizes include paint clearance, and can have alternate smaller uses (ie
+the sub-mini switch only wants a 5.2mm hole, but the hole is sized so
+that you could instead replace it with a second LED for rate information
+or something like that.  Similarly, the 7mm holes for pots can be used
+for the "regular" mini switches that only need 6mm holes). 
+
+			  X	  Y	Size		Comments
+			---	---	----		---
+
+Side A / Face
+-------------
+Knob A (eg "Bass"):	 -8	 32	 7		Upper left
+Knob B (eg "Treble"):	 +8	 32      7		Upper right
+Knob C (eg "Volume"):	 -8	 16	 7		Lower left
+Knob D (eg "Boost"):	 +8	 16	 7		Lower right
+
+3mm LED:		-13	-34	 5.9		Tayda A-661 Bezel
+Sub-mini switch:	 13	-34	 5.9		Tayda A-5671
+Stomp:			  0	-34	12.5
+
+Side B / Top (Y ranges -12.75 .. +12.75):
+-----------------------------------------
+9V power rectangle:	  0	 +6.5	12.5h x 9.5w
+
+Side C / Left (X ranges -12.75 .. +12.75):
+-----------------------------------------
+Mono out:		 -5.5	 -4	 9.5
+  undercut rectangle:	 -9.75	 -4	 9.5h x 6w
+
+Side E / Right (X ranges -12.75 .. +12.75):
+-----------------------------------------
+Mono in:		 +5.5	-18	 9.5
+  undercut rectangle:	 +9.75	-18	 9.5h x 6w
