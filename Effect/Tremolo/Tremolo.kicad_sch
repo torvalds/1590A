@@ -1573,13 +1573,13 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 74.93) (xy 176.53 74.93)
+			(xy 170.18 74.93) (xy 176.53 74.93)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1e49382c-23ae-4dcb-a258-4113d43eff1b")
+		(uuid "345f30f8-df8a-4d6b-92ab-9377cbb40056")
 	)
 	(wire
 		(pts
@@ -1650,16 +1650,6 @@
 			(type default)
 		)
 		(uuid "62666cf2-7267-43df-bbcf-84d95e947a50")
-	)
-	(wire
-		(pts
-			(xy 200.66 55.88) (xy 208.28 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6a04073c-2081-4b78-b351-0baa0969236a")
 	)
 	(wire
 		(pts
@@ -1843,7 +1833,7 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 74.93) (xy 171.45 76.2)
+			(xy 176.53 74.93) (xy 176.53 76.2)
 		)
 		(stroke
 			(width 0)
@@ -1960,7 +1950,7 @@
 		)
 		(uuid "0d5fcd46-c6ec-4257-b47b-23e1958e28c0")
 	)
-	(text_box "LFO using an op-amp and RC circuit\n\nTrip points: voltage divider between GND and output of opamp rails:\n100k/22k gives closer to opamp rails than to GND\nTime is ~2RC (charge + discharge cycle) so with 100k pot (+4k7 minimum) and 10uF cap, up to ~2 Hz?"
+	(text_box "LFO using an op-amp and RC circuit\n\nTrip points: voltage divider between GND and output of opamp rails:\n100k/10k gives closer to opamp rails than to GND\nTime is ~2RC (charge + discharge cycle) so with 100k pot (+4k7 minimum) and 10uF cap, up to ~2 Hz?"
 		(exclude_from_sim no)
 		(at 139.7 15.24 0)
 		(size 138.43 83.82)
@@ -2261,22 +2251,22 @@
 	)
 	(global_label "LFO^{OUT}"
 		(shape input)
-		(at 208.28 55.88 0)
+		(at 170.18 74.93 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "d6b266f4-e892-4912-aedc-fa0ff7770375")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 217.6661 55.88 0)
+			(at 160.7939 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -2547,7 +2537,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 171.45 83.82 0)
+		(at 176.53 83.82 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2556,7 +2546,7 @@
 		(fields_autoplaced yes)
 		(uuid "0af48f1e-4202-48ac-a05e-77e093dfb998")
 		(property "Reference" "#PWR9"
-			(at 171.45 90.17 0)
+			(at 176.53 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2565,7 +2555,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 171.45 88.9 0)
+			(at 176.53 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2573,7 +2563,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 171.45 83.82 0)
+			(at 176.53 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2582,7 +2572,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 171.45 83.82 0)
+			(at 176.53 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2591,7 +2581,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 171.45 83.82 0)
+			(at 176.53 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3011,15 +3001,15 @@
 	(symbol
 		(lib_id "Mylib:PMV250EPEAR")
 		(at 229.87 127 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "394978c8-0982-4c5a-a64a-527239923535")
 		(property "Reference" "Q1"
-			(at 233.68 125.7299 90)
+			(at 233.68 128.2701 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3028,7 +3018,7 @@
 			)
 		)
 		(property "Value" "PMV250"
-			(at 233.68 128.2699 90)
+			(at 233.68 125.7301 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3037,7 +3027,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
-			(at 219.202 119.38 0)
+			(at 219.202 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3435,7 +3425,7 @@
 				)
 			)
 		)
-		(property "Value" "22k"
+		(property "Value" "10k"
 			(at 187.96 34.29 90)
 			(effects
 				(font
@@ -4195,7 +4185,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 171.45 80.01 0)
+		(at 176.53 80.01 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4204,7 +4194,7 @@
 		(dnp no)
 		(uuid "a8d54a9e-b52d-4f17-8148-9d04873d9438")
 		(property "Reference" "C5"
-			(at 167.64 78.7399 0)
+			(at 172.72 78.7399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4213,7 +4203,7 @@
 			)
 		)
 		(property "Value" "1uF"
-			(at 167.64 81.2799 0)
+			(at 172.72 81.2799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4222,7 +4212,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
-			(at 170.4848 83.82 0)
+			(at 175.5648 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4231,7 +4221,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 171.45 80.01 0)
+			(at 176.53 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4240,7 +4230,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 171.45 80.01 0)
+			(at 176.53 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
