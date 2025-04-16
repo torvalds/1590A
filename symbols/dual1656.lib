@@ -1,0 +1,16 @@
+** Monkey see, monkey do
+** This makes the odd TI OPA1656.LIB spice model work for me
+** The TI argument order is odd, and the naming is odd too
+** This tries to make both sane. Or at least sanER.
+** I don't really know ngspice at all
+**
+** I would love to just include the whole OPA1656.LIB file,
+** but it's (C) TI, so I'd better not. Go download it from
+** TI, and unzip it, and put it under this repo in a "sim"
+** directory
+**
+.subckt DUAL1656 OUTA INA- INA+ V- INB+ INB- OUTB V+
+.include ../../sim/OPA1656.LIB
+XU1A INA+ INA- V+ V- OUTA OPA1656
+XU1B INB+ INB- V+ V- OUTB OPA1656
+.ends
