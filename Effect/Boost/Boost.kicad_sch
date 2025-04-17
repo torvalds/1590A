@@ -6260,7 +6260,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Params" "dc=0 ampl=1 f=1k ac=1"
+		(property "Sim.Params" "dc=0 ampl=0.2 f=1k ac=1"
 			(at 153.67 116.7101 0)
 			(effects
 				(font
@@ -8563,7 +8563,7 @@
 		(lib_id "Switch:SW_SPDT")
 		(at 177.8 58.42 0)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
@@ -8694,7 +8694,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Device" ""
+		(property "Sim.Device" "R"
 			(at 177.8 58.42 0)
 			(effects
 				(font
@@ -8703,7 +8703,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Pins" ""
+		(property "Sim.Pins" "1=r0 2=wiper 3=r1"
 			(at 177.8 58.42 0)
 			(effects
 				(font
@@ -8722,6 +8722,24 @@
 			)
 		)
 		(property "VENDOR" ""
+			(at 177.8 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "POT"
+			(at 177.8 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "r=10M pos=1"
 			(at 177.8 58.42 0)
 			(effects
 				(font
