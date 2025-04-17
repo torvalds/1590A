@@ -2886,8 +2886,8 @@
 	)
 	(text_box "Boost the original signal, inverting\nWith the legally required clipping diodes"
 		(exclude_from_sim no)
-		(at 234.95 97.79 0)
-		(size -95.25 -83.185)
+		(at 139.7 14.605 0)
+		(size 95.25 83.185)
 		(stroke
 			(width 0)
 			(type default)
@@ -2906,7 +2906,7 @@
 	(text_box "Simulation"
 		(exclude_from_sim no)
 		(at 139.7 101.6 0)
-		(size 66.04 27.94)
+		(size 116.84 33.02)
 		(stroke
 			(width 0)
 			(type default)
@@ -2940,6 +2940,17 @@
 			(justify left top)
 		)
 		(uuid "a125468e-3dc4-4227-9845-a94de4c4c7a4")
+	)
+	(text ".control\nset controlswait\nwrite acout.out all\nset appendwrite\nsetplot const\nlet swpos=0\nrepeat 3\n  alter SW1 pos swpos\n  let swpos=swpos+0.5\n  run\n  write acout.out all\nend\n.endc"
+		(exclude_from_sim no)
+		(at 211.836 117.348 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8d4fe525-8045-4827-a4b3-f993a4086ae2")
 	)
 	(global_label "OUT"
 		(shape input)
