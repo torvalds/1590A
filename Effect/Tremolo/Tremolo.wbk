@@ -4,13 +4,17 @@
     {
       "analysis": "TRAN",
       "commands": [
-        ".tran 10u 1 0 10u uic",
+        ".tran 97u 3 0 125u uic",
         ".kicad adjustpaths",
         ".save all",
         ".probe alli",
         ".probe allp"
       ],
       "dottedSecondary": true,
+      "fixedY1scale": {
+        "max": 4.5,
+        "min": -4.5
+      },
       "margins": {
         "bottom": 45,
         "left": 70,
@@ -21,17 +25,17 @@
       "showGrid": true,
       "traces": [
         {
-          "color": "rgb(228, 26, 28)",
-          "signal": "V(IN)",
-          "trace_type": 257
-        },
-        {
           "color": "rgb(55, 126, 184)",
-          "signal": "V(LFOOUT)",
+          "signal": "V(LEDOUT)",
           "trace_type": 257
         },
         {
           "color": "rgb(77, 175, 74)",
+          "signal": "V(LFOOUT)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(152, 78, 163)",
           "signal": "V(OUT)",
           "trace_type": 257
         }
