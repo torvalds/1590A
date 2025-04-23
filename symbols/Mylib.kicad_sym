@@ -1,7 +1,7 @@
 (kicad_symbol_lib
-	(version 20231120)
+	(version 20241209)
 	(generator "kicad_symbol_editor")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(symbol "3PDT"
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -95,24 +95,6 @@
 				)
 			)
 			(pin passive line
-				(at 6.35 -7.62 180)
-				(length 2.54)
-				(name "A2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
 				(at -2.54 -11.43 0)
 				(length 2.54)
 				(name "A3"
@@ -123,6 +105,24 @@
 					)
 				)
 				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 6.35 -7.62 180)
+				(length 2.54)
+				(name "A2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -151,24 +151,6 @@
 				)
 			)
 			(pin passive line
-				(at 5.08 -7.62 180)
-				(length 2.54)
-				(name "B2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "5"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
 				(at -2.54 -11.43 0)
 				(length 2.54)
 				(name "B3"
@@ -179,6 +161,24 @@
 					)
 				)
 				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 5.08 -7.62 180)
+				(length 2.54)
+				(name "B2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -207,24 +207,6 @@
 				)
 			)
 			(pin passive line
-				(at 5.08 -7.62 180)
-				(length 2.54)
-				(name "C2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "8"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
 				(at -2.54 -11.43 0)
 				(length 2.54)
 				(name "C3"
@@ -242,7 +224,26 @@
 					)
 				)
 			)
+			(pin passive line
+				(at 5.08 -7.62 180)
+				(length 2.54)
+				(name "C2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "AP2210N-5.0TRG1"
 		(exclude_from_sim no)
@@ -360,10 +361,15 @@
 				)
 			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "BAT41ZFILM"
-		(pin_numbers hide)
-		(pin_names hide)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(hide yes)
+		)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -440,7 +446,7 @@
 		(symbol "BAT41ZFILM_0_1"
 			(polyline
 				(pts
-					(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
 				)
 				(stroke
 					(width 0.254)
@@ -452,7 +458,7 @@
 			)
 			(polyline
 				(pts
-					(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
+					(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
 				)
 				(stroke
 					(width 0.254)
@@ -501,6 +507,7 @@
 				)
 			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "DerangedMonkey"
 		(exclude_from_sim no)
@@ -558,6 +565,7 @@
 				(hide yes)
 			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "Enclosure_125B"
 		(exclude_from_sim no)
@@ -629,6 +637,7 @@
 				)
 			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "Enclosure_1590A"
 		(exclude_from_sim yes)
@@ -700,6 +709,7 @@
 				)
 			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "FuzzPenguin"
 		(exclude_from_sim no)
@@ -748,6 +758,7 @@
 				(hide yes)
 			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "HUSB237"
 		(exclude_from_sim no)
@@ -837,35 +848,17 @@
 					)
 				)
 			)
-			(pin power_in line
-				(at 0 11.43 270)
+			(pin bidirectional line
+				(at -10.16 1.27 0)
 				(length 2.54)
-				(name "VBUS"
+				(name "CC2"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 10.16 5.08 180)
-				(length 2.54)
-				(name "VSET"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "3"
+				(number "6"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -909,17 +902,17 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -10.16 1.27 0)
+			(pin power_in line
+				(at 0 11.43 270)
 				(length 2.54)
-				(name "CC2"
+				(name "VBUS"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "6"
+				(number "2"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -945,7 +938,26 @@
 					)
 				)
 			)
+			(pin passive line
+				(at 10.16 5.08 180)
+				(length 2.54)
+				(name "VSET"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "OPA1655DVB"
 		(exclude_from_sim no)
@@ -1053,24 +1065,6 @@
 				)
 			)
 			(pin power_in line
-				(at 2.54 -7.62 90)
-				(length 3.81)
-				(name "V-"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
 				(at 2.54 7.62 270)
 				(length 3.81)
 				(name "V+"
@@ -1088,19 +1082,17 @@
 					)
 				)
 			)
-		)
-		(symbol "OPA1655DVB_1_1"
-			(pin output line
-				(at 12.7 0 180)
-				(length 2.54)
-				(name "~"
+			(pin power_in line
+				(at 2.54 -7.62 90)
+				(length 3.81)
+				(name "V-"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "1"
+				(number "2"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1108,6 +1100,8 @@
 					)
 				)
 			)
+		)
+		(symbol "OPA1655DVB_1_1"
 			(pin input line
 				(at -2.54 2.54 0)
 				(length 2.54)
@@ -1144,7 +1138,26 @@
 					)
 				)
 			)
+			(pin output line
+				(at 12.7 0 180)
+				(length 2.54)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "OPA1656"
 		(exclude_from_sim no)
@@ -1257,17 +1270,17 @@
 			)
 		)
 		(symbol "OPA1656_1_1"
-			(pin output line
-				(at 10.16 0 180)
+			(pin input line
+				(at -5.08 2.54 0)
 				(length 2.54)
-				(name "OUT"
+				(name "+"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "1"
+				(number "3"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1293,17 +1306,17 @@
 					)
 				)
 			)
-			(pin input line
-				(at -5.08 2.54 0)
-				(length 2.54)
-				(name "+"
+			(pin power_in line
+				(at 0 7.62 270)
+				(length 3.81)
+				(name "V+"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "3"
+				(number "8"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1329,17 +1342,17 @@
 					)
 				)
 			)
-			(pin power_in line
-				(at 0 7.62 270)
-				(length 3.81)
-				(name "V+"
+			(pin output line
+				(at 10.16 0 180)
+				(length 2.54)
+				(name "OUT"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "8"
+				(number "1"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1404,6 +1417,7 @@
 				)
 			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "PMV250EPEAR"
 		(exclude_from_sim no)
@@ -1425,8 +1439,8 @@
 				)
 			)
 		)
-		(property "Footprint" "SOT-23-3"
-			(at -7.62 -10.668 0)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 0 -10.668 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1498,28 +1512,6 @@
 			)
 		)
 		(symbol "PMV250EPEAR_0_1"
-			(circle
-				(center -1.778 0)
-				(radius 0.254)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type outline)
-				)
-			)
-			(circle
-				(center 0 -0.889)
-				(radius 2.794)
-				(stroke
-					(width 0.254)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
 			(polyline
 				(pts
 					(xy -2.54 0) (xy -1.778 0)
@@ -1556,10 +1548,56 @@
 					(type none)
 				)
 			)
+			(circle
+				(center -1.778 0)
+				(radius 0.254)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.778 -1.778) (xy -1.778 0.762) (xy 1.778 0.762) (xy 1.778 -1.778)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
 			(polyline
 				(pts
 					(xy -0.508 -1.778) (xy 0.508 -1.778)
 				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 -0.254) (xy -0.381 -1.27) (xy 0.381 -1.27) (xy 0 -0.254)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(circle
+				(center 0 -0.889)
+				(radius 2.794)
 				(stroke
 					(width 0.254)
 					(type default)
@@ -1578,54 +1616,6 @@
 				)
 				(fill
 					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 1.27 -1.778) (xy 2.286 -1.778)
-				)
-				(stroke
-					(width 0.254)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 2.54 0) (xy 0 0) (xy 0 -1.778)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy -1.778 -1.778) (xy -1.778 0.762) (xy 1.778 0.762) (xy 1.778 -1.778)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 0 -0.254) (xy -0.381 -1.27) (xy 0.381 -1.27) (xy 0 -0.254)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type outline)
 				)
 			)
 			(polyline
@@ -1652,6 +1642,18 @@
 					(type none)
 				)
 			)
+			(polyline
+				(pts
+					(xy 1.27 -1.778) (xy 2.286 -1.778)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
 			(circle
 				(center 1.778 0)
 				(radius 0.254)
@@ -1663,8 +1665,38 @@
 					(type outline)
 				)
 			)
+			(polyline
+				(pts
+					(xy 2.54 0) (xy 0 0) (xy 0 -1.778)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
 		)
 		(symbol "PMV250EPEAR_1_1"
+			(pin passive line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "D"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 			(pin input line
 				(at 0 -7.62 90)
 				(length 2.54)
@@ -1701,25 +1733,8 @@
 					)
 				)
 			)
-			(pin passive line
-				(at -5.08 0 0)
-				(length 2.54)
-				(name "D"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "3"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "TMUX4053DYY"
 		(exclude_from_sim no)
@@ -1800,24 +1815,6 @@
 					(type none)
 				)
 			)
-			(pin input line
-				(at 0 -16.51 90)
-				(length 2.54)
-				(name "SEL1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "11"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 			(pin bidirectional line
 				(at -7.62 -2.54 0)
 				(length 2.54)
@@ -1847,6 +1844,24 @@
 					)
 				)
 				(number "13"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 0 -16.51 90)
+				(length 2.54)
+				(name "SEL1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "11"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1910,6 +1925,24 @@
 				)
 			)
 			(pin bidirectional line
+				(at -7.62 -3.81 0)
+				(length 2.54)
+				(name "S2A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
 				(at -7.62 -8.89 0)
 				(length 2.54)
 				(name "S2B"
@@ -1963,24 +1996,6 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -7.62 -3.81 0)
-				(length 2.54)
-				(name "S2A"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 		)
 		(symbol "TMUX4053DYY_3_1"
 			(rectangle
@@ -2007,42 +2022,6 @@
 				)
 			)
 			(pin bidirectional line
-				(at -7.62 -8.89 0)
-				(length 2.54)
-				(name "S3B"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "3"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 7.62 -6.35 180)
-				(length 2.54)
-				(name "D3"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "4"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
 				(at -7.62 -3.81 0)
 				(length 2.54)
 				(name "S3A"
@@ -2053,6 +2032,24 @@
 					)
 				)
 				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -7.62 -8.89 0)
+				(length 2.54)
+				(name "S3B"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2078,19 +2075,17 @@
 					)
 				)
 			)
-		)
-		(symbol "TMUX4053DYY_4_1"
-			(pin power_in line
-				(at 0 -2.54 270)
+			(pin bidirectional line
+				(at 7.62 -6.35 180)
 				(length 2.54)
-				(name "+V"
+				(name "D3"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "16"
+				(number "4"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2098,6 +2093,8 @@
 					)
 				)
 			)
+		)
+		(symbol "TMUX4053DYY_4_1"
 			(pin input line
 				(at -8.89 -7.62 0)
 				(length 2.54)
@@ -2109,24 +2106,6 @@
 					)
 				)
 				(number "6"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at 0 -16.51 90)
-				(length 2.54)
-				(name "-V"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "7"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2152,7 +2131,44 @@
 					)
 				)
 			)
+			(pin power_in line
+				(at 0 -2.54 270)
+				(length 2.54)
+				(name "+V"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "16"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 -16.51 90)
+				(length 2.54)
+				(name "-V"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "TPS73801"
 		(exclude_from_sim no)
@@ -2242,17 +2258,17 @@
 					)
 				)
 			)
-			(pin power_out line
-				(at 10.16 3.81 180)
+			(pin input line
+				(at -10.16 -3.81 0)
 				(length 2.54)
-				(name "OUT"
+				(name "EN"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "2"
+				(number "5"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2278,42 +2294,6 @@
 					)
 				)
 			)
-			(pin input line
-				(at 10.16 -3.81 180)
-				(length 2.54)
-				(name "FB"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "4"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at -10.16 -3.81 0)
-				(length 2.54)
-				(name "EN"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "5"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 			(pin power_in line
 				(at 2.54 -12.7 90)
 				(length 2.54)
@@ -2332,7 +2312,44 @@
 					)
 				)
 			)
+			(pin power_out line
+				(at 10.16 3.81 180)
+				(length 2.54)
+				(name "OUT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 10.16 -3.81 180)
+				(length 2.54)
+				(name "FB"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "TranquilSloth"
 		(exclude_from_sim no)
@@ -2381,5 +2398,6 @@
 				(hide yes)
 			)
 		)
+		(embedded_fonts no)
 	)
 )
