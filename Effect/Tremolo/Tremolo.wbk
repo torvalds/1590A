@@ -4,7 +4,7 @@
     {
       "analysis": "TRAN",
       "commands": [
-        ".tran 97u 3 0 125u uic",
+        ".tran 1u 1 0 1u uic",
         ".kicad adjustpaths",
         ".save all",
         ".probe alli",
@@ -25,13 +25,23 @@
       "showGrid": true,
       "traces": [
         {
+          "color": "rgb(252, 60, 255)",
+          "signal": "I(D1)",
+          "trace_type": 258
+        },
+        {
+          "color": "rgb(228, 26, 28)",
+          "signal": "V(CTRL)",
+          "trace_type": 257
+        },
+        {
           "color": "rgb(55, 126, 184)",
-          "signal": "V(LEDOUT)",
+          "signal": "V(LFOOUT1)",
           "trace_type": 257
         },
         {
           "color": "rgb(77, 175, 74)",
-          "signal": "V(LFOOUT)",
+          "signal": "V(LFOOUT2)",
           "trace_type": 257
         },
         {
