@@ -4,7 +4,56 @@
     {
       "analysis": "TRAN",
       "commands": [
-        ".tran 2u 10m 0 2u uic",
+        ".tran 1u 250m 0 10u uic",
+        ".kicad adjustpaths",
+        ".save all",
+        ".probe alli",
+        ".probe allp"
+      ],
+      "dottedSecondary": true,
+      "fixedY1scale": {
+        "max": 1.0,
+        "min": -1.0
+      },
+      "legend": {
+        "x": 1694,
+        "y": 155
+      },
+      "margins": {
+        "bottom": 45,
+        "left": 70,
+        "right": 70,
+        "top": 30
+      },
+      "measurements": [],
+      "showGrid": true,
+      "traces": [
+        {
+          "color": "rgb(255, 127, 0)",
+          "signal": "V(FILTERED)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(55, 126, 184)",
+          "signal": "V(IN)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(152, 78, 163)",
+          "signal": "V(OUT)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(77, 175, 74)",
+          "signal": "V(RECT)",
+          "trace_type": 257
+        }
+      ]
+    },
+    {
+      "analysis": "AC",
+      "commands": [
+        ".ac dec 500 20 20k",
         ".kicad adjustpaths",
         ".save all",
         ".probe alli",
@@ -21,14 +70,29 @@
       "showGrid": true,
       "traces": [
         {
-          "color": "rgb(228, 26, 28)",
-          "signal": "V(IN)",
-          "trace_type": 257
+          "color": "rgb(55, 126, 184)",
+          "signal": "V(FILTERED) (gain)",
+          "trace_type": 521
         },
         {
-          "color": "rgb(163, 152, 24)",
-          "signal": "V(OUT)",
-          "trace_type": 257
+          "color": "rgb(255, 127, 0)",
+          "signal": "V(IN) (gain)",
+          "trace_type": 521
+        },
+        {
+          "color": "rgb(228, 26, 28)",
+          "signal": "V(OUT) (phase)",
+          "trace_type": 517
+        },
+        {
+          "color": "rgb(228, 26, 28)",
+          "signal": "V(OUT) (gain)",
+          "trace_type": 521
+        },
+        {
+          "color": "rgb(152, 78, 163)",
+          "signal": "V(RECT) (gain)",
+          "trace_type": 521
         }
       ]
     }
