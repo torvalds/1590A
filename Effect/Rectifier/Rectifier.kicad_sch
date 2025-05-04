@@ -2197,14 +2197,14 @@
 			(embedded_fonts no)
 		)
 	)
-	(text_box "Precision signal rectifier circuit\nhttps://www.ti.com/lit/ug/tidu030/tidu030.pdf\n\nCould be used for a compressor or something, here it's used\njust purely as a full-wave rectifier (aka \"octaver\")\n\nThis simulates fine, and worked on its own in a test circuit,\nbut didn't work well in an earlier pedal with a tone circuit\n\nI must have messed something up, I suspect there was feedback\nbetween different stages even if I also simulated that. But I've\nlost sight of the original broken circuit, so I'm just trying again.\n\nRemind me what the definition of insanity was again?"
+	(text_box "Precision signal rectifier circuit\nhttps://www.ti.com/lit/ug/tidu030/tidu030.pdf\n\nCould be used for a compressor or something, here it's used\njust purely as a full-wave rectifier (aka \"octaver\")"
 		(exclude_from_sim no)
 		(at 14.605 81.915 0)
 		(size 116.205 78.105)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(fill
 			(type none)
@@ -2297,7 +2297,7 @@
 		)
 		(uuid "684ce469-d2ed-4561-8598-d098e8089d2f")
 	)
-	(text_box "Second-order active Sallen-Key low-pass filter\n(F = 723Hz, K=2, Q=1)\n\nOk, that was at 725 when the resistors were 22k/22k\nwith 10nF caps.\n\nNow it's a 10k-110k linear pot instead (and 4.7nF caps) so\nthat the center point is similar, but you can play with it,\nwhich modifies Q and center frequency.\n\n(F_{c} goes from ~600Hz in the middle to 1.5k at the edges,\nwhile Q goes from ~0.2 to ~5 as you sweep the pot)\n\nUseful? You be the judge."
+	(text_box "Second-order active Sallen-Key low-pass filter\n(F = 723Hz, K=2, Q=1)\n\nOk, that was at 725Hz when the resistors were 22k/22k\nwith 10nF caps.\n\nNow it's a 10k-110k linear pot instead (and 4.7nF caps) so\nthat the center point is similar, but you can play with it,\nwhich modifies Q and center frequency.\n\n(F_{c} goes from ~600Hz in the middle to 1.5k at the edges,\nwhile Q goes from ~0.2 to ~5 as you sweep the pot)\n\nUseful? You be the judge."
 		(exclude_from_sim no)
 		(at 132.08 81.915 0)
 		(size 95.25 78.105)
@@ -2317,7 +2317,7 @@
 		)
 		(uuid "7fc05b3e-8d55-46b8-ac77-185a4b73c941")
 	)
-	(text_box "Random note frequencies\n\nThe point of this is not to make a good sound,\nbut to have a waveform that I can then look at\nthe output waveform and think it's different\nyet \"similar\"."
+	(text_box "Random note frequencies for simulation\n\nThe point of this is not to make a good sound,\nbut to have a waveform that I can then look at\nthe output waveform and think it's different\nyet \"similar\"."
 		(exclude_from_sim no)
 		(at 229.87 13.97 0)
 		(size 54.61 107.95)
@@ -2338,7 +2338,7 @@
 		(uuid "8403d492-81fa-4076-a2a5-d3780b97c9b8")
 	)
 	(junction
-		(at 80.01 129.54)
+		(at 86.36 123.19)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0235287e-b707-4cef-ab6f-41875528e8bb")
@@ -2368,7 +2368,7 @@
 		(uuid "4b656cc9-a325-42ac-8f4b-ff79742dac98")
 	)
 	(junction
-		(at 58.42 151.13)
+		(at 64.77 144.78)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5bd56472-4626-4c26-adb3-f64af6a685d0")
@@ -2380,7 +2380,7 @@
 		(uuid "631ab4ec-2a94-4306-9ae8-5a63a8a178c5")
 	)
 	(junction
-		(at 107.95 132.08)
+		(at 114.3 125.73)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6953c760-ba52-41f2-8aee-32c89aff5068")
@@ -2392,13 +2392,13 @@
 		(uuid "74efea41-dffe-43bc-a3d4-f2bbf8ab8d5f")
 	)
 	(junction
-		(at 88.9 151.13)
+		(at 95.25 144.78)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "82ed9b5e-b319-4800-97d4-eb35660b5f69")
 	)
 	(junction
-		(at 44.45 129.54)
+		(at 50.8 123.19)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "95f64468-de54-4120-a17d-724f840e34e7")
@@ -2416,13 +2416,13 @@
 		(uuid "a0578a8e-7703-44c9-a095-ff161becffad")
 	)
 	(junction
-		(at 58.42 129.54)
+		(at 64.77 123.19)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a3f71f03-e8df-4a2f-976e-161187e934f3")
 	)
 	(junction
-		(at 44.45 151.13)
+		(at 50.8 144.78)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a8e3c7c7-c679-46b2-8a63-e35681804486")
@@ -2461,7 +2461,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 134.62) (xy 88.9 134.62)
+			(xy 97.79 128.27) (xy 95.25 128.27)
 		)
 		(stroke
 			(width 0)
@@ -2501,7 +2501,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 151.13) (xy 58.42 151.13)
+			(xy 50.8 144.78) (xy 64.77 144.78)
 		)
 		(stroke
 			(width 0)
@@ -2521,7 +2521,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 151.13) (xy 96.52 151.13)
+			(xy 95.25 144.78) (xy 102.87 144.78)
 		)
 		(stroke
 			(width 0)
@@ -2531,7 +2531,7 @@
 	)
 	(wire
 		(pts
-			(xy 21.59 127) (xy 25.4 127)
+			(xy 27.94 120.65) (xy 31.75 120.65)
 		)
 		(stroke
 			(width 0)
@@ -2541,7 +2541,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 151.13) (xy 88.9 151.13)
+			(xy 77.47 144.78) (xy 95.25 144.78)
 		)
 		(stroke
 			(width 0)
@@ -2551,7 +2551,7 @@
 	)
 	(wire
 		(pts
-			(xy 80.01 129.54) (xy 91.44 129.54)
+			(xy 86.36 123.19) (xy 97.79 123.19)
 		)
 		(stroke
 			(width 0)
@@ -2561,7 +2561,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 151.13) (xy 107.95 132.08)
+			(xy 114.3 144.78) (xy 114.3 125.73)
 		)
 		(stroke
 			(width 0)
@@ -2571,7 +2571,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 132.08) (xy 106.68 132.08)
+			(xy 114.3 125.73) (xy 113.03 125.73)
 		)
 		(stroke
 			(width 0)
@@ -2611,7 +2611,7 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 129.54) (xy 80.01 129.54)
+			(xy 78.74 123.19) (xy 86.36 123.19)
 		)
 		(stroke
 			(width 0)
@@ -2691,7 +2691,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 151.13) (xy 44.45 143.51)
+			(xy 50.8 144.78) (xy 50.8 137.16)
 		)
 		(stroke
 			(width 0)
@@ -2741,7 +2741,7 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 129.54) (xy 44.45 129.54)
+			(xy 46.99 123.19) (xy 50.8 123.19)
 		)
 		(stroke
 			(width 0)
@@ -2771,7 +2771,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 132.08) (xy 107.95 132.08)
+			(xy 115.57 125.73) (xy 114.3 125.73)
 		)
 		(stroke
 			(width 0)
@@ -2781,7 +2781,7 @@
 	)
 	(wire
 		(pts
-			(xy 21.59 132.08) (xy 25.4 132.08)
+			(xy 27.94 125.73) (xy 31.75 125.73)
 		)
 		(stroke
 			(width 0)
@@ -2831,7 +2831,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 129.54) (xy 58.42 135.89)
+			(xy 64.77 123.19) (xy 64.77 129.54)
 		)
 		(stroke
 			(width 0)
@@ -2881,7 +2881,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 135.89) (xy 44.45 129.54)
+			(xy 50.8 129.54) (xy 50.8 123.19)
 		)
 		(stroke
 			(width 0)
@@ -2941,7 +2941,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 129.54) (xy 64.77 129.54)
+			(xy 64.77 123.19) (xy 71.12 123.19)
 		)
 		(stroke
 			(width 0)
@@ -2961,7 +2961,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 151.13) (xy 107.95 151.13)
+			(xy 110.49 144.78) (xy 114.3 144.78)
 		)
 		(stroke
 			(width 0)
@@ -2981,7 +2981,7 @@
 	)
 	(wire
 		(pts
-			(xy 80.01 129.54) (xy 80.01 132.08)
+			(xy 86.36 123.19) (xy 86.36 125.73)
 		)
 		(stroke
 			(width 0)
@@ -2991,7 +2991,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 151.13) (xy 63.5 151.13)
+			(xy 64.77 144.78) (xy 69.85 144.78)
 		)
 		(stroke
 			(width 0)
@@ -3011,7 +3011,7 @@
 	)
 	(wire
 		(pts
-			(xy 21.59 151.13) (xy 21.59 132.08)
+			(xy 27.94 144.78) (xy 27.94 125.73)
 		)
 		(stroke
 			(width 0)
@@ -3041,7 +3041,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 143.51) (xy 58.42 151.13)
+			(xy 64.77 137.16) (xy 64.77 144.78)
 		)
 		(stroke
 			(width 0)
@@ -3051,7 +3051,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 134.62) (xy 88.9 151.13)
+			(xy 95.25 128.27) (xy 95.25 144.78)
 		)
 		(stroke
 			(width 0)
@@ -3081,7 +3081,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 129.54) (xy 58.42 129.54)
+			(xy 50.8 123.19) (xy 64.77 123.19)
 		)
 		(stroke
 			(width 0)
@@ -3101,7 +3101,7 @@
 	)
 	(wire
 		(pts
-			(xy 21.59 151.13) (xy 44.45 151.13)
+			(xy 27.94 144.78) (xy 50.8 144.78)
 		)
 		(stroke
 			(width 0)
@@ -3401,7 +3401,7 @@
 	)
 	(global_label "RECT"
 		(shape input)
-		(at 109.22 132.08 0)
+		(at 115.57 125.73 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3411,7 +3411,7 @@
 		)
 		(uuid "5414b486-f6a1-4d79-b55c-4b72d31f7787")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 116.8618 132.08 0)
+			(at 123.2118 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3489,7 +3489,7 @@
 	)
 	(global_label "-V"
 		(shape input)
-		(at 30.48 137.16 270)
+		(at 36.83 130.81 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3499,7 +3499,7 @@
 		)
 		(uuid "727cef9a-7d12-4a70-a8e1-2b2c0e7781c5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 30.48 142.8062 90)
+			(at 36.83 136.4562 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3577,7 +3577,7 @@
 	)
 	(global_label "+V"
 		(shape input)
-		(at 30.48 121.92 90)
+		(at 36.83 115.57 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3587,7 +3587,7 @@
 		)
 		(uuid "8b1f24cf-8f54-4694-8541-5ea2cf91489d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 30.48 116.2738 90)
+			(at 36.83 109.9238 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3643,7 +3643,7 @@
 	)
 	(global_label "IN"
 		(shape input)
-		(at 21.59 127 180)
+		(at 27.94 120.65 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3653,7 +3653,7 @@
 		)
 		(uuid "a1fcc08c-6052-4c54-990b-22aee9761e30")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 16.6695 127 0)
+			(at 23.0195 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4180,7 +4180,7 @@
 	)
 	(symbol
 		(lib_id "Device:D_Schottky_Dual_Series_AKC_Split")
-		(at 68.58 129.54 180)
+		(at 74.93 123.19 180)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4189,7 +4189,7 @@
 		(fields_autoplaced yes)
 		(uuid "06002830-6a5b-45e1-af12-cdb840f4a723")
 		(property "Reference" "D1"
-			(at 68.834 123.19 0)
+			(at 75.184 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4197,7 +4197,7 @@
 			)
 		)
 		(property "Value" "BAT54S"
-			(at 68.834 125.73 0)
+			(at 75.184 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4205,7 +4205,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
-			(at 71.12 127 0)
+			(at 77.47 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4214,7 +4214,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 71.12 127 0)
+			(at 77.47 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4223,7 +4223,7 @@
 			)
 		)
 		(property "Description" "Dual Schottky diode, anode/cathode/center"
-			(at 68.58 129.54 0)
+			(at 74.93 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4232,7 +4232,7 @@
 			)
 		)
 		(property "Sim.Library" "/home/torvalds/KiCad/1590A/symbols/bat54s.lib"
-			(at 68.58 129.54 0)
+			(at 74.93 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4241,7 +4241,7 @@
 			)
 		)
 		(property "Sim.Name" "BAT54S"
-			(at 68.58 129.54 0)
+			(at 74.93 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4250,7 +4250,7 @@
 			)
 		)
 		(property "Sim.Device" "SUBCKT"
-			(at 68.58 129.54 0)
+			(at 74.93 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4259,7 +4259,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=A 2=K 3=C"
-			(at 68.58 129.54 0)
+			(at 74.93 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4287,7 +4287,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 44.45 139.7 0)
+		(at 50.8 133.35 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4296,7 +4296,7 @@
 		(dnp no)
 		(uuid "06d26336-1592-472e-b55d-664f7f152bce")
 		(property "Reference" "C9"
-			(at 48.26 140.9701 0)
+			(at 54.61 134.6201 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4305,7 +4305,7 @@
 			)
 		)
 		(property "Value" "47pF"
-			(at 48.26 138.4301 0)
+			(at 54.61 132.0801 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4314,7 +4314,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 45.4152 135.89 0)
+			(at 51.7652 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4323,7 +4323,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 44.45 139.7 0)
+			(at 50.8 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4332,7 +4332,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 44.45 139.7 0)
+			(at 50.8 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5620,7 +5620,7 @@
 	)
 	(symbol
 		(lib_id "Mylib:OPA1656")
-		(at 96.52 132.08 0)
+		(at 102.87 125.73 0)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5628,7 +5628,7 @@
 		(dnp no)
 		(uuid "3dbf65e4-d5d2-418e-98fc-41f3de2a0700")
 		(property "Reference" "U2"
-			(at 98.806 124.968 0)
+			(at 105.156 118.618 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5636,7 +5636,7 @@
 			)
 		)
 		(property "Value" "OPA1656"
-			(at 103.124 127.508 0)
+			(at 109.474 121.158 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5644,7 +5644,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-			(at 99.06 140.716 0)
+			(at 105.41 134.366 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5654,7 +5654,7 @@
 			)
 		)
 		(property "Datasheet" "https://ti.com/lit/ds/symlink/opa1655.pdf"
-			(at 99.06 143.256 0)
+			(at 105.41 136.906 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5664,7 +5664,7 @@
 			)
 		)
 		(property "Description" "Dual audio op-amp"
-			(at 99.06 123.19 0)
+			(at 105.41 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5674,7 +5674,7 @@
 			)
 		)
 		(property "Sim.Library" "${KIPRJMOD}/../../symbols/dual1656.lib"
-			(at 96.52 149.86 0)
+			(at 102.87 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5683,7 +5683,7 @@
 			)
 		)
 		(property "Sim.Name" "DUAL1656"
-			(at 96.52 157.48 0)
+			(at 102.87 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5692,7 +5692,7 @@
 			)
 		)
 		(property "Sim.Device" "SUBCKT"
-			(at 96.52 154.94 0)
+			(at 102.87 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5701,7 +5701,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=OUTA 2=INA- 3=INA+ 4=V- 5=INB+ 6=INB- 7=OUTB 8=V+"
-			(at 96.52 152.4 0)
+			(at 102.87 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6724,7 +6724,7 @@
 	)
 	(symbol
 		(lib_id "Device:D_Schottky_Dual_Series_AKC_Split")
-		(at 58.42 139.7 90)
+		(at 64.77 133.35 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6733,7 +6733,7 @@
 		(fields_autoplaced yes)
 		(uuid "64d2ade0-e28c-4e84-8f2c-9f0babf52db6")
 		(property "Reference" "D1"
-			(at 60.96 138.1759 90)
+			(at 67.31 131.8259 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6742,7 +6742,7 @@
 			)
 		)
 		(property "Value" "BAT54S"
-			(at 60.96 140.7159 90)
+			(at 67.31 134.3659 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6751,7 +6751,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
-			(at 60.96 142.24 0)
+			(at 67.31 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6760,7 +6760,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 60.96 142.24 0)
+			(at 67.31 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6769,7 +6769,7 @@
 			)
 		)
 		(property "Description" "Dual Schottky diode, anode/cathode/center"
-			(at 58.42 139.7 0)
+			(at 64.77 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6778,7 +6778,7 @@
 			)
 		)
 		(property "Sim.Library" "/home/torvalds/KiCad/1590A/symbols/bat54s.lib"
-			(at 58.42 139.7 0)
+			(at 64.77 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6787,7 +6787,7 @@
 			)
 		)
 		(property "Sim.Name" "BAT54S"
-			(at 58.42 139.7 0)
+			(at 64.77 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6796,7 +6796,7 @@
 			)
 		)
 		(property "Sim.Device" "SUBCKT"
-			(at 58.42 139.7 0)
+			(at 64.77 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6805,7 +6805,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=A 2=K 3=C"
-			(at 58.42 139.7 0)
+			(at 64.77 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7703,7 +7703,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 80.01 139.7 0)
+		(at 86.36 133.35 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7712,7 +7712,7 @@
 		(fields_autoplaced yes)
 		(uuid "8dfd0433-1d41-42c5-b205-5efaafc10b50")
 		(property "Reference" "#PWR017"
-			(at 80.01 146.05 0)
+			(at 86.36 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7721,7 +7721,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 80.01 144.78 0)
+			(at 86.36 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7729,7 +7729,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 80.01 139.7 0)
+			(at 86.36 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7738,7 +7738,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 80.01 139.7 0)
+			(at 86.36 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7747,7 +7747,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 80.01 139.7 0)
+			(at 86.36 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7769,7 +7769,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 80.01 135.89 180)
+		(at 86.36 129.54 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7778,7 +7778,7 @@
 		(fields_autoplaced yes)
 		(uuid "8ef3a1e9-d624-4fa4-b60b-99e4d3fda19a")
 		(property "Reference" "R9"
-			(at 82.55 134.6199 0)
+			(at 88.9 128.2699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7787,7 +7787,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 82.55 137.1599 0)
+			(at 88.9 130.8099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7796,7 +7796,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 81.788 135.89 90)
+			(at 88.138 129.54 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7805,7 +7805,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 80.01 135.89 0)
+			(at 86.36 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7814,7 +7814,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 80.01 135.89 0)
+			(at 86.36 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8145,7 +8145,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 100.33 151.13 90)
+		(at 106.68 144.78 90)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8155,7 +8155,7 @@
 		(fields_autoplaced yes)
 		(uuid "94ac0bfd-df93-4181-b03c-e801e037dce2")
 		(property "Reference" "R13"
-			(at 100.33 144.78 90)
+			(at 106.68 138.43 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8163,7 +8163,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 100.33 147.32 90)
+			(at 106.68 140.97 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8171,7 +8171,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 100.33 149.352 90)
+			(at 106.68 143.002 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8180,7 +8180,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 100.33 151.13 0)
+			(at 106.68 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8189,7 +8189,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 100.33 151.13 0)
+			(at 106.68 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9114,7 +9114,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 67.31 151.13 90)
+		(at 73.66 144.78 90)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9124,7 +9124,7 @@
 		(fields_autoplaced yes)
 		(uuid "b8ff196f-b4f6-48a1-a557-f54b7e7eebb8")
 		(property "Reference" "R12"
-			(at 67.31 144.78 90)
+			(at 73.66 138.43 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9132,7 +9132,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 67.31 147.32 90)
+			(at 73.66 140.97 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9140,7 +9140,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 67.31 149.352 90)
+			(at 73.66 143.002 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9149,7 +9149,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 67.31 151.13 0)
+			(at 73.66 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9158,7 +9158,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 67.31 151.13 0)
+			(at 73.66 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9795,7 +9795,7 @@
 	)
 	(symbol
 		(lib_id "Mylib:OPA1656")
-		(at 30.48 129.54 0)
+		(at 36.83 123.19 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9803,7 +9803,7 @@
 		(dnp no)
 		(uuid "dceb3446-7710-4c0c-90ca-d43e19d3ca5d")
 		(property "Reference" "U2"
-			(at 35.306 121.92 0)
+			(at 41.656 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9811,7 +9811,7 @@
 			)
 		)
 		(property "Value" "OPA1656"
-			(at 39.878 125.222 0)
+			(at 46.228 118.872 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9819,7 +9819,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-			(at 33.02 138.176 0)
+			(at 39.37 131.826 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9829,7 +9829,7 @@
 			)
 		)
 		(property "Datasheet" "https://ti.com/lit/ds/symlink/opa1655.pdf"
-			(at 33.02 140.716 0)
+			(at 39.37 134.366 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9839,7 +9839,7 @@
 			)
 		)
 		(property "Description" "Dual audio op-amp"
-			(at 33.02 120.65 0)
+			(at 39.37 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9849,7 +9849,7 @@
 			)
 		)
 		(property "Sim.Library" "${KIPRJMOD}/../../symbols/dual1656.lib"
-			(at 30.48 147.32 0)
+			(at 36.83 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9858,7 +9858,7 @@
 			)
 		)
 		(property "Sim.Name" "DUAL1656"
-			(at 30.48 154.94 0)
+			(at 36.83 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9867,7 +9867,7 @@
 			)
 		)
 		(property "Sim.Device" "SUBCKT"
-			(at 30.48 152.4 0)
+			(at 36.83 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9876,7 +9876,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=OUTA 2=INA- 3=INA+ 4=V- 5=INB+ 6=INB- 7=OUTB 8=V+"
-			(at 30.48 149.86 0)
+			(at 36.83 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
