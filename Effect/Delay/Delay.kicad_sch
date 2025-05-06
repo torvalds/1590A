@@ -1714,7 +1714,7 @@
 		)
 		(uuid "03465cb6-c81d-4f8d-bb43-0f0c01ea00f1")
 	)
-	(text_box "Output:\n\nSecond Low-Pass filter gets fed from op amp2 output\nthat comes from the delay buffer and goes through DEMOD.\n\nAgain with the unity gain (15k+10k input, but also feedback).\n\nop-amp2 output: 15k / 5.6nF is a 1.9k LP filter\n\nLPF2-output: 2k7 / 10nF is a 5.9kHz LP filter."
+	(text_box "Output:\n\nSecond Low-Pass filter gets fed from op amp2 output\nthat comes from the delay buffer and goes through DEMOD.\n\nSame multiple-feedback lowpass filter as on input\n"
 		(exclude_from_sim no)
 		(at 107.315 74.295 0)
 		(size 88.265 73.66)
@@ -1734,7 +1734,7 @@
 		)
 		(uuid "10602148-a666-4f30-a31b-f8bf8d205e71")
 	)
-	(text_box "Input:\n\nLPF1-in is the inverting side of an op-amp, with LPF1 being the output\nof said op-amp. The non-inverting input of the op-amp is VREF.\n\nSo if I read this right, this is a low-pass filter, with 15k / 5.6nF giving 1.9kHz,\nand unity gain (15k+10k on input, 15k+10k feedback), and the 560pF capacitor to\navoid the op-amp oscillating.\n\nThe datasheet has the signal being capacitively coupled, but since it's already\nbiased to VREF I'm skipping that.\n\nThe LPF1 opamp then internally gets mixed to the \"OP1\" opamp (fed from MOD),\nand into the buffer. No idea what the MOD and DEMOD sides do"
+	(text_box "Input:\n\nLPF1-in is the inverting side of an op-amp, with LPF1 being the output\nof said op-amp. The non-inverting input of the op-amp is VREF.\n\nThis is an inverting multiple feedback low-pass filter, with unity unity gain.\nCut-off frequency at 7.15kHz, and Q=1.1\n\nSee\n   http://sim.okawa-denshi.jp/en/OPttool.php\nfor calculator.\n\nThe datasheet has the signal being capacitively coupled, but since it's already\nbiased to VREF I'm skipping that.\n\nThe LPF1 opamp then internally gets mixed to the \"OP1\" opamp (fed from MOD),\nand into the buffer. No idea what the MOD and DEMOD sides do"
 		(exclude_from_sim no)
 		(at 15.875 73.66 0)
 		(size 89.535 74.93)
