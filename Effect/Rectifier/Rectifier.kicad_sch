@@ -2132,7 +2132,7 @@
 		)
 		(uuid "684ce469-d2ed-4561-8598-d098e8089d2f")
 	)
-	(text_box "Second-order active Sallen-Key low-pass filter\n(F = 723Hz, K=2, Q=1)\n\nOk, that was at 725Hz when the resistors were 22k/22k\nwith 10nF caps.\n\nNow it's a 10k-110k linear pot instead (and 4.7nF caps) so\nthat the center point is similar, but you can play with it,\nwhich modifies Q and center frequency.\n\n(F_{c} goes from ~600Hz in the middle to 1.5k at the edges,\nwhile Q goes from ~0.2 to ~5 as you sweep the pot)\n\nUseful? You be the judge."
+	(text_box "Second-order active Sallen-Key low-pass filter\n\nhttp://sim.okawa-denshi.jp/en/OPstool.php\n\nThis makes R1/R2 go from a balanced 55k:55k,\nwhich has a Fc around 600Hz and a Q=1.\n\nTo a R1:R2 of 105k:5k, which has Fc around 1.5k\nand a Q of ~4.6\n\nIt's much more fun at the weird edge."
 		(exclude_from_sim no)
 		(at 124.46 14.605 0)
 		(size 102.87 78.105)
@@ -3761,7 +3761,7 @@
 				)
 			)
 		)
-		(property "Value" "4.7k"
+		(property "Value" "56k"
 			(at 154.94 55.88 90)
 			(effects
 				(font
@@ -6956,7 +6956,7 @@
 				)
 			)
 		)
-		(property "Value" "B100k Tone"
+		(property "Value" "B50k  Weird"
 			(at 164.338 54.864 90)
 			(effects
 				(font
@@ -7018,7 +7018,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Params" "r=100k"
+		(property "Sim.Params" "r=100k pos=1"
 			(at 165.1 59.69 0)
 			(effects
 				(font
@@ -8588,7 +8588,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Params" "dc=0 ampl=0.5 f=440 ac=1"
+		(property "Sim.Params" "dc=0 ampl=0.5 f=330 ac=1"
 			(at 252.73 110.3601 0)
 			(effects
 				(font
