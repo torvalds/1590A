@@ -113,7 +113,7 @@ with most of the actual SMD components from Mouser:
  - Tayda A-3670 etc: 1M series mini toggle switches and the sub-mini 2M
    series for the side switch.
 
- - Wuerth 694106301002 9V DC power jack
+ - Wurth 694106301002 9V DC power jack
 
  - SMD resistors are all 0805, and the values generally don't matter,
    but there's a couple of voltage references, so why would you ever get
