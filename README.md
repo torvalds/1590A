@@ -2,18 +2,10 @@
 
 ### Electrical
 
-These are probably entirely non-functional, but having done guitar pedal
-board kit builds, I decided I should try to make something from scratch.
-
-> [!WARNING]
-> **Little of this is tested**
->
-> I've never done analog circuits in my life.  But hey, I also
-> don't play guitar, so when it doesn't work, it doesn't really
-> matter.
->
-> So be aware that it probably doesn't work, or if it works it
-> does so mainly by luck.
+These are not really all that useful, but having done guitar pedal board
+kit builds, I decided I should try to make something from scratch.  I
+don't actually play guitar, but guitar pedal kits were fun to solder,
+and that then turned into "I want to actually understand what they do"..
 
 > [!NOTE]
 > I'm not soldering wires together like some kind of animal ---
@@ -37,17 +29,11 @@ the 1590A is pretty tight.
 
 The base board should work with any of the effect boards, and is mainly
 just about the power rails and the input and output DC decoupling and
-signal buffering. And the stomp switch with true bypass etc.
-
-The input buffering also has a trim-pot on the base board for setting
-initial an boost level for the effect board input (1..11x voltage gain,
-so roughly 0..+20dB).
+signal buffering.  And the stomp switch with true bypass etc.
 
 The base board design is a traditional 9V power rail with a reference
 voltage at 4.5V (except using a 2426 rail splitter rather than some kind
-of traditional voltage divider hackery).  As far as the effect boards
-are concerned, that reference voltage *is* ground, and they think they
-have +-4.5V power rails.
+of traditional voltage divider hackery).
 
 The effects boards are random "Linus is testing things he doesn't know
 anything about".
@@ -62,30 +48,56 @@ anything about".
    much. With the opamps I have, hitting the voltage rails is a clean
    clip. But your choice of opamp will most definitely matter.
 
+   It works fine, and acts like any number of traditional boost pedals.
+
  - There's a "rectifier" board that is really just an op-amp based
-   precision rectifier of the signal in front, with the original signal
-   blended back in, and then a low-pass filter and volume knob.
+   precision rectifier of the signal in front, followed by a low-pass
+   filter to get rid of most of the harsh high frequencies that the
+   rectification causes at the signal "folding" point.
 
-   It's supposed to be an octaver fuzz kind of thing.
+   The original signal is then blended back in. It's supposed to be kind
+   of an octaver fuzz kind of thing, although with the filter is more of
+   a random distortion effect.
 
-Some pieces of this --- not all --- have been tested.  And some pieces
-have been simulated in ngspice.  Signals have been looked at with a
-signal generator and a scope, and I've made random noises on an electric
-guitar to check that it works that way too.
+   The sound is actually somewhat interesting.
 
-Is it *musical*? Hell knows.  The first rectifier board was horribly
-broken with nasty high-frequency noise, but it actually sounded somewhat
-interesting with a bass guitar and amp that filtered all that out.
+ - There's a "tremolo" board with an LFO that drives a timed attenuation
+   of the signal through a JFET to ground.
 
-This "gen2" one hopefully is better.
+   The traditional analog tremolo boards that I did from kits tend to
+   use a LED coupled with a LDR ("Vactrol"), and that always struck me
+   as hacky. That said, having designed it with a JFET I understand why
+   they used that vactrol.
+
+   This is a pretty useless board from a sound standpoint, but my
+   favorite one from a learning standpoint.
+
+All of this has been tested and found somewhat working.  And much of it
+has been have been simulated in kicad using ltspice.  Signals have been
+looked at with a signal generator and a scope, and I've made random
+noises on an electric guitar to check that it works that way too.
+
+Is any of it *musical*? Kind of.  The boost pedal with clipping sounds
+perfectly fine.  Real musicians have said "I could see myself using
+this", but it's also obviously about as non-unique as you can get.
+
+The rectifier board sounds more unique and interesting now that the tone
+control has been made to be more extreme.  It definitely adds some
+"character" to the output.  I'm not sure you'd use it for music, but
+it's at least interesting.
+
+The tremolo has a somewhat odd timing interface and the modulation is
+pretty abrupt.  If you're looking for something smooth, this isn't it.
+But I like the board.
 
 > [!NOTE]
 > Unlike the Gen1 boards, these are two-layer boards. Yes, it's slightly
 > cheaper, but perhaps more importantly it means I get boards back a day
 > earlier for testing.
 >
-> That admittedly hasn't improved the end result noticeably yet, but one
-> day. One day..
+> That helped enormously with the tremolo in particular, which went from
+> having a very annoying ticking sound ("It's a metronome too!") to being
+> almost usable.
 
 ### Mechanicals
 
@@ -131,4 +143,5 @@ with most of the actual SMD components from Mouser:
    That may be what you want, but on the whole I'd suggest something
    more modern and more rail-to-rail'ish.
 
- - Hammond 1590A enclosure. There are Tayda drill patterns that work.
+ - Hammond 1590A enclosure. There are drill patterns that work here:
+   ["Tayda drill patterns"](/Tayda/Enclosure-drill-holes)
