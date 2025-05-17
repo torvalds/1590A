@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "9e337e0b-885b-4d2b-99a2-62cdd082c615")
 	(paper "A4")
 	(title_block
@@ -12,7 +12,9 @@
 	(lib_symbols
 		(symbol "Connector:Conn_Coaxial"
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -78,18 +80,6 @@
 				)
 			)
 			(symbol "Conn_Coaxial_0_1"
-				(arc
-					(start -1.778 -0.508)
-					(mid 0.2311 -1.8066)
-					(end 1.778 0)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
 				(polyline
 					(pts
 						(xy -2.54 0) (xy -0.508 0)
@@ -102,12 +92,24 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 0 -2.54) (xy 0 -1.778)
-					)
+				(arc
+					(start 1.778 0)
+					(mid 0.222 -1.8079)
+					(end -1.778 -0.508)
 					(stroke
-						(width 0)
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -1.778 0.508)
+					(mid 0.2221 1.8084)
+					(end 1.778 0)
+					(stroke
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -125,12 +127,12 @@
 						(type none)
 					)
 				)
-				(arc
-					(start 1.778 0)
-					(mid 0.2099 1.8101)
-					(end -1.778 0.508)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 0 -1.778)
+					)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -176,6 +178,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Connector_Audio:AudioJack2_Ground"
 			(exclude_from_sim no)
@@ -266,6 +269,17 @@
 						(type none)
 					)
 				)
+				(rectangle
+					(start 2.54 3.81)
+					(end -2.54 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
 				(polyline
 					(pts
 						(xy 2.54 2.54) (xy -0.635 2.54) (xy -0.635 0) (xy -1.27 -0.635) (xy -1.905 0)
@@ -276,17 +290,6 @@
 					)
 					(fill
 						(type none)
-					)
-				)
-				(rectangle
-					(start 2.54 3.81)
-					(end -2.54 -2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
 					)
 				)
 			)
@@ -346,6 +349,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Mechanical:MountingHole"
 			(pin_names
@@ -428,10 +432,13 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Switch:SW_SPDT"
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -512,7 +519,7 @@
 					)
 				)
 				(circle
-					(center 2.032 -2.54)
+					(center 2.032 2.54)
 					(radius 0.4572)
 					(stroke
 						(width 0)
@@ -523,7 +530,7 @@
 					)
 				)
 				(circle
-					(center 2.032 2.54)
+					(center 2.032 -2.54)
 					(radius 0.4572)
 					(stroke
 						(width 0)
@@ -547,24 +554,6 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 2.54 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
 					(at -5.08 0 0)
 					(length 2.54)
 					(name "B"
@@ -575,6 +564,24 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -601,12 +608,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -697,24 +709,14 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
-	)
-	(no_connect
-		(at 72.39 107.95)
-		(uuid "4053aab4-207d-44f4-bb3d-7207e37cebbf")
-	)
-	(no_connect
-		(at 99.06 66.04)
-		(uuid "4bed0602-5d75-4cff-bba7-6390855af951")
-	)
-	(no_connect
-		(at 45.72 66.04)
-		(uuid "71259c9f-822b-44cb-a1d1-31aa3d645ccc")
 	)
 	(text_box "Two audio jacks and two BNC connectors, connected together pairwise.\nNote input switch is *not* grounded, since not all may be in use.\n\nMainly two use cases:\n\n (a) Signal generator to BNC connector, audio jack to pedal\n      - switch closed, other BNC connector to oscilloscope as reference\n\n (b) guitar or pedal input on audio connector, BNC connected to oscilloscope\n       - switch closed, audio jack connecting to (other) pedal input\n\n (c) Signal generator in on BNC, audio jack to pedal\n       - switch open\n       - pedal output signal in on the other jack, BNC out to oscilloscope\n\nYes, it's simplistic, but I've wanted this several times."
 		(exclude_from_sim no)
 		(at 13.97 13.97 0)
 		(size 113.665 120.015)
+		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
 			(width 0)
 			(type default)
@@ -729,6 +731,18 @@
 			(justify left top)
 		)
 		(uuid "4aeac954-14ac-4908-8ef1-502eeb93440f")
+	)
+	(no_connect
+		(at 72.39 107.95)
+		(uuid "4053aab4-207d-44f4-bb3d-7207e37cebbf")
+	)
+	(no_connect
+		(at 99.06 66.04)
+		(uuid "4bed0602-5d75-4cff-bba7-6390855af951")
+	)
+	(no_connect
+		(at 45.72 66.04)
+		(uuid "71259c9f-822b-44cb-a1d1-31aa3d645ccc")
 	)
 	(global_label "SIG2"
 		(shape input)
@@ -936,7 +950,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "051e42b5-52e0-4c1e-a2b6-256422363521")
-		(property "Reference" "#PWR1"
+		(property "Reference" "#PWR01"
 			(at 40.64 80.01 0)
 			(effects
 				(font
@@ -986,7 +1000,7 @@
 		(instances
 			(project ""
 				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
-					(reference "#PWR1")
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -1190,7 +1204,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4a5953a6-f782-4300-8bc9-1e9d2750b1f8")
-		(property "Reference" "#PWR4"
+		(property "Reference" "#PWR04"
 			(at 93.98 97.79 0)
 			(effects
 				(font
@@ -1240,7 +1254,7 @@
 		(instances
 			(project "Connector"
 				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
-					(reference "#PWR4")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -1320,7 +1334,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6c8ae21a-ebf7-4b1b-99cb-32186de5d271")
-		(property "Reference" "#PWR3"
+		(property "Reference" "#PWR03"
 			(at 41.91 97.79 0)
 			(effects
 				(font
@@ -1370,7 +1384,7 @@
 		(instances
 			(project "Connector"
 				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
-					(reference "#PWR3")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -1591,7 +1605,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8a9e2b87-cdd2-4d74-90e4-2488c80c2930")
-		(property "Reference" "#PWR2"
+		(property "Reference" "#PWR02"
 			(at 93.98 80.01 0)
 			(effects
 				(font
@@ -1641,7 +1655,7 @@
 		(instances
 			(project ""
 				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
-					(reference "#PWR2")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -1974,4 +1988,5 @@
 			(page "1")
 		)
 	)
+	(embedded_fonts no)
 )
