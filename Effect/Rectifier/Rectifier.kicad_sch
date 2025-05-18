@@ -3393,28 +3393,6 @@
 			)
 		)
 	)
-	(global_label "+V"
-		(shape input)
-		(at 110.49 128.27 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "2025590b-93df-4fe1-9ef5-63e94428e355")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 110.49 122.6238 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "OUT"
 		(shape input)
 		(at 167.64 135.89 0)
@@ -5605,76 +5583,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 110.49 132.08 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "574f11d8-c0d9-41eb-b1f5-9a3ec9da5bdc")
-		(property "Reference" "C7"
-			(at 114.3 130.8099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0.1uF"
-			(at 114.3 133.3499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Mylib:C_0704_1810Metric"
-			(at 111.4552 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 110.49 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 110.49 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "02b00103-a2f6-4384-9997-60ecb6361504")
-		)
-		(pin "2"
-			(uuid "3d0186e3-4855-4096-8f88-6122fa2cc9a0")
-		)
-		(instances
-			(project "Rectifier"
-				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
-					(reference "C7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 198.12 115.57 0)
 		(unit 1)
@@ -6490,7 +6398,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm"
+		(property "Footprint" "Package_SO:TSSOP-14_4.4x5mm_P0.65mm"
 			(at 90.17 122.936 0)
 			(effects
 				(font
@@ -6820,7 +6728,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm"
+		(property "Footprint" "Package_SO:TSSOP-14_4.4x5mm_P0.65mm"
 			(at 198.12 70.866 0)
 			(effects
 				(font
@@ -6887,46 +6795,46 @@
 			)
 		)
 		(pin "10"
-			(uuid "84fe89ce-534b-4b69-8138-5b3e56c4b20f")
+			(uuid "84fe89ce-534b-4b69-8138-5b3e56c4b210")
 		)
 		(pin "1"
-			(uuid "c3e5d8fc-0267-4d80-a2cb-7b23b6a526ee")
+			(uuid "c3e5d8fc-0267-4d80-a2cb-7b23b6a526ef")
 		)
 		(pin "12"
-			(uuid "bfb36069-59fc-4576-9b63-215869db7446")
+			(uuid "bfb36069-59fc-4576-9b63-215869db7447")
 		)
 		(pin "6"
-			(uuid "4919bbe9-8f59-43c0-9093-ccb19389b925")
+			(uuid "4919bbe9-8f59-43c0-9093-ccb19389b926")
 		)
 		(pin "5"
-			(uuid "d3a8d20f-7176-44de-92ce-adf67cc51eb5")
+			(uuid "d3a8d20f-7176-44de-92ce-adf67cc51eb6")
 		)
 		(pin "14"
-			(uuid "df6a5c3d-a4a3-4e2d-b331-c3361b639848")
+			(uuid "df6a5c3d-a4a3-4e2d-b331-c3361b639849")
 		)
 		(pin "7"
-			(uuid "968a26c9-6d22-4a1a-804b-c953f598b2d4")
+			(uuid "968a26c9-6d22-4a1a-804b-c953f598b2d5")
 		)
 		(pin "13"
-			(uuid "f4765dad-1909-4d72-8ce0-65b8586c192c")
+			(uuid "f4765dad-1909-4d72-8ce0-65b8586c192d")
 		)
 		(pin "2"
-			(uuid "317e62cb-91e6-4494-9ad4-345e4705fe88")
+			(uuid "317e62cb-91e6-4494-9ad4-345e4705fe89")
 		)
 		(pin "11"
-			(uuid "7472795f-c8c9-4940-8812-d6fd7bd08244")
+			(uuid "7472795f-c8c9-4940-8812-d6fd7bd08245")
 		)
 		(pin "4"
-			(uuid "e00632df-e333-495f-9444-c4b16728fd89")
+			(uuid "e00632df-e333-495f-9444-c4b16728fd8a")
 		)
 		(pin "8"
-			(uuid "83ee3a86-7391-467d-8389-7ff3c2c51c30")
+			(uuid "83ee3a86-7391-467d-8389-7ff3c2c51c31")
 		)
 		(pin "3"
-			(uuid "eebc631f-1cd2-45a9-9bf5-75cca0ef20af")
+			(uuid "eebc631f-1cd2-45a9-9bf5-75cca0ef20b0")
 		)
 		(pin "9"
-			(uuid "e2270628-bbe1-4285-b75e-a6a0983d952b")
+			(uuid "e2270628-bbe1-4285-b75e-a6a0983d952c")
 		)
 		(instances
 			(project ""
@@ -7072,7 +6980,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm"
+		(property "Footprint" "Package_SO:TSSOP-14_4.4x5mm_P0.65mm"
 			(at 35.56 65.786 0)
 			(effects
 				(font
@@ -7139,46 +7047,46 @@
 			)
 		)
 		(pin "10"
-			(uuid "84fe89ce-534b-4b69-8138-5b3e56c4b20f")
+			(uuid "84fe89ce-534b-4b69-8138-5b3e56c4b211")
 		)
 		(pin "1"
-			(uuid "c3e5d8fc-0267-4d80-a2cb-7b23b6a526ee")
+			(uuid "c3e5d8fc-0267-4d80-a2cb-7b23b6a526f0")
 		)
 		(pin "12"
-			(uuid "bfb36069-59fc-4576-9b63-215869db7446")
+			(uuid "bfb36069-59fc-4576-9b63-215869db7448")
 		)
 		(pin "6"
-			(uuid "4919bbe9-8f59-43c0-9093-ccb19389b925")
+			(uuid "4919bbe9-8f59-43c0-9093-ccb19389b927")
 		)
 		(pin "5"
-			(uuid "d3a8d20f-7176-44de-92ce-adf67cc51eb5")
+			(uuid "d3a8d20f-7176-44de-92ce-adf67cc51eb7")
 		)
 		(pin "14"
-			(uuid "df6a5c3d-a4a3-4e2d-b331-c3361b639848")
+			(uuid "df6a5c3d-a4a3-4e2d-b331-c3361b63984a")
 		)
 		(pin "7"
-			(uuid "968a26c9-6d22-4a1a-804b-c953f598b2d4")
+			(uuid "968a26c9-6d22-4a1a-804b-c953f598b2d6")
 		)
 		(pin "13"
-			(uuid "f4765dad-1909-4d72-8ce0-65b8586c192c")
+			(uuid "f4765dad-1909-4d72-8ce0-65b8586c192e")
 		)
 		(pin "2"
-			(uuid "317e62cb-91e6-4494-9ad4-345e4705fe88")
+			(uuid "317e62cb-91e6-4494-9ad4-345e4705fe8a")
 		)
 		(pin "11"
-			(uuid "7472795f-c8c9-4940-8812-d6fd7bd08244")
+			(uuid "7472795f-c8c9-4940-8812-d6fd7bd08246")
 		)
 		(pin "4"
-			(uuid "e00632df-e333-495f-9444-c4b16728fd89")
+			(uuid "e00632df-e333-495f-9444-c4b16728fd8b")
 		)
 		(pin "8"
-			(uuid "83ee3a86-7391-467d-8389-7ff3c2c51c30")
+			(uuid "83ee3a86-7391-467d-8389-7ff3c2c51c32")
 		)
 		(pin "3"
-			(uuid "eebc631f-1cd2-45a9-9bf5-75cca0ef20af")
+			(uuid "eebc631f-1cd2-45a9-9bf5-75cca0ef20b1")
 		)
 		(pin "9"
-			(uuid "e2270628-bbe1-4285-b75e-a6a0983d952b")
+			(uuid "e2270628-bbe1-4285-b75e-a6a0983d952d")
 		)
 		(instances
 			(project ""
@@ -8166,7 +8074,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm"
+		(property "Footprint" "Package_SO:TSSOP-14_4.4x5mm_P0.65mm"
 			(at 101.6 68.326 0)
 			(effects
 				(font
@@ -8233,46 +8141,46 @@
 			)
 		)
 		(pin "10"
-			(uuid "84fe89ce-534b-4b69-8138-5b3e56c4b20f")
+			(uuid "84fe89ce-534b-4b69-8138-5b3e56c4b212")
 		)
 		(pin "1"
-			(uuid "c3e5d8fc-0267-4d80-a2cb-7b23b6a526ee")
+			(uuid "c3e5d8fc-0267-4d80-a2cb-7b23b6a526f1")
 		)
 		(pin "12"
-			(uuid "bfb36069-59fc-4576-9b63-215869db7446")
+			(uuid "bfb36069-59fc-4576-9b63-215869db7449")
 		)
 		(pin "6"
-			(uuid "4919bbe9-8f59-43c0-9093-ccb19389b925")
+			(uuid "4919bbe9-8f59-43c0-9093-ccb19389b928")
 		)
 		(pin "5"
-			(uuid "d3a8d20f-7176-44de-92ce-adf67cc51eb5")
+			(uuid "d3a8d20f-7176-44de-92ce-adf67cc51eb8")
 		)
 		(pin "14"
-			(uuid "df6a5c3d-a4a3-4e2d-b331-c3361b639848")
+			(uuid "df6a5c3d-a4a3-4e2d-b331-c3361b63984b")
 		)
 		(pin "7"
-			(uuid "968a26c9-6d22-4a1a-804b-c953f598b2d4")
+			(uuid "968a26c9-6d22-4a1a-804b-c953f598b2d7")
 		)
 		(pin "13"
-			(uuid "f4765dad-1909-4d72-8ce0-65b8586c192c")
+			(uuid "f4765dad-1909-4d72-8ce0-65b8586c192f")
 		)
 		(pin "2"
-			(uuid "317e62cb-91e6-4494-9ad4-345e4705fe88")
+			(uuid "317e62cb-91e6-4494-9ad4-345e4705fe8b")
 		)
 		(pin "11"
-			(uuid "7472795f-c8c9-4940-8812-d6fd7bd08244")
+			(uuid "7472795f-c8c9-4940-8812-d6fd7bd08247")
 		)
 		(pin "4"
-			(uuid "e00632df-e333-495f-9444-c4b16728fd89")
+			(uuid "e00632df-e333-495f-9444-c4b16728fd8c")
 		)
 		(pin "8"
-			(uuid "83ee3a86-7391-467d-8389-7ff3c2c51c30")
+			(uuid "83ee3a86-7391-467d-8389-7ff3c2c51c33")
 		)
 		(pin "3"
-			(uuid "eebc631f-1cd2-45a9-9bf5-75cca0ef20af")
+			(uuid "eebc631f-1cd2-45a9-9bf5-75cca0ef20b2")
 		)
 		(pin "9"
-			(uuid "e2270628-bbe1-4285-b75e-a6a0983d952b")
+			(uuid "e2270628-bbe1-4285-b75e-a6a0983d952e")
 		)
 		(instances
 			(project ""
@@ -9242,72 +9150,6 @@
 			(project "Rectifier"
 				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
 					(reference "V2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 110.49 135.89 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "dce14298-74ca-4eaf-92e7-bbf35a5a10e6")
-		(property "Reference" "#PWR017"
-			(at 110.49 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 110.49 140.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 110.49 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 110.49 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 110.49 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2255f83f-301e-41af-900c-3184288aac0b")
-		)
-		(instances
-			(project "Rectifier"
-				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
-					(reference "#PWR017")
 					(unit 1)
 				)
 			)
