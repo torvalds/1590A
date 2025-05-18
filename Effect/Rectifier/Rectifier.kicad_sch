@@ -1198,7 +1198,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Mylib:OPA1656"
+		(symbol "Mylib:OPA1664"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1210,7 +1210,7 @@
 					)
 				)
 			)
-			(property "Value" "OPA1656"
+			(property "Value" "OPA1664"
 				(at 2.54 11.43 0)
 				(effects
 					(font
@@ -1219,7 +1219,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+			(property "Footprint" "Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm"
 				(at 2.54 -8.636 0)
 				(effects
 					(font
@@ -1229,7 +1229,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://ti.com/lit/ds/symlink/opa1655.pdf"
+			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/opa1664.pdf"
 				(at 2.54 -11.176 0)
 				(effects
 					(font
@@ -1239,7 +1239,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Dual audio op-amp"
+			(property "Description" "Quad audio op-amp"
 				(at 2.54 8.89 0)
 				(effects
 					(font
@@ -1249,7 +1249,7 @@
 					(hide yes)
 				)
 			)
-			(property "Sim.Library" "${KIPRJMOD}/../../symbols/dual1656.lib"
+			(property "Sim.Library" "${KIPRJMOD}/../../symbols/opa1664.lib"
 				(at 0 -17.78 0)
 				(effects
 					(font
@@ -1258,7 +1258,7 @@
 					(hide yes)
 				)
 			)
-			(property "Sim.Name" "DUAL1656"
+			(property "Sim.Name" "OPA1664"
 				(at 0 -25.4 0)
 				(effects
 					(font
@@ -1276,7 +1276,7 @@
 					(hide yes)
 				)
 			)
-			(property "Sim.Pins" "1=OUTA 2=INA- 3=INA+ 4=V- 5=INB+ 6=INB- 7=OUTB 8=V+"
+			(property "Sim.Pins" "1=OUTA 2=INA- 3=INA+ 4=V+ 5=INB+ 6=INB- 7=OUTB 8=OUTC 0=INC- 10=INC+ 11=V- 12=IND+ 13=IND- 14=OUTD"
 				(at 0 -20.32 0)
 				(effects
 					(font
@@ -1285,7 +1285,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "Ultra-Low-Noise, Low-Distortion, FET-Input, Burr-Brown Audio Operational Amplifier"
+			(property "ki_keywords" "Low-Power, Low-Noise-and-Distortion, Bipolar-Input SoundPlus Audio Operational Amplifiers"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1294,7 +1294,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "OPA1656_0_1"
+			(symbol "OPA1664_0_1"
 				(polyline
 					(pts
 						(xy -2.54 5.08) (xy 7.62 0) (xy -2.54 -5.08) (xy -2.54 5.08)
@@ -1308,7 +1308,7 @@
 					)
 				)
 			)
-			(symbol "OPA1656_1_1"
+			(symbol "OPA1664_1_1"
 				(pin input line
 					(at -5.08 2.54 0)
 					(length 2.54)
@@ -1355,7 +1355,7 @@
 							)
 						)
 					)
-					(number "8"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1373,7 +1373,7 @@
 							)
 						)
 					)
-					(number "4"
+					(number "11"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1400,7 +1400,7 @@
 					)
 				)
 			)
-			(symbol "OPA1656_2_1"
+			(symbol "OPA1664_2_1"
 				(pin input line
 					(at -5.08 2.54 0)
 					(length 2.54)
@@ -1448,6 +1448,118 @@
 						)
 					)
 					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "OPA1664_3_1"
+				(pin input line
+					(at -5.08 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "OUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "OPA1664_4_1"
+				(pin input line
+					(at -5.08 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "OUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2427,7 +2539,7 @@
 		(at 97.79 114.3)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "d9f1c2ed-895c-4f6b-ac5e-0bc013cc02f1")
+		(uuid "c2be704a-912a-4fc2-b4e5-ba04f8ce9d03")
 	)
 	(junction
 		(at 255.27 143.51)
@@ -3567,28 +3679,6 @@
 			)
 		)
 	)
-	(global_label "+V"
-		(shape input)
-		(at 87.63 106.68 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "dbb6ae33-2c71-4c2a-8b45-217f2c0ba7ff")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 87.63 101.0338 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "IN"
 		(shape input)
 		(at 248.92 102.87 90)
@@ -4424,131 +4514,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Mylib:OPA1656")
-		(at 195.58 62.23 0)
-		(unit 2)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1510daca-6230-48dc-90de-df9bc3d67e04")
-		(property "Reference" "U2"
-			(at 198.12 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "OPA1656"
-			(at 198.12 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-			(at 198.12 70.866 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://ti.com/lit/ds/symlink/opa1655.pdf"
-			(at 198.12 73.406 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "Dual audio op-amp"
-			(at 198.12 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" "${KIPRJMOD}/../../symbols/dual1656.lib"
-			(at 195.58 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" "DUAL1656"
-			(at 195.58 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 195.58 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=OUTA 2=INA- 3=INA+ 4=V- 5=INB+ 6=INB- 7=OUTB 8=V+"
-			(at 195.58 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "29582dbc-e0e9-4179-ab32-1961dc79b580")
-		)
-		(pin "4"
-			(uuid "6616dbd3-5cfd-49db-84cb-c8bbdcdba80c")
-		)
-		(pin "8"
-			(uuid "d88ba6cd-4377-4974-8f2b-37cd47116536")
-		)
-		(pin "5"
-			(uuid "8c69f52e-9e40-40bb-b2a6-1f741cc704ef")
-		)
-		(pin "6"
-			(uuid "98f6aa88-261e-4964-a320-8f96e97e8b80")
-		)
-		(pin "1"
-			(uuid "a6d28fbc-2619-4237-b35d-f795deca5085")
-		)
-		(pin "7"
-			(uuid "75281c4e-faec-4f1d-ba83-944b98b953c9")
-		)
-		(pin "2"
-			(uuid "f0d5f125-fa98-4d89-9ec6-249e4e985d54")
-		)
-		(instances
-			(project ""
-				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
-					(reference "U2")
-					(unit 2)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GNDREF")
 		(at 179.07 134.62 0)
 		(unit 1)
@@ -5359,130 +5324,6 @@
 				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
 					(reference "R4")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mylib:OPA1656")
-		(at 99.06 59.69 0)
-		(unit 2)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "3dbf65e4-d5d2-418e-98fc-41f3de2a0700")
-		(property "Reference" "U1"
-			(at 101.346 52.578 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "OPA1656"
-			(at 105.664 55.118 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-			(at 101.6 68.326 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://ti.com/lit/ds/symlink/opa1655.pdf"
-			(at 101.6 70.866 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "Dual audio op-amp"
-			(at 101.6 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" "${KIPRJMOD}/../../symbols/dual1656.lib"
-			(at 99.06 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" "DUAL1656"
-			(at 99.06 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 99.06 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=OUTA 2=INA- 3=INA+ 4=V- 5=INB+ 6=INB- 7=OUTB 8=V+"
-			(at 99.06 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "8"
-			(uuid "96d2c65c-30a0-47f6-beef-f34d6bb1cd64")
-		)
-		(pin "5"
-			(uuid "e6653b7d-54a5-4552-988b-73b224a56e9f")
-		)
-		(pin "3"
-			(uuid "94ed95d2-e43b-4cb0-b3d9-ab1738cec446")
-		)
-		(pin "4"
-			(uuid "0c0df9e0-6541-45a7-8fa4-22450e087fdf")
-		)
-		(pin "2"
-			(uuid "f3e5c881-82d2-4838-93c2-c4afffb3d96f")
-		)
-		(pin "7"
-			(uuid "d1b93766-beeb-4834-bcad-72ef62c5702a")
-		)
-		(pin "1"
-			(uuid "7d4e4d20-3b24-48ac-928c-c7390333e51a")
-		)
-		(pin "6"
-			(uuid "48ba443c-4bad-4052-bb6d-27bc3b2db5b7")
-		)
-		(instances
-			(project "Rectifier"
-				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
-					(reference "U1")
-					(unit 2)
 				)
 			)
 		)
@@ -6624,6 +6465,149 @@
 		)
 	)
 	(symbol
+		(lib_id "Mylib:OPA1664")
+		(at 87.63 114.3 0)
+		(unit 4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7b7555e3-bbf1-4026-8aa7-7c6bead358aa")
+		(property "Reference" "U1"
+			(at 90.17 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "OPA1664"
+			(at 90.17 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm"
+			(at 90.17 122.936 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/opa1664.pdf"
+			(at 90.17 125.476 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "Quad audio op-amp"
+			(at 90.17 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "${KIPRJMOD}/../../symbols/opa1664.lib"
+			(at 87.63 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "OPA1664"
+			(at 87.63 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 87.63 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=OUTA 2=INA- 3=INA+ 4=V+ 5=INB+ 6=INB- 7=OUTB 8=OUTC 9=INC- 10=INC+ 11=V- 12=IND+ 13=IND- 14=OUTD"
+			(at 87.63 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "10"
+			(uuid "84fe89ce-534b-4b69-8138-5b3e56c4b20f")
+		)
+		(pin "1"
+			(uuid "c3e5d8fc-0267-4d80-a2cb-7b23b6a526ee")
+		)
+		(pin "12"
+			(uuid "bfb36069-59fc-4576-9b63-215869db7446")
+		)
+		(pin "6"
+			(uuid "4919bbe9-8f59-43c0-9093-ccb19389b925")
+		)
+		(pin "5"
+			(uuid "d3a8d20f-7176-44de-92ce-adf67cc51eb5")
+		)
+		(pin "14"
+			(uuid "df6a5c3d-a4a3-4e2d-b331-c3361b639848")
+		)
+		(pin "7"
+			(uuid "968a26c9-6d22-4a1a-804b-c953f598b2d4")
+		)
+		(pin "13"
+			(uuid "f4765dad-1909-4d72-8ce0-65b8586c192c")
+		)
+		(pin "2"
+			(uuid "317e62cb-91e6-4494-9ad4-345e4705fe88")
+		)
+		(pin "11"
+			(uuid "7472795f-c8c9-4940-8812-d6fd7bd08244")
+		)
+		(pin "4"
+			(uuid "e00632df-e333-495f-9444-c4b16728fd89")
+		)
+		(pin "8"
+			(uuid "83ee3a86-7391-467d-8389-7ff3c2c51c30")
+		)
+		(pin "3"
+			(uuid "eebc631f-1cd2-45a9-9bf5-75cca0ef20af")
+		)
+		(pin "9"
+			(uuid "e2270628-bbe1-4285-b75e-a6a0983d952b")
+		)
+		(instances
+			(project ""
+				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
+					(reference "U1")
+					(unit 4)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 198.12 111.76 0)
 		(unit 1)
@@ -6811,6 +6795,149 @@
 		)
 	)
 	(symbol
+		(lib_id "Mylib:OPA1664")
+		(at 195.58 62.23 0)
+		(unit 3)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "806efad0-9b05-4344-a43b-bdb9e09b1ceb")
+		(property "Reference" "U1"
+			(at 198.12 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "OPA1664"
+			(at 198.12 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm"
+			(at 198.12 70.866 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/opa1664.pdf"
+			(at 198.12 73.406 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "Quad audio op-amp"
+			(at 198.12 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "${KIPRJMOD}/../../symbols/opa1664.lib"
+			(at 195.58 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "OPA1664"
+			(at 195.58 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 195.58 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=OUTA 2=INA- 3=INA+ 4=V+ 5=INB+ 6=INB- 7=OUTB 8=OUTC 9=INC- 10=INC+ 11=V- 12=IND+ 13=IND- 14=OUTD"
+			(at 195.58 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "10"
+			(uuid "84fe89ce-534b-4b69-8138-5b3e56c4b20f")
+		)
+		(pin "1"
+			(uuid "c3e5d8fc-0267-4d80-a2cb-7b23b6a526ee")
+		)
+		(pin "12"
+			(uuid "bfb36069-59fc-4576-9b63-215869db7446")
+		)
+		(pin "6"
+			(uuid "4919bbe9-8f59-43c0-9093-ccb19389b925")
+		)
+		(pin "5"
+			(uuid "d3a8d20f-7176-44de-92ce-adf67cc51eb5")
+		)
+		(pin "14"
+			(uuid "df6a5c3d-a4a3-4e2d-b331-c3361b639848")
+		)
+		(pin "7"
+			(uuid "968a26c9-6d22-4a1a-804b-c953f598b2d4")
+		)
+		(pin "13"
+			(uuid "f4765dad-1909-4d72-8ce0-65b8586c192c")
+		)
+		(pin "2"
+			(uuid "317e62cb-91e6-4494-9ad4-345e4705fe88")
+		)
+		(pin "11"
+			(uuid "7472795f-c8c9-4940-8812-d6fd7bd08244")
+		)
+		(pin "4"
+			(uuid "e00632df-e333-495f-9444-c4b16728fd89")
+		)
+		(pin "8"
+			(uuid "83ee3a86-7391-467d-8389-7ff3c2c51c30")
+		)
+		(pin "3"
+			(uuid "eebc631f-1cd2-45a9-9bf5-75cca0ef20af")
+		)
+		(pin "9"
+			(uuid "e2270628-bbe1-4285-b75e-a6a0983d952b")
+		)
+		(instances
+			(project ""
+				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
+					(reference "U1")
+					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Potentiometer_MountingPin")
 		(at 165.1 59.69 90)
 		(unit 1)
@@ -6914,6 +7041,149 @@
 			(project ""
 				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
 					(reference "RV1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mylib:OPA1664")
+		(at 33.02 57.15 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "87621520-af64-473e-8acf-71830e5f7820")
+		(property "Reference" "U1"
+			(at 46.99 50.7298 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "OPA1664"
+			(at 46.99 53.2698 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm"
+			(at 35.56 65.786 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/opa1664.pdf"
+			(at 35.56 68.326 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "Quad audio op-amp"
+			(at 35.56 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "${KIPRJMOD}/../../symbols/opa1664.lib"
+			(at 33.02 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "OPA1664"
+			(at 33.02 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 33.02 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=OUTA 2=INA- 3=INA+ 4=V+ 5=INB+ 6=INB- 7=OUTB 8=OUTC 9=INC- 10=INC+ 11=V- 12=IND+ 13=IND- 14=OUTD"
+			(at 33.02 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "10"
+			(uuid "84fe89ce-534b-4b69-8138-5b3e56c4b20f")
+		)
+		(pin "1"
+			(uuid "c3e5d8fc-0267-4d80-a2cb-7b23b6a526ee")
+		)
+		(pin "12"
+			(uuid "bfb36069-59fc-4576-9b63-215869db7446")
+		)
+		(pin "6"
+			(uuid "4919bbe9-8f59-43c0-9093-ccb19389b925")
+		)
+		(pin "5"
+			(uuid "d3a8d20f-7176-44de-92ce-adf67cc51eb5")
+		)
+		(pin "14"
+			(uuid "df6a5c3d-a4a3-4e2d-b331-c3361b639848")
+		)
+		(pin "7"
+			(uuid "968a26c9-6d22-4a1a-804b-c953f598b2d4")
+		)
+		(pin "13"
+			(uuid "f4765dad-1909-4d72-8ce0-65b8586c192c")
+		)
+		(pin "2"
+			(uuid "317e62cb-91e6-4494-9ad4-345e4705fe88")
+		)
+		(pin "11"
+			(uuid "7472795f-c8c9-4940-8812-d6fd7bd08244")
+		)
+		(pin "4"
+			(uuid "e00632df-e333-495f-9444-c4b16728fd89")
+		)
+		(pin "8"
+			(uuid "83ee3a86-7391-467d-8389-7ff3c2c51c30")
+		)
+		(pin "3"
+			(uuid "eebc631f-1cd2-45a9-9bf5-75cca0ef20af")
+		)
+		(pin "9"
+			(uuid "e2270628-bbe1-4285-b75e-a6a0983d952b")
+		)
+		(instances
+			(project ""
+				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -7592,131 +7862,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Mylib:OPA1656")
-		(at 87.63 114.3 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "99dbc385-7d9a-4b73-9dba-c6243fc8112b")
-		(property "Reference" "U2"
-			(at 101.6 107.9814 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "OPA1656"
-			(at 101.6 110.5214 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-			(at 90.17 122.936 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://ti.com/lit/ds/symlink/opa1655.pdf"
-			(at 90.17 125.476 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "Dual audio op-amp"
-			(at 90.17 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" "${KIPRJMOD}/../../symbols/dual1656.lib"
-			(at 87.63 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" "DUAL1656"
-			(at 87.63 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 87.63 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=OUTA 2=INA- 3=INA+ 4=V- 5=INB+ 6=INB- 7=OUTB 8=V+"
-			(at 87.63 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "29582dbc-e0e9-4179-ab32-1961dc79b581")
-		)
-		(pin "4"
-			(uuid "6616dbd3-5cfd-49db-84cb-c8bbdcdba80d")
-		)
-		(pin "8"
-			(uuid "d88ba6cd-4377-4974-8f2b-37cd47116537")
-		)
-		(pin "5"
-			(uuid "8c69f52e-9e40-40bb-b2a6-1f741cc704f0")
-		)
-		(pin "6"
-			(uuid "98f6aa88-261e-4964-a320-8f96e97e8b81")
-		)
-		(pin "1"
-			(uuid "a6d28fbc-2619-4237-b35d-f795deca5086")
-		)
-		(pin "7"
-			(uuid "75281c4e-faec-4f1d-ba83-944b98b953ca")
-		)
-		(pin "2"
-			(uuid "f0d5f125-fa98-4d89-9ec6-249e4e985d55")
-		)
-		(instances
-			(project ""
-				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
-					(reference "U2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Simulation_SPICE:VDC")
 		(at 255.27 138.43 0)
 		(unit 1)
@@ -7991,6 +8136,149 @@
 				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
 					(reference "Box1")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mylib:OPA1664")
+		(at 99.06 59.69 0)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a3ef64f5-a6cb-424b-8ac9-09a7483d9d6b")
+		(property "Reference" "U1"
+			(at 101.6 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "OPA1664"
+			(at 101.6 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:TSSOP-14-1EP_4.4x5mm_P0.65mm"
+			(at 101.6 68.326 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/opa1664.pdf"
+			(at 101.6 70.866 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "Quad audio op-amp"
+			(at 101.6 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "${KIPRJMOD}/../../symbols/opa1664.lib"
+			(at 99.06 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "OPA1664"
+			(at 99.06 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 99.06 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=OUTA 2=INA- 3=INA+ 4=V+ 5=INB+ 6=INB- 7=OUTB 8=OUTC 9=INC- 10=INC+ 11=V- 12=IND+ 13=IND- 14=OUTD"
+			(at 99.06 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "10"
+			(uuid "84fe89ce-534b-4b69-8138-5b3e56c4b20f")
+		)
+		(pin "1"
+			(uuid "c3e5d8fc-0267-4d80-a2cb-7b23b6a526ee")
+		)
+		(pin "12"
+			(uuid "bfb36069-59fc-4576-9b63-215869db7446")
+		)
+		(pin "6"
+			(uuid "4919bbe9-8f59-43c0-9093-ccb19389b925")
+		)
+		(pin "5"
+			(uuid "d3a8d20f-7176-44de-92ce-adf67cc51eb5")
+		)
+		(pin "14"
+			(uuid "df6a5c3d-a4a3-4e2d-b331-c3361b639848")
+		)
+		(pin "7"
+			(uuid "968a26c9-6d22-4a1a-804b-c953f598b2d4")
+		)
+		(pin "13"
+			(uuid "f4765dad-1909-4d72-8ce0-65b8586c192c")
+		)
+		(pin "2"
+			(uuid "317e62cb-91e6-4494-9ad4-345e4705fe88")
+		)
+		(pin "11"
+			(uuid "7472795f-c8c9-4940-8812-d6fd7bd08244")
+		)
+		(pin "4"
+			(uuid "e00632df-e333-495f-9444-c4b16728fd89")
+		)
+		(pin "8"
+			(uuid "83ee3a86-7391-467d-8389-7ff3c2c51c30")
+		)
+		(pin "3"
+			(uuid "eebc631f-1cd2-45a9-9bf5-75cca0ef20af")
+		)
+		(pin "9"
+			(uuid "e2270628-bbe1-4285-b75e-a6a0983d952b")
+		)
+		(instances
+			(project ""
+				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
+					(reference "U1")
+					(unit 2)
 				)
 			)
 		)
@@ -9026,130 +9314,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Mylib:OPA1656")
-		(at 33.02 57.15 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "dceb3446-7710-4c0c-90ca-d43e19d3ca5d")
-		(property "Reference" "U1"
-			(at 37.846 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "OPA1656"
-			(at 42.418 52.832 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-			(at 35.56 65.786 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://ti.com/lit/ds/symlink/opa1655.pdf"
-			(at 35.56 68.326 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "Dual audio op-amp"
-			(at 35.56 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" "${KIPRJMOD}/../../symbols/dual1656.lib"
-			(at 33.02 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" "DUAL1656"
-			(at 33.02 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 33.02 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=OUTA 2=INA- 3=INA+ 4=V- 5=INB+ 6=INB- 7=OUTB 8=V+"
-			(at 33.02 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "8"
-			(uuid "aa7a02e7-316d-4202-bf5f-32247c84ade6")
-		)
-		(pin "5"
-			(uuid "c2b07002-bb53-4762-80dd-04920e61abd3")
-		)
-		(pin "3"
-			(uuid "4569eecc-3895-414e-8d28-de7cc29b6df9")
-		)
-		(pin "4"
-			(uuid "531fc62b-296c-4727-9ba1-4097cb0e465e")
-		)
-		(pin "2"
-			(uuid "37bb21e0-8d04-49a0-840c-eab22598238f")
-		)
-		(pin "7"
-			(uuid "c1b2fd2a-7194-457a-85c6-b366f463f543")
-		)
-		(pin "1"
-			(uuid "6d88b3e2-47a2-4194-b700-bf2aa5182f5a")
-		)
-		(pin "6"
-			(uuid "638edfde-7f00-4218-999c-0ea3174f6224")
-		)
-		(instances
-			(project "Rectifier"
-				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
-					(reference "U1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Simulation_SPICE:VSIN")
 		(at 238.76 91.44 0)
 		(unit 1)
@@ -9251,72 +9415,6 @@
 			(project "Rectifier"
 				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
 					(reference "V6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 87.63 121.92 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ef7f4682-2453-40b9-8ef1-7d9e23020df8")
-		(property "Reference" "#PWR012"
-			(at 87.63 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 87.63 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 87.63 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 87.63 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 87.63 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "116cd177-ee00-4e70-b198-5f49f3d3d757")
-		)
-		(instances
-			(project "Rectifier"
-				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
-					(reference "#PWR012")
 					(unit 1)
 				)
 			)
