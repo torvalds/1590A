@@ -14,6 +14,9 @@
 
 $fn = 100;
 
+// Corner locations
+corners = [[-40,-15],[-40,15],[40,-15],[40,15]];
+
 // 3mm hole board locations
 holes = [[-35,+10], [+35,+10], [-20,-7.5], [+20,-7.5]];
 
@@ -22,17 +25,6 @@ module board_2d()
     minkowski() {
         square([80,30], center=true);
         circle(r=1);
-    }
-}
-
-module lip_2d()
-{
-    difference() {
-        minkowski() {
-            square([81,31], center=true);
-            circle(r=1);
-        }
-        board_2d();
     }
 }
 
@@ -66,7 +58,7 @@ module usbc_jack()
     translate([20,10,6.6])
         minkowski() {
             cube([8.35,20,2.56], center=true);
-            sphere(r=2);
+            sphere(d=3.8);
         }
 }
 
@@ -84,34 +76,61 @@ module capacitors()
 module mounting_pin(loc)
 {
     translate(loc) {
-        cylinder(h=3.4, d=5);
+        cylinder(h=3.4, d1=12, d2=8);
         translate([0,0,5])
-            cylinder(h=15, d=5);
+            cylinder(h=15, d=8);
     }
 }
 
-module lip()
+module screw()
 {
-    translate([0,0,4])
-        linear_extrude(height=4)
-            lip_2d();
+    // 0: 3 5: 2.9 10: 2.8 15:2.7
+    cylinder(h=15, d1=3, d2=2.7);
+    translate([0,0,-2])
+        cylinder(h=7, d1=8, d2=3);
+}
+
+module corner_clips()
+{
+    translate([0,0,5])
+    for (loc = corners)
+        translate(loc)
+            cylinder(h=15,r=3);
+    translate([0,0,2])
+        linear_extrude(height=3)
+            intersection() {
+                for (loc = corners)
+                    translate(loc)
+                        circle(2);
+                board_2d();
+            }
 }
 
 module cutout()
 {
     // Extrude the board cutout, but not above the DC jacks.
     // We'll separately cut out the DC jacks to keep them
-    // captured for easy soldering inserted in the box
+    // captured for easy soldering inserted in the box.
+    // Also, we don't cut out the mounting pins around holes.
     difference() {
         linear_extrude(height=20)
             board_2d();
         translate([0,-15,20])
             cube([80,15,10], center=true);
+	for (loc = holes)
+            mounting_pin(loc);
     }
+    translate([0,0,3.4])
+        linear_extrude(height=1.6)
+            board_2d();
     dc_jacks();
     usbc_jack();
     capacitors();
-    lip();
+
+    // Add screw holes
+    for (pos = holes)
+        translate(pos)
+            screw();
 }
 
 module box()
@@ -120,8 +139,6 @@ module box()
         exterior();
         cutout();
     }
-    for (pos = holes)
-        mounting_pin(pos);
 }
 
 // Now do it twice for the upper and lower parts, cut off at 5mm
@@ -131,19 +148,7 @@ difference() {
     cube([100,100,10],center=true);
 }
 
-// Add the lip that was removed
-difference() {
-    lip();
-    dc_jacks();
-    usbc_jack();
-}
-
-// Mounting pin through hole
-for (pos = holes)
-    translate(pos)
-        translate([0,0,3.4])
-            cylinder(h=5, d=2.5);
-
+corner_clips();
 
 // Lid
 translate([0, -45, 0]) {
