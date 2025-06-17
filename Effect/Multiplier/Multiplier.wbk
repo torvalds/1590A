@@ -4,7 +4,7 @@
     {
       "analysis": "TRAN",
       "commands": [
-        ".tran 1u 300m 0 10u uic",
+        ".tran 1u 1 0 10u uic",
         ".kicad adjustpaths",
         ".save all",
         ".probe alli",
@@ -25,8 +25,23 @@
       "showGrid": true,
       "traces": [
         {
+          "color": "rgb(255, 127, 0)",
+          "signal": "V(2V)",
+          "trace_type": 257
+        },
+        {
           "color": "rgb(228, 26, 28)",
           "signal": "V(IN)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(152, 78, 163)",
+          "signal": "V(Net-_Q3A-B_)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(55, 126, 184)",
+          "signal": "V(OUT)",
           "trace_type": 257
         },
         {
