@@ -4,7 +4,7 @@
     {
       "analysis": "TRAN",
       "commands": [
-        ".tran 100n 300m 0 10u",
+        ".tran 100n 1 0 10u uic",
         ".kicad adjustpaths",
         ".save all",
         ".probe alli",
@@ -25,6 +25,26 @@
       "showGrid": true,
       "traces": [
         {
+          "color": "rgb(141, 160, 203)",
+          "signal": "I(XQ1:2)",
+          "trace_type": 258
+        },
+        {
+          "color": "rgb(231, 138, 195)",
+          "signal": "I(XQ2:3)",
+          "trace_type": 258
+        },
+        {
+          "color": "rgb(152, 78, 163)",
+          "signal": "I(XU3:INA+)",
+          "trace_type": 258
+        },
+        {
+          "color": "rgb(255, 127, 0)",
+          "signal": "I(XU3:INB+)",
+          "trace_type": 258
+        },
+        {
           "color": "rgb(166, 86, 40)",
           "signal": "V(BUFF)",
           "trace_type": 257
@@ -35,13 +55,8 @@
           "trace_type": 257
         },
         {
-          "color": "rgb(55, 126, 184)",
-          "signal": "V(OUT)",
-          "trace_type": 257
-        },
-        {
-          "color": "rgb(152, 78, 163)",
-          "signal": "V(OUT1)",
+          "color": "rgb(247, 129, 191)",
+          "signal": "V(IN2)",
           "trace_type": 257
         }
       ]
