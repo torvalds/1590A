@@ -5,7 +5,7 @@
 These are not really all that useful, but having done guitar pedal board
 kit builds, I decided I should try to make something from scratch.  I
 don't actually play guitar, but guitar pedal kits were fun to solder,
-and that then turned into "I want to actually understand what they do"..
+and that then turned into "I want to actually understand what they do".
 
 > [!NOTE]
 > I'm not soldering wires together like some kind of animal ---
@@ -73,7 +73,7 @@ anything about".
    favorite one from a learning standpoint.
 
 All of this has been tested and found somewhat working.  And much of it
-has been have been simulated in kicad using ltspice.  Signals have been
+has been simulated in KiCad using LTspice.  Signals have been
 looked at with a signal generator and a scope, and I've made random
 noises on an electric guitar to check that it works that way too.
 
