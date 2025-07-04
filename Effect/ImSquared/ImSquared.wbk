@@ -1,10 +1,11 @@
 {
+  "custom_cursors": 2,
   "last_sch_text_sim_command": "",
   "tabs": [
     {
       "analysis": "TRAN",
       "commands": [
-        ".tran 100n 1 0 10u uic",
+        ".tran 1u 1 0 10u uic",
         ".kicad adjustpaths",
         ".save all",
         ".probe alli",
@@ -45,7 +46,7 @@
           "trace_type": 258
         },
         {
-          "color": "rgb(166, 86, 40)",
+          "color": "rgb(77, 175, 74)",
           "signal": "V(BUFF)",
           "trace_type": 257
         },
@@ -55,13 +56,23 @@
           "trace_type": 257
         },
         {
-          "color": "rgb(247, 129, 191)",
-          "signal": "V(IN2)",
+          "color": "rgb(55, 126, 184)",
+          "signal": "V(OUT)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(255, 5, 224)",
+          "signal": "V(OUT1)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(166, 86, 40)",
+          "signal": "V(OUT2)",
           "trace_type": 257
         }
       ]
     }
   ],
   "user_defined_signals": [],
-  "version": 6
+  "version": 7
 }
