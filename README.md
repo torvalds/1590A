@@ -5,7 +5,7 @@
 These are not at all useful, but having done guitar pedal board kit
 builds, I decided I should try to make something from scratch.  I don't
 actually play guitar, but guitar pedal kits were fun to solder, and that
-then turned into "I want to actually understand what they do"..
+then turned into "I want to actually understand what they do"...
 
 > [!NOTE]
 > I'm not soldering wires together like some kind of animal ---
@@ -108,7 +108,7 @@ The 0.65mm or 0.5mm pitch stuff ends up being just annoying.
 The resistors are all 0805 size, and capacitors are all over the place:
 smaller capacitors in the pF or nF range are 0805, bigger ones are 1206,
 and I ended up with 0.1uF C0G in 0704 because it was a common cap choice
-for both signal re-biasing and for op-amp bypassing, and doign 1206 was
+for both signal re-biasing and for op-amp bypassing, and doing 1206 was
 actually taking up noticeable amounts of board space in some cases.
 
 Electro-mechanical:
