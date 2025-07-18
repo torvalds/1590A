@@ -1393,6 +1393,194 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Switch:SW_SPDT_MSM"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "SW"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SW_SPDT_MSM"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -13.97 11.43 0)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 -7.62 0)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Switch, single pole double throw, center OFF position"
+				(at 0 0 0)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "switch spdt single-pole double-throw ON-OFF-ON"
+				(at 0 0 0)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SW_SPDT_MSM_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.651 0.254) (xy 1.651 2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 2.54)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 -2.54)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SW_SPDT_MSM_1_1"
+				(rectangle
+					(start -3.175 3.81)
+					(end 3.175 -3.81)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 2.54)
+					(name "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Transistor_FET:MMBFJ112"
 			(pin_names
 				(hide yes)
@@ -1803,7 +1991,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text ".nocontrol\nset controlswait\nlinearize v(OUT) v(IN)\n* file, sample rate, format, multiplier, offset, oversampling\nsndparam sim-output.wav 44100 wav 1.0 0 2\nsndprint v(OUT)\n* Go back to the original analysis after sndprint\nsetplot tran1\nrusage\n.noendc\n"
+	(text ".control\nset controlswait\nlinearize v(OUT) v(IN)\n* file, sample rate, format, multiplier, offset, oversampling\nsndparam sim-output.wav 44100 wav 1.0 0 2\nsndprint v(OUT)\n* Go back to the original analysis after sndprint\nsetplot tran1\nrusage\n.endc\n"
 		(exclude_from_sim no)
 		(at 26.67 141.732 0)
 		(effects
@@ -1814,7 +2002,7 @@
 		)
 		(uuid "f5401cc0-a909-4c13-8af7-b1fd464bbefc")
 	)
-	(text_box "Two-stage BJT boost"
+	(text_box "Two-stage BJT boost\n\nThe three-way switch (\"Bright\", \"Clean\" and \"Blunt\") for optional\nbypassing of the emitter resistor simulates as a high-value\npotentiometer.  Use a wiper value of 0 / 0.5 / 1 to simulate the\nthree cases."
 		(exclude_from_sim no)
 		(at 171.45 13.97 0)
 		(size 110.49 92.075)
@@ -1921,10 +2109,16 @@
 		(uuid "0ac94f7d-5de3-4317-926c-3e5cf6d05015")
 	)
 	(junction
-		(at 238.76 43.18)
+		(at 240.03 48.26)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3154d4d5-aa9d-4cfa-8656-4096c40436ce")
+	)
+	(junction
+		(at 240.03 62.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "424ed17f-400c-458e-b6de-1715cd3197d1")
 	)
 	(junction
 		(at 149.86 40.64)
@@ -1933,7 +2127,7 @@
 		(uuid "7f3ebb1c-0c5c-4bd9-9382-c003c5d60e80")
 	)
 	(junction
-		(at 231.14 50.8)
+		(at 232.41 55.88)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "82e9007b-54f0-4b46-8b3c-d1ba4da072c8")
@@ -1957,14 +2151,14 @@
 		(uuid "fdf61d80-c224-4036-9ea2-c5d860f08e65")
 	)
 	(junction
-		(at 208.28 50.8)
+		(at 209.55 55.88)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fe7428f3-e831-45fd-8255-e54a4416c65d")
 	)
 	(wire
 		(pts
-			(xy 238.76 67.31) (xy 238.76 66.04)
+			(xy 240.03 72.39) (xy 240.03 71.12)
 		)
 		(stroke
 			(width 0)
@@ -1984,6 +2178,16 @@
 	)
 	(wire
 		(pts
+			(xy 240.03 62.23) (xy 240.03 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2952d415-991c-480b-8052-03ddc461746c")
+	)
+	(wire
+		(pts
 			(xy 114.3 34.29) (xy 114.3 39.37)
 		)
 		(stroke
@@ -1994,7 +2198,7 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 49.53) (xy 196.85 54.61)
+			(xy 198.12 54.61) (xy 198.12 59.69)
 		)
 		(stroke
 			(width 0)
@@ -2004,7 +2208,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 49.53) (xy 196.85 49.53)
+			(xy 191.77 54.61) (xy 198.12 54.61)
 		)
 		(stroke
 			(width 0)
@@ -2014,7 +2218,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 74.93) (xy 208.28 73.66)
+			(xy 209.55 80.01) (xy 209.55 78.74)
 		)
 		(stroke
 			(width 0)
@@ -2024,7 +2228,7 @@
 	)
 	(wire
 		(pts
-			(xy 238.76 43.18) (xy 238.76 45.72)
+			(xy 240.03 48.26) (xy 240.03 50.8)
 		)
 		(stroke
 			(width 0)
@@ -2044,6 +2248,16 @@
 	)
 	(wire
 		(pts
+			(xy 252.73 62.23) (xy 240.03 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "81ee47d8-dcba-449d-a669-174f6144762c")
+	)
+	(wire
+		(pts
 			(xy 40.64 30.48) (xy 40.64 34.29)
 		)
 		(stroke
@@ -2054,7 +2268,7 @@
 	)
 	(wire
 		(pts
-			(xy 264.16 46.99) (xy 264.16 43.18)
+			(xy 265.43 52.07) (xy 265.43 48.26)
 		)
 		(stroke
 			(width 0)
@@ -2094,7 +2308,7 @@
 	)
 	(wire
 		(pts
-			(xy 264.16 43.18) (xy 256.54 43.18)
+			(xy 265.43 48.26) (xy 257.81 48.26)
 		)
 		(stroke
 			(width 0)
@@ -2134,7 +2348,7 @@
 	)
 	(wire
 		(pts
-			(xy 238.76 43.18) (xy 248.92 43.18)
+			(xy 240.03 48.26) (xy 250.19 48.26)
 		)
 		(stroke
 			(width 0)
@@ -2164,7 +2378,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 50.8) (xy 208.28 53.34)
+			(xy 209.55 55.88) (xy 209.55 58.42)
 		)
 		(stroke
 			(width 0)
@@ -2174,7 +2388,17 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 66.04) (xy 208.28 63.5)
+			(xy 252.73 69.85) (xy 252.73 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e35a0124-d7fb-448a-b078-992656249bc1")
+	)
+	(wire
+		(pts
+			(xy 209.55 71.12) (xy 209.55 68.58)
 		)
 		(stroke
 			(width 0)
@@ -2184,7 +2408,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 49.53) (xy 208.28 50.8)
+			(xy 209.55 54.61) (xy 209.55 55.88)
 		)
 		(stroke
 			(width 0)
@@ -2194,7 +2418,7 @@
 	)
 	(wire
 		(pts
-			(xy 238.76 40.64) (xy 238.76 43.18)
+			(xy 240.03 45.72) (xy 240.03 48.26)
 		)
 		(stroke
 			(width 0)
@@ -2204,7 +2428,7 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 50.8) (xy 231.14 57.15)
+			(xy 232.41 55.88) (xy 232.41 62.23)
 		)
 		(stroke
 			(width 0)
@@ -2214,7 +2438,7 @@
 	)
 	(wire
 		(pts
-			(xy 226.06 50.8) (xy 231.14 50.8)
+			(xy 227.33 55.88) (xy 232.41 55.88)
 		)
 		(stroke
 			(width 0)
@@ -2224,7 +2448,7 @@
 	)
 	(wire
 		(pts
-			(xy 238.76 58.42) (xy 238.76 55.88)
+			(xy 240.03 63.5) (xy 240.03 62.23)
 		)
 		(stroke
 			(width 0)
@@ -2244,7 +2468,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 49.53) (xy 182.88 49.53)
+			(xy 181.61 54.61) (xy 184.15 54.61)
 		)
 		(stroke
 			(width 0)
@@ -2254,7 +2478,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 50.8) (xy 218.44 50.8)
+			(xy 209.55 55.88) (xy 219.71 55.88)
 		)
 		(stroke
 			(width 0)
@@ -2374,7 +2598,7 @@
 	)
 	(global_label "+V"
 		(shape input)
-		(at 238.76 33.02 90)
+		(at 240.03 38.1 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2384,7 +2608,7 @@
 		)
 		(uuid "529293e9-2fc5-4124-b4e2-27e573979fff")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 238.76 27.3738 90)
+			(at 240.03 32.4538 90)
 			(hide yes)
 			(effects
 				(font
@@ -2418,7 +2642,7 @@
 	)
 	(global_label "+V"
 		(shape input)
-		(at 208.28 41.91 90)
+		(at 209.55 46.99 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2428,7 +2652,7 @@
 		)
 		(uuid "5ec9fb64-1d2a-4c59-8e05-c92c9b377ead")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 208.28 36.2638 90)
+			(at 209.55 41.3438 90)
 			(hide yes)
 			(effects
 				(font
@@ -2440,7 +2664,7 @@
 	)
 	(global_label "VBIAS"
 		(shape input)
-		(at 196.85 62.23 270)
+		(at 198.12 67.31 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2450,7 +2674,7 @@
 		)
 		(uuid "7786494f-d313-4471-96e1-1381aec44171")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 196.85 70.4767 90)
+			(at 198.12 75.5567 90)
 			(hide yes)
 			(effects
 				(font
@@ -2462,7 +2686,7 @@
 	)
 	(global_label "OUT"
 		(shape input)
-		(at 267.97 50.8 0)
+		(at 269.24 55.88 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2472,7 +2696,7 @@
 		)
 		(uuid "7e064d4d-203c-410b-8921-70ce5af563f0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 274.5838 50.8 0)
+			(at 275.8538 55.88 0)
 			(hide yes)
 			(effects
 				(font
@@ -2506,7 +2730,7 @@
 	)
 	(global_label "VBIAS"
 		(shape input)
-		(at 231.14 64.77 270)
+		(at 232.41 69.85 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2516,7 +2740,7 @@
 		)
 		(uuid "9da47414-b1e2-4ca3-813a-dc40ef70d2a5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 231.14 73.0167 90)
+			(at 232.41 78.0967 90)
 			(hide yes)
 			(effects
 				(font
@@ -2550,7 +2774,7 @@
 	)
 	(global_label "BUF"
 		(shape input)
-		(at 180.34 49.53 180)
+		(at 181.61 54.61 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2560,7 +2784,7 @@
 		)
 		(uuid "a743f906-2374-472b-b0a7-d09bd8ca4562")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 173.6657 49.53 0)
+			(at 174.9357 54.61 0)
 			(hide yes)
 			(effects
 				(font
@@ -2660,7 +2884,7 @@
 	)
 	(symbol
 		(lib_id "Mylib:DMMT5551")
-		(at 207.01 58.42 0)
+		(at 208.28 63.5 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2669,7 +2893,7 @@
 		(fields_autoplaced yes)
 		(uuid "0d8a404a-f331-4b7d-aa3d-45f75f860e42")
 		(property "Reference" "Q2"
-			(at 209.55 57.1499 0)
+			(at 210.82 62.2299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2678,7 +2902,7 @@
 			)
 		)
 		(property "Value" "DMMT5551"
-			(at 209.55 59.6899 0)
+			(at 210.82 64.7699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2687,7 +2911,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
-			(at 209.804 71.882 0)
+			(at 211.074 76.962 0)
 			(hide yes)
 			(effects
 				(font
@@ -2696,7 +2920,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds30436.pdf"
-			(at 211.328 74.422 0)
+			(at 212.598 79.502 0)
 			(hide yes)
 			(effects
 				(font
@@ -2705,7 +2929,7 @@
 			)
 		)
 		(property "Description" "Matched dual small signal NPN transistor"
-			(at 209.804 76.962 0)
+			(at 211.074 82.042 0)
 			(hide yes)
 			(effects
 				(font
@@ -2714,7 +2938,7 @@
 			)
 		)
 		(property "Sim.Library" "/home/torvalds/KiCad/1590A/symbols/DMMT5551.lib"
-			(at 209.804 79.502 0)
+			(at 211.074 84.582 0)
 			(hide yes)
 			(effects
 				(font
@@ -2723,7 +2947,7 @@
 			)
 		)
 		(property "Sim.Name" "DMMT5551"
-			(at 208.534 45.974 0)
+			(at 209.804 51.054 0)
 			(hide yes)
 			(effects
 				(font
@@ -2732,7 +2956,7 @@
 			)
 		)
 		(property "Sim.Device" "SUBCKT"
-			(at 193.294 82.296 0)
+			(at 194.564 87.376 0)
 			(hide yes)
 			(effects
 				(font
@@ -2741,7 +2965,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=1 2=2 3=3 4=4 5=5 6=6"
-			(at 215.138 82.296 0)
+			(at 216.408 87.376 0)
 			(hide yes)
 			(effects
 				(font
@@ -2964,7 +3188,7 @@
 	)
 	(symbol
 		(lib_id "Mylib:DMMT5551")
-		(at 237.49 50.8 0)
+		(at 238.76 55.88 0)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2973,7 +3197,7 @@
 		(fields_autoplaced yes)
 		(uuid "1f2d7b2c-62ce-41d6-96a1-22a6f413850b")
 		(property "Reference" "Q2"
-			(at 240.03 49.5299 0)
+			(at 241.3 54.6099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2982,7 +3206,7 @@
 			)
 		)
 		(property "Value" "DMMT5551"
-			(at 240.03 52.0699 0)
+			(at 241.3 57.1499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2991,7 +3215,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
-			(at 240.284 64.262 0)
+			(at 241.554 69.342 0)
 			(hide yes)
 			(effects
 				(font
@@ -3000,7 +3224,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds30436.pdf"
-			(at 241.808 66.802 0)
+			(at 243.078 71.882 0)
 			(hide yes)
 			(effects
 				(font
@@ -3009,7 +3233,7 @@
 			)
 		)
 		(property "Description" "Matched dual small signal NPN transistor"
-			(at 240.284 69.342 0)
+			(at 241.554 74.422 0)
 			(hide yes)
 			(effects
 				(font
@@ -3018,7 +3242,7 @@
 			)
 		)
 		(property "Sim.Library" "/home/torvalds/KiCad/1590A/symbols/DMMT5551.lib"
-			(at 240.284 71.882 0)
+			(at 241.554 76.962 0)
 			(hide yes)
 			(effects
 				(font
@@ -3027,7 +3251,7 @@
 			)
 		)
 		(property "Sim.Name" "DMMT5551"
-			(at 239.014 38.354 0)
+			(at 240.284 43.434 0)
 			(hide yes)
 			(effects
 				(font
@@ -3036,7 +3260,7 @@
 			)
 		)
 		(property "Sim.Device" "SUBCKT"
-			(at 223.774 74.676 0)
+			(at 225.044 79.756 0)
 			(hide yes)
 			(effects
 				(font
@@ -3045,7 +3269,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=1 2=2 3=3 4=4 5=5 6=6"
-			(at 245.618 74.676 0)
+			(at 246.888 79.756 0)
 			(hide yes)
 			(effects
 				(font
@@ -3081,34 +3305,32 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 191.77 58.42 0)
+		(lib_id "Device:C")
+		(at 250.19 83.82 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "215f3587-f112-4126-aed9-01a6bb6a8c68")
-		(property "Reference" "#PWR011"
-			(at 191.77 64.77 0)
-			(hide yes)
+		(uuid "2089497f-7dce-4c9f-88c2-30f5923c1c95")
+		(property "Reference" "C6"
+			(at 242.57 83.82 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "GND"
-			(at 191.77 63.5 0)
+		(property "Value" "0.1uF"
+			(at 245.11 83.82 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 191.77 58.42 0)
+		(property "Footprint" "Mylib:C_0704_1810Metric"
+			(at 249.2248 80.01 0)
 			(hide yes)
 			(effects
 				(font
@@ -3117,7 +3339,193 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 191.77 58.42 0)
+			(at 250.19 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 250.19 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Availability" ""
+			(at 250.19 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Check_prices" ""
+			(at 250.19 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 250.19 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER_PART_NUMBER" ""
+			(at 250.19 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 250.19 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 250.19 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PROD_ID" ""
+			(at 250.19 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 250.19 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 250.19 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 250.19 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 250.19 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 250.19 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "VENDOR" ""
+			(at 250.19 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "35ec42c4-7cec-4e96-aafe-ef9b29437e55")
+		)
+		(pin "1"
+			(uuid "2e6b0cdf-2e7f-459a-980f-9ebc6904eaf9")
+		)
+		(instances
+			(project "Boost"
+				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
+					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 193.04 63.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "215f3587-f112-4126-aed9-01a6bb6a8c68")
+		(property "Reference" "#PWR011"
+			(at 193.04 69.85 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 193.04 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 193.04 63.5 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 193.04 63.5 0)
 			(hide yes)
 			(effects
 				(font
@@ -3126,7 +3534,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 191.77 58.42 0)
+			(at 193.04 63.5 0)
 			(hide yes)
 			(effects
 				(font
@@ -3148,7 +3556,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 264.16 54.61 0)
+		(at 265.43 59.69 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3156,8 +3564,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "296df780-cb46-47e8-8e10-e3599d497dbd")
-		(property "Reference" "#PWR015"
-			(at 264.16 60.96 0)
+		(property "Reference" "#PWR017"
+			(at 265.43 66.04 0)
 			(hide yes)
 			(effects
 				(font
@@ -3166,7 +3574,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 264.16 59.69 0)
+			(at 265.43 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3174,7 +3582,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 264.16 54.61 0)
+			(at 265.43 59.69 0)
 			(hide yes)
 			(effects
 				(font
@@ -3183,7 +3591,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 264.16 54.61 0)
+			(at 265.43 59.69 0)
 			(hide yes)
 			(effects
 				(font
@@ -3192,7 +3600,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 264.16 54.61 0)
+			(at 265.43 59.69 0)
 			(hide yes)
 			(effects
 				(font
@@ -3206,7 +3614,7 @@
 		(instances
 			(project "Fuzzy"
 				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
-					(reference "#PWR015")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -3214,7 +3622,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 238.76 67.31 0)
+		(at 240.03 72.39 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3223,7 +3631,7 @@
 		(fields_autoplaced yes)
 		(uuid "2f263604-6676-487c-b023-1cd8ceb790d3")
 		(property "Reference" "#PWR013"
-			(at 238.76 73.66 0)
+			(at 240.03 78.74 0)
 			(hide yes)
 			(effects
 				(font
@@ -3232,7 +3640,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 238.76 72.39 0)
+			(at 240.03 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3240,7 +3648,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 238.76 67.31 0)
+			(at 240.03 72.39 0)
 			(hide yes)
 			(effects
 				(font
@@ -3249,7 +3657,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 238.76 67.31 0)
+			(at 240.03 72.39 0)
 			(hide yes)
 			(effects
 				(font
@@ -3258,7 +3666,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 238.76 67.31 0)
+			(at 240.03 72.39 0)
 			(hide yes)
 			(effects
 				(font
@@ -3412,7 +3820,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 208.28 74.93 0)
+		(at 209.55 80.01 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3421,7 +3829,7 @@
 		(fields_autoplaced yes)
 		(uuid "42dd0b55-fda9-4929-a290-ba7bb2a981a3")
 		(property "Reference" "#PWR012"
-			(at 208.28 81.28 0)
+			(at 209.55 86.36 0)
 			(hide yes)
 			(effects
 				(font
@@ -3430,7 +3838,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 208.28 80.01 0)
+			(at 209.55 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3438,7 +3846,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 208.28 74.93 0)
+			(at 209.55 80.01 0)
 			(hide yes)
 			(effects
 				(font
@@ -3447,7 +3855,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 208.28 74.93 0)
+			(at 209.55 80.01 0)
 			(hide yes)
 			(effects
 				(font
@@ -3456,7 +3864,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 208.28 74.93 0)
+			(at 209.55 80.01 0)
 			(hide yes)
 			(effects
 				(font
@@ -3544,15 +3952,15 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 252.73 43.18 90)
+		(at 254 48.26 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "477f2c6a-511d-4fc4-89d1-298be0098fce")
-		(property "Reference" "C6"
-			(at 252.73 35.56 90)
+		(property "Reference" "C7"
+			(at 254 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3560,7 +3968,7 @@
 			)
 		)
 		(property "Value" "0.47uF"
-			(at 252.73 38.1 90)
+			(at 254 43.18 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3568,7 +3976,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
-			(at 256.54 42.2148 0)
+			(at 257.81 47.2948 0)
 			(hide yes)
 			(effects
 				(font
@@ -3577,7 +3985,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 252.73 43.18 0)
+			(at 254 48.26 0)
 			(hide yes)
 			(effects
 				(font
@@ -3586,7 +3994,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 252.73 43.18 0)
+			(at 254 48.26 0)
 			(hide yes)
 			(effects
 				(font
@@ -3595,7 +4003,7 @@
 			)
 		)
 		(property "Availability" ""
-			(at 252.73 43.18 0)
+			(at 254 48.26 0)
 			(hide yes)
 			(effects
 				(font
@@ -3604,7 +4012,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 252.73 43.18 0)
+			(at 254 48.26 0)
 			(hide yes)
 			(effects
 				(font
@@ -3613,7 +4021,7 @@
 			)
 		)
 		(property "Description_1" ""
-			(at 252.73 43.18 0)
+			(at 254 48.26 0)
 			(hide yes)
 			(effects
 				(font
@@ -3622,7 +4030,7 @@
 			)
 		)
 		(property "MANUFACTURER_PART_NUMBER" ""
-			(at 252.73 43.18 0)
+			(at 254 48.26 0)
 			(hide yes)
 			(effects
 				(font
@@ -3631,7 +4039,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 252.73 43.18 0)
+			(at 254 48.26 0)
 			(hide yes)
 			(effects
 				(font
@@ -3640,7 +4048,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 252.73 43.18 0)
+			(at 254 48.26 0)
 			(hide yes)
 			(effects
 				(font
@@ -3649,7 +4057,7 @@
 			)
 		)
 		(property "PROD_ID" ""
-			(at 252.73 43.18 0)
+			(at 254 48.26 0)
 			(hide yes)
 			(effects
 				(font
@@ -3658,7 +4066,7 @@
 			)
 		)
 		(property "Package" ""
-			(at 252.73 43.18 0)
+			(at 254 48.26 0)
 			(hide yes)
 			(effects
 				(font
@@ -3667,7 +4075,7 @@
 			)
 		)
 		(property "Price" ""
-			(at 252.73 43.18 0)
+			(at 254 48.26 0)
 			(hide yes)
 			(effects
 				(font
@@ -3676,7 +4084,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 252.73 43.18 0)
+			(at 254 48.26 0)
 			(hide yes)
 			(effects
 				(font
@@ -3685,7 +4093,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 252.73 43.18 0)
+			(at 254 48.26 0)
 			(hide yes)
 			(effects
 				(font
@@ -3694,7 +4102,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 252.73 43.18 0)
+			(at 254 48.26 0)
 			(hide yes)
 			(effects
 				(font
@@ -3703,7 +4111,7 @@
 			)
 		)
 		(property "VENDOR" ""
-			(at 252.73 43.18 0)
+			(at 254 48.26 0)
 			(hide yes)
 			(effects
 				(font
@@ -3720,7 +4128,7 @@
 		(instances
 			(project "Fuzzy"
 				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
-					(reference "C6")
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -3728,7 +4136,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Potentiometer_MountingPin")
-		(at 264.16 50.8 0)
+		(at 265.43 55.88 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3737,7 +4145,7 @@
 		(dnp no)
 		(uuid "4bb1b566-18d7-4daf-8161-d11a97f85475")
 		(property "Reference" "RV2"
-			(at 268.224 44.196 0)
+			(at 269.494 49.276 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3745,7 +4153,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 268.224 46.736 0)
+			(at 269.494 51.816 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3753,7 +4161,7 @@
 			)
 		)
 		(property "Footprint" "Mylib:Potentiometer_9mm_MP"
-			(at 264.16 50.8 0)
+			(at 265.43 55.88 0)
 			(hide yes)
 			(effects
 				(font
@@ -3762,7 +4170,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 264.16 50.8 0)
+			(at 265.43 55.88 0)
 			(hide yes)
 			(effects
 				(font
@@ -3771,7 +4179,7 @@
 			)
 		)
 		(property "Description" "Potentiometer with a mounting pin"
-			(at 264.16 50.8 0)
+			(at 265.43 55.88 0)
 			(hide yes)
 			(effects
 				(font
@@ -3780,7 +4188,7 @@
 			)
 		)
 		(property "Sim.Device" "R"
-			(at 264.16 50.8 0)
+			(at 265.43 55.88 0)
 			(hide yes)
 			(effects
 				(font
@@ -3789,7 +4197,7 @@
 			)
 		)
 		(property "Sim.Type" "POT"
-			(at 264.16 50.8 0)
+			(at 265.43 55.88 0)
 			(hide yes)
 			(effects
 				(font
@@ -3798,7 +4206,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=r0 2=wiper 3=r1"
-			(at 264.16 50.8 0)
+			(at 265.43 55.88 0)
 			(hide yes)
 			(effects
 				(font
@@ -3806,8 +4214,8 @@
 				)
 			)
 		)
-		(property "Sim.Params" "r=100k pos=1"
-			(at 264.16 50.8 0)
+		(property "Sim.Params" "r=100k"
+			(at 265.43 55.88 0)
 			(hide yes)
 			(effects
 				(font
@@ -3838,7 +4246,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 186.69 49.53 90)
+		(at 187.96 54.61 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3846,7 +4254,7 @@
 		(dnp no)
 		(uuid "4dbc7e63-3689-4587-93ef-17f267f8a069")
 		(property "Reference" "C4"
-			(at 186.69 41.91 90)
+			(at 187.96 46.99 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3854,7 +4262,7 @@
 			)
 		)
 		(property "Value" "0.47uF"
-			(at 186.69 44.45 90)
+			(at 187.96 49.53 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3862,7 +4270,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
-			(at 190.5 48.5648 0)
+			(at 191.77 53.6448 0)
 			(hide yes)
 			(effects
 				(font
@@ -3871,7 +4279,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 186.69 49.53 0)
+			(at 187.96 54.61 0)
 			(hide yes)
 			(effects
 				(font
@@ -3880,7 +4288,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 186.69 49.53 0)
+			(at 187.96 54.61 0)
 			(hide yes)
 			(effects
 				(font
@@ -3889,7 +4297,7 @@
 			)
 		)
 		(property "Availability" ""
-			(at 186.69 49.53 0)
+			(at 187.96 54.61 0)
 			(hide yes)
 			(effects
 				(font
@@ -3898,7 +4306,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 186.69 49.53 0)
+			(at 187.96 54.61 0)
 			(hide yes)
 			(effects
 				(font
@@ -3907,7 +4315,7 @@
 			)
 		)
 		(property "Description_1" ""
-			(at 186.69 49.53 0)
+			(at 187.96 54.61 0)
 			(hide yes)
 			(effects
 				(font
@@ -3916,7 +4324,7 @@
 			)
 		)
 		(property "MANUFACTURER_PART_NUMBER" ""
-			(at 186.69 49.53 0)
+			(at 187.96 54.61 0)
 			(hide yes)
 			(effects
 				(font
@@ -3925,7 +4333,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 186.69 49.53 0)
+			(at 187.96 54.61 0)
 			(hide yes)
 			(effects
 				(font
@@ -3934,7 +4342,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 186.69 49.53 0)
+			(at 187.96 54.61 0)
 			(hide yes)
 			(effects
 				(font
@@ -3943,7 +4351,7 @@
 			)
 		)
 		(property "PROD_ID" ""
-			(at 186.69 49.53 0)
+			(at 187.96 54.61 0)
 			(hide yes)
 			(effects
 				(font
@@ -3952,7 +4360,7 @@
 			)
 		)
 		(property "Package" ""
-			(at 186.69 49.53 0)
+			(at 187.96 54.61 0)
 			(hide yes)
 			(effects
 				(font
@@ -3961,7 +4369,7 @@
 			)
 		)
 		(property "Price" ""
-			(at 186.69 49.53 0)
+			(at 187.96 54.61 0)
 			(hide yes)
 			(effects
 				(font
@@ -3970,7 +4378,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 186.69 49.53 0)
+			(at 187.96 54.61 0)
 			(hide yes)
 			(effects
 				(font
@@ -3979,7 +4387,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 186.69 49.53 0)
+			(at 187.96 54.61 0)
 			(hide yes)
 			(effects
 				(font
@@ -3988,7 +4396,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 186.69 49.53 0)
+			(at 187.96 54.61 0)
 			(hide yes)
 			(effects
 				(font
@@ -3997,7 +4405,7 @@
 			)
 		)
 		(property "VENDOR" ""
-			(at 186.69 49.53 0)
+			(at 187.96 54.61 0)
 			(hide yes)
 			(effects
 				(font
@@ -4022,7 +4430,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 208.28 69.85 0)
+		(at 209.55 74.93 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4030,7 +4438,7 @@
 		(dnp no)
 		(uuid "4fd42469-031b-451b-9c53-38bdd062cc48")
 		(property "Reference" "R7"
-			(at 210.82 68.5799 0)
+			(at 212.09 73.6599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4039,7 +4447,7 @@
 			)
 		)
 		(property "Value" "3k3"
-			(at 210.82 71.12 0)
+			(at 212.09 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4048,7 +4456,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 206.502 69.85 90)
+			(at 207.772 74.93 90)
 			(hide yes)
 			(effects
 				(font
@@ -4057,7 +4465,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 208.28 69.85 0)
+			(at 209.55 74.93 0)
 			(hide yes)
 			(effects
 				(font
@@ -4066,7 +4474,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 208.28 69.85 0)
+			(at 209.55 74.93 0)
 			(hide yes)
 			(effects
 				(font
@@ -4075,7 +4483,7 @@
 			)
 		)
 		(property "Availability" ""
-			(at 208.28 69.85 0)
+			(at 209.55 74.93 0)
 			(hide yes)
 			(effects
 				(font
@@ -4084,7 +4492,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 208.28 69.85 0)
+			(at 209.55 74.93 0)
 			(hide yes)
 			(effects
 				(font
@@ -4093,7 +4501,7 @@
 			)
 		)
 		(property "Description_1" ""
-			(at 208.28 69.85 0)
+			(at 209.55 74.93 0)
 			(hide yes)
 			(effects
 				(font
@@ -4102,7 +4510,7 @@
 			)
 		)
 		(property "MANUFACTURER_PART_NUMBER" ""
-			(at 208.28 69.85 0)
+			(at 209.55 74.93 0)
 			(hide yes)
 			(effects
 				(font
@@ -4111,7 +4519,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 208.28 69.85 0)
+			(at 209.55 74.93 0)
 			(hide yes)
 			(effects
 				(font
@@ -4120,7 +4528,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 208.28 69.85 0)
+			(at 209.55 74.93 0)
 			(hide yes)
 			(effects
 				(font
@@ -4129,7 +4537,7 @@
 			)
 		)
 		(property "PROD_ID" ""
-			(at 208.28 69.85 0)
+			(at 209.55 74.93 0)
 			(hide yes)
 			(effects
 				(font
@@ -4138,7 +4546,7 @@
 			)
 		)
 		(property "Package" ""
-			(at 208.28 69.85 0)
+			(at 209.55 74.93 0)
 			(hide yes)
 			(effects
 				(font
@@ -4147,7 +4555,7 @@
 			)
 		)
 		(property "Price" ""
-			(at 208.28 69.85 0)
+			(at 209.55 74.93 0)
 			(hide yes)
 			(effects
 				(font
@@ -4156,7 +4564,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 208.28 69.85 0)
+			(at 209.55 74.93 0)
 			(hide yes)
 			(effects
 				(font
@@ -4165,7 +4573,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 208.28 69.85 0)
+			(at 209.55 74.93 0)
 			(hide yes)
 			(effects
 				(font
@@ -4174,7 +4582,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 208.28 69.85 0)
+			(at 209.55 74.93 0)
 			(hide yes)
 			(effects
 				(font
@@ -4183,7 +4591,7 @@
 			)
 		)
 		(property "VENDOR" ""
-			(at 208.28 69.85 0)
+			(at 209.55 74.93 0)
 			(hide yes)
 			(effects
 				(font
@@ -4208,7 +4616,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 238.76 62.23 0)
+		(at 240.03 67.31 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4216,7 +4624,7 @@
 		(dnp no)
 		(uuid "5223199c-6823-442b-8aaf-f1aa806e6e63")
 		(property "Reference" "R10"
-			(at 241.3 60.9599 0)
+			(at 242.57 66.0399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4225,7 +4633,7 @@
 			)
 		)
 		(property "Value" "3k3"
-			(at 241.3 63.5 0)
+			(at 242.57 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4234,7 +4642,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 236.982 62.23 90)
+			(at 238.252 67.31 90)
 			(hide yes)
 			(effects
 				(font
@@ -4243,7 +4651,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 238.76 62.23 0)
+			(at 240.03 67.31 0)
 			(hide yes)
 			(effects
 				(font
@@ -4252,7 +4660,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 238.76 62.23 0)
+			(at 240.03 67.31 0)
 			(hide yes)
 			(effects
 				(font
@@ -4261,7 +4669,7 @@
 			)
 		)
 		(property "Availability" ""
-			(at 238.76 62.23 0)
+			(at 240.03 67.31 0)
 			(hide yes)
 			(effects
 				(font
@@ -4270,7 +4678,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 238.76 62.23 0)
+			(at 240.03 67.31 0)
 			(hide yes)
 			(effects
 				(font
@@ -4279,7 +4687,7 @@
 			)
 		)
 		(property "Description_1" ""
-			(at 238.76 62.23 0)
+			(at 240.03 67.31 0)
 			(hide yes)
 			(effects
 				(font
@@ -4288,7 +4696,7 @@
 			)
 		)
 		(property "MANUFACTURER_PART_NUMBER" ""
-			(at 238.76 62.23 0)
+			(at 240.03 67.31 0)
 			(hide yes)
 			(effects
 				(font
@@ -4297,7 +4705,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 238.76 62.23 0)
+			(at 240.03 67.31 0)
 			(hide yes)
 			(effects
 				(font
@@ -4306,7 +4714,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 238.76 62.23 0)
+			(at 240.03 67.31 0)
 			(hide yes)
 			(effects
 				(font
@@ -4315,7 +4723,7 @@
 			)
 		)
 		(property "PROD_ID" ""
-			(at 238.76 62.23 0)
+			(at 240.03 67.31 0)
 			(hide yes)
 			(effects
 				(font
@@ -4324,7 +4732,7 @@
 			)
 		)
 		(property "Package" ""
-			(at 238.76 62.23 0)
+			(at 240.03 67.31 0)
 			(hide yes)
 			(effects
 				(font
@@ -4333,7 +4741,7 @@
 			)
 		)
 		(property "Price" ""
-			(at 238.76 62.23 0)
+			(at 240.03 67.31 0)
 			(hide yes)
 			(effects
 				(font
@@ -4342,7 +4750,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 238.76 62.23 0)
+			(at 240.03 67.31 0)
 			(hide yes)
 			(effects
 				(font
@@ -4351,7 +4759,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 238.76 62.23 0)
+			(at 240.03 67.31 0)
 			(hide yes)
 			(effects
 				(font
@@ -4360,7 +4768,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 238.76 62.23 0)
+			(at 240.03 67.31 0)
 			(hide yes)
 			(effects
 				(font
@@ -4369,7 +4777,7 @@
 			)
 		)
 		(property "VENDOR" ""
-			(at 238.76 62.23 0)
+			(at 240.03 67.31 0)
 			(hide yes)
 			(effects
 				(font
@@ -4387,6 +4795,115 @@
 			(project "Fuzzy"
 				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
 					(reference "R10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_SPDT_MSM")
+		(at 252.73 74.93 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5f8e1203-f602-44b9-93f1-08380218afff")
+		(property "Reference" "SW1"
+			(at 257.81 69.342 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SW_SPDT_MSM"
+			(at 272.542 71.882 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Mylib:Tayda Toggle SPDT"
+			(at 241.3 60.96 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 260.35 74.93 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Switch, single pole double throw, center OFF position"
+			(at 252.73 74.93 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "R"
+			(at 252.73 74.93 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" "POT"
+			(at 252.73 74.93 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=r0 2=wiper 3=r1"
+			(at 252.73 74.93 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Params" "r=9.9MEG"
+			(at 252.73 74.93 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "c6da2179-e857-45db-ab8a-cec0bae020e1")
+		)
+		(pin "1"
+			(uuid "8f664b6d-95fd-4292-bfa2-b4d402d300b6")
+		)
+		(pin "3"
+			(uuid "8bdc4d09-63df-47a5-aeaa-89dc25acdc4b")
+		)
+		(instances
+			(project ""
+				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
+					(reference "SW1")
 					(unit 1)
 				)
 			)
@@ -4946,6 +5463,191 @@
 			(project "Fuzzy"
 				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
 					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 255.27 83.82 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "789a00ff-f929-4305-b342-08fc463183aa")
+		(property "Reference" "C8"
+			(at 262.89 83.82 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0.47uF"
+			(at 260.35 83.82 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+			(at 256.2352 80.01 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 255.27 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 255.27 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Availability" ""
+			(at 255.27 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Check_prices" ""
+			(at 255.27 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 255.27 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER_PART_NUMBER" ""
+			(at 255.27 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 255.27 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 255.27 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PROD_ID" ""
+			(at 255.27 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 255.27 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 255.27 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 255.27 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 255.27 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 255.27 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "VENDOR" ""
+			(at 255.27 83.82 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "92e48239-ffa2-4a43-9d47-af71fac2cad2")
+		)
+		(pin "1"
+			(uuid "819851bd-5700-4052-90fa-076ffb5a500e")
+		)
+		(instances
+			(project "Boost"
+				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -5753,7 +6455,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 208.28 45.72 0)
+		(at 209.55 50.8 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5762,7 +6464,7 @@
 		(dnp no)
 		(uuid "a60864b8-405f-49af-b4c9-809cef6a48a5")
 		(property "Reference" "R6"
-			(at 205.74 44.4499 0)
+			(at 207.01 49.5299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5771,7 +6473,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 205.74 46.99 0)
+			(at 207.01 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5780,7 +6482,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 210.058 45.72 90)
+			(at 211.328 50.8 90)
 			(hide yes)
 			(effects
 				(font
@@ -5789,7 +6491,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 208.28 45.72 0)
+			(at 209.55 50.8 0)
 			(hide yes)
 			(effects
 				(font
@@ -5798,7 +6500,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 208.28 45.72 0)
+			(at 209.55 50.8 0)
 			(hide yes)
 			(effects
 				(font
@@ -5807,7 +6509,7 @@
 			)
 		)
 		(property "Availability" ""
-			(at 208.28 45.72 0)
+			(at 209.55 50.8 0)
 			(hide yes)
 			(effects
 				(font
@@ -5816,7 +6518,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 208.28 45.72 0)
+			(at 209.55 50.8 0)
 			(hide yes)
 			(effects
 				(font
@@ -5825,7 +6527,7 @@
 			)
 		)
 		(property "Description_1" ""
-			(at 208.28 45.72 0)
+			(at 209.55 50.8 0)
 			(hide yes)
 			(effects
 				(font
@@ -5834,7 +6536,7 @@
 			)
 		)
 		(property "MANUFACTURER_PART_NUMBER" ""
-			(at 208.28 45.72 0)
+			(at 209.55 50.8 0)
 			(hide yes)
 			(effects
 				(font
@@ -5843,7 +6545,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 208.28 45.72 0)
+			(at 209.55 50.8 0)
 			(hide yes)
 			(effects
 				(font
@@ -5852,7 +6554,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 208.28 45.72 0)
+			(at 209.55 50.8 0)
 			(hide yes)
 			(effects
 				(font
@@ -5861,7 +6563,7 @@
 			)
 		)
 		(property "PROD_ID" ""
-			(at 208.28 45.72 0)
+			(at 209.55 50.8 0)
 			(hide yes)
 			(effects
 				(font
@@ -5870,7 +6572,7 @@
 			)
 		)
 		(property "Package" ""
-			(at 208.28 45.72 0)
+			(at 209.55 50.8 0)
 			(hide yes)
 			(effects
 				(font
@@ -5879,7 +6581,7 @@
 			)
 		)
 		(property "Price" ""
-			(at 208.28 45.72 0)
+			(at 209.55 50.8 0)
 			(hide yes)
 			(effects
 				(font
@@ -5888,7 +6590,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 208.28 45.72 0)
+			(at 209.55 50.8 0)
 			(hide yes)
 			(effects
 				(font
@@ -5897,7 +6599,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 208.28 45.72 0)
+			(at 209.55 50.8 0)
 			(hide yes)
 			(effects
 				(font
@@ -5906,7 +6608,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 208.28 45.72 0)
+			(at 209.55 50.8 0)
 			(hide yes)
 			(effects
 				(font
@@ -5915,7 +6617,7 @@
 			)
 		)
 		(property "VENDOR" ""
-			(at 208.28 45.72 0)
+			(at 209.55 50.8 0)
 			(hide yes)
 			(effects
 				(font
@@ -5940,7 +6642,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 259.08 50.8 0)
+		(at 260.35 55.88 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5948,8 +6650,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a8b39f80-e556-41a9-9bd4-5a92c7e80653")
-		(property "Reference" "#PWR014"
-			(at 259.08 57.15 0)
+		(property "Reference" "#PWR016"
+			(at 260.35 62.23 0)
 			(hide yes)
 			(effects
 				(font
@@ -5958,7 +6660,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 259.08 55.88 0)
+			(at 260.35 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5966,7 +6668,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 259.08 50.8 0)
+			(at 260.35 55.88 0)
 			(hide yes)
 			(effects
 				(font
@@ -5975,7 +6677,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 259.08 50.8 0)
+			(at 260.35 55.88 0)
 			(hide yes)
 			(effects
 				(font
@@ -5984,7 +6686,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 259.08 50.8 0)
+			(at 260.35 55.88 0)
 			(hide yes)
 			(effects
 				(font
@@ -5998,7 +6700,7 @@
 		(instances
 			(project "Fuzzy"
 				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
-					(reference "#PWR014")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -6072,7 +6774,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 222.25 50.8 90)
+		(at 223.52 55.88 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6080,7 +6782,7 @@
 		(dnp no)
 		(uuid "ab4a26c7-fdf5-44bc-8295-ba37e09b0e99")
 		(property "Reference" "C5"
-			(at 222.25 43.18 90)
+			(at 223.52 48.26 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6088,7 +6790,7 @@
 			)
 		)
 		(property "Value" "0.47uF"
-			(at 222.25 45.72 90)
+			(at 223.52 50.8 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6096,7 +6798,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
-			(at 226.06 49.8348 0)
+			(at 227.33 54.9148 0)
 			(hide yes)
 			(effects
 				(font
@@ -6105,7 +6807,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 222.25 50.8 0)
+			(at 223.52 55.88 0)
 			(hide yes)
 			(effects
 				(font
@@ -6114,7 +6816,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 222.25 50.8 0)
+			(at 223.52 55.88 0)
 			(hide yes)
 			(effects
 				(font
@@ -6123,7 +6825,7 @@
 			)
 		)
 		(property "Availability" ""
-			(at 222.25 50.8 0)
+			(at 223.52 55.88 0)
 			(hide yes)
 			(effects
 				(font
@@ -6132,7 +6834,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 222.25 50.8 0)
+			(at 223.52 55.88 0)
 			(hide yes)
 			(effects
 				(font
@@ -6141,7 +6843,7 @@
 			)
 		)
 		(property "Description_1" ""
-			(at 222.25 50.8 0)
+			(at 223.52 55.88 0)
 			(hide yes)
 			(effects
 				(font
@@ -6150,7 +6852,7 @@
 			)
 		)
 		(property "MANUFACTURER_PART_NUMBER" ""
-			(at 222.25 50.8 0)
+			(at 223.52 55.88 0)
 			(hide yes)
 			(effects
 				(font
@@ -6159,7 +6861,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 222.25 50.8 0)
+			(at 223.52 55.88 0)
 			(hide yes)
 			(effects
 				(font
@@ -6168,7 +6870,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 222.25 50.8 0)
+			(at 223.52 55.88 0)
 			(hide yes)
 			(effects
 				(font
@@ -6177,7 +6879,7 @@
 			)
 		)
 		(property "PROD_ID" ""
-			(at 222.25 50.8 0)
+			(at 223.52 55.88 0)
 			(hide yes)
 			(effects
 				(font
@@ -6186,7 +6888,7 @@
 			)
 		)
 		(property "Package" ""
-			(at 222.25 50.8 0)
+			(at 223.52 55.88 0)
 			(hide yes)
 			(effects
 				(font
@@ -6195,7 +6897,7 @@
 			)
 		)
 		(property "Price" ""
-			(at 222.25 50.8 0)
+			(at 223.52 55.88 0)
 			(hide yes)
 			(effects
 				(font
@@ -6204,7 +6906,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 222.25 50.8 0)
+			(at 223.52 55.88 0)
 			(hide yes)
 			(effects
 				(font
@@ -6213,7 +6915,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 222.25 50.8 0)
+			(at 223.52 55.88 0)
 			(hide yes)
 			(effects
 				(font
@@ -6222,7 +6924,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 222.25 50.8 0)
+			(at 223.52 55.88 0)
 			(hide yes)
 			(effects
 				(font
@@ -6231,7 +6933,7 @@
 			)
 		)
 		(property "VENDOR" ""
-			(at 222.25 50.8 0)
+			(at 223.52 55.88 0)
 			(hide yes)
 			(effects
 				(font
@@ -6321,35 +7023,34 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 238.76 36.83 0)
-		(mirror y)
+		(lib_id "power:GND")
+		(at 250.19 87.63 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "b8e75610-3e1e-4c51-9410-d037aeef3ef1")
-		(property "Reference" "R9"
-			(at 236.22 35.5599 0)
+		(fields_autoplaced yes)
+		(uuid "b65ea6b0-752c-477f-a131-16a89d321494")
+		(property "Reference" "#PWR014"
+			(at 250.19 93.98 0)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "10k"
-			(at 236.22 38.1 0)
+		(property "Value" "GND"
+			(at 250.19 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 240.538 36.83 90)
+		(property "Footprint" ""
+			(at 250.19 87.63 0)
 			(hide yes)
 			(effects
 				(font
@@ -6358,7 +7059,74 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 238.76 36.83 0)
+			(at 250.19 87.63 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 250.19 87.63 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b80d91d8-fa77-4023-8472-77be89b65046")
+		)
+		(instances
+			(project "Boost"
+				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
+					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 240.03 41.91 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b8e75610-3e1e-4c51-9410-d037aeef3ef1")
+		(property "Reference" "R9"
+			(at 237.49 40.6399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 237.49 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 241.808 41.91 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 240.03 41.91 0)
 			(hide yes)
 			(effects
 				(font
@@ -6367,7 +7135,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 238.76 36.83 0)
+			(at 240.03 41.91 0)
 			(hide yes)
 			(effects
 				(font
@@ -6376,7 +7144,7 @@
 			)
 		)
 		(property "Availability" ""
-			(at 238.76 36.83 0)
+			(at 240.03 41.91 0)
 			(hide yes)
 			(effects
 				(font
@@ -6385,7 +7153,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 238.76 36.83 0)
+			(at 240.03 41.91 0)
 			(hide yes)
 			(effects
 				(font
@@ -6394,7 +7162,7 @@
 			)
 		)
 		(property "Description_1" ""
-			(at 238.76 36.83 0)
+			(at 240.03 41.91 0)
 			(hide yes)
 			(effects
 				(font
@@ -6403,7 +7171,7 @@
 			)
 		)
 		(property "MANUFACTURER_PART_NUMBER" ""
-			(at 238.76 36.83 0)
+			(at 240.03 41.91 0)
 			(hide yes)
 			(effects
 				(font
@@ -6412,7 +7180,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 238.76 36.83 0)
+			(at 240.03 41.91 0)
 			(hide yes)
 			(effects
 				(font
@@ -6421,7 +7189,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 238.76 36.83 0)
+			(at 240.03 41.91 0)
 			(hide yes)
 			(effects
 				(font
@@ -6430,7 +7198,7 @@
 			)
 		)
 		(property "PROD_ID" ""
-			(at 238.76 36.83 0)
+			(at 240.03 41.91 0)
 			(hide yes)
 			(effects
 				(font
@@ -6439,7 +7207,7 @@
 			)
 		)
 		(property "Package" ""
-			(at 238.76 36.83 0)
+			(at 240.03 41.91 0)
 			(hide yes)
 			(effects
 				(font
@@ -6448,7 +7216,7 @@
 			)
 		)
 		(property "Price" ""
-			(at 238.76 36.83 0)
+			(at 240.03 41.91 0)
 			(hide yes)
 			(effects
 				(font
@@ -6457,7 +7225,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 238.76 36.83 0)
+			(at 240.03 41.91 0)
 			(hide yes)
 			(effects
 				(font
@@ -6466,7 +7234,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 238.76 36.83 0)
+			(at 240.03 41.91 0)
 			(hide yes)
 			(effects
 				(font
@@ -6475,7 +7243,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 238.76 36.83 0)
+			(at 240.03 41.91 0)
 			(hide yes)
 			(effects
 				(font
@@ -6484,7 +7252,7 @@
 			)
 		)
 		(property "VENDOR" ""
-			(at 238.76 36.83 0)
+			(at 240.03 41.91 0)
 			(hide yes)
 			(effects
 				(font
@@ -6502,6 +7270,72 @@
 			(project "Fuzzy"
 				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
 					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 255.27 87.63 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b9157705-3b87-4f70-8627-1c609322b33b")
+		(property "Reference" "#PWR015"
+			(at 255.27 93.98 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 255.27 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 255.27 87.63 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 255.27 87.63 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 255.27 87.63 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "77672ca4-d4a2-4023-bf9b-1bc7fe1eeff8")
+		)
+		(instances
+			(project "Boost"
+				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -7059,7 +7893,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 231.14 60.96 180)
+		(at 232.41 66.04 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7067,7 +7901,7 @@
 		(dnp no)
 		(uuid "dcefb6b7-a74b-4b15-9e86-fe68dca7c773")
 		(property "Reference" "R8"
-			(at 228.6 62.2301 0)
+			(at 229.87 67.3101 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7076,7 +7910,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 228.6 59.69 0)
+			(at 229.87 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7085,7 +7919,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 232.918 60.96 90)
+			(at 234.188 66.04 90)
 			(hide yes)
 			(effects
 				(font
@@ -7094,7 +7928,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 231.14 60.96 0)
+			(at 232.41 66.04 0)
 			(hide yes)
 			(effects
 				(font
@@ -7103,7 +7937,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 231.14 60.96 0)
+			(at 232.41 66.04 0)
 			(hide yes)
 			(effects
 				(font
@@ -7112,7 +7946,7 @@
 			)
 		)
 		(property "Availability" ""
-			(at 231.14 60.96 0)
+			(at 232.41 66.04 0)
 			(hide yes)
 			(effects
 				(font
@@ -7121,7 +7955,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 231.14 60.96 0)
+			(at 232.41 66.04 0)
 			(hide yes)
 			(effects
 				(font
@@ -7130,7 +7964,7 @@
 			)
 		)
 		(property "Description_1" ""
-			(at 231.14 60.96 0)
+			(at 232.41 66.04 0)
 			(hide yes)
 			(effects
 				(font
@@ -7139,7 +7973,7 @@
 			)
 		)
 		(property "MANUFACTURER_PART_NUMBER" ""
-			(at 231.14 60.96 0)
+			(at 232.41 66.04 0)
 			(hide yes)
 			(effects
 				(font
@@ -7148,7 +7982,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 231.14 60.96 0)
+			(at 232.41 66.04 0)
 			(hide yes)
 			(effects
 				(font
@@ -7157,7 +7991,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 231.14 60.96 0)
+			(at 232.41 66.04 0)
 			(hide yes)
 			(effects
 				(font
@@ -7166,7 +8000,7 @@
 			)
 		)
 		(property "PROD_ID" ""
-			(at 231.14 60.96 0)
+			(at 232.41 66.04 0)
 			(hide yes)
 			(effects
 				(font
@@ -7175,7 +8009,7 @@
 			)
 		)
 		(property "Package" ""
-			(at 231.14 60.96 0)
+			(at 232.41 66.04 0)
 			(hide yes)
 			(effects
 				(font
@@ -7184,7 +8018,7 @@
 			)
 		)
 		(property "Price" ""
-			(at 231.14 60.96 0)
+			(at 232.41 66.04 0)
 			(hide yes)
 			(effects
 				(font
@@ -7193,7 +8027,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 231.14 60.96 0)
+			(at 232.41 66.04 0)
 			(hide yes)
 			(effects
 				(font
@@ -7202,7 +8036,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 231.14 60.96 0)
+			(at 232.41 66.04 0)
 			(hide yes)
 			(effects
 				(font
@@ -7211,7 +8045,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 231.14 60.96 0)
+			(at 232.41 66.04 0)
 			(hide yes)
 			(effects
 				(font
@@ -7220,7 +8054,7 @@
 			)
 		)
 		(property "VENDOR" ""
-			(at 231.14 60.96 0)
+			(at 232.41 66.04 0)
 			(hide yes)
 			(effects
 				(font
@@ -7377,7 +8211,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Potentiometer_MountingPin")
-		(at 196.85 58.42 0)
+		(at 198.12 63.5 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7386,7 +8220,7 @@
 		(dnp no)
 		(uuid "eaa753c9-f00d-47ed-9846-0a48b6b1b2ae")
 		(property "Reference" "RV1"
-			(at 200.914 51.816 0)
+			(at 202.184 56.896 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7394,7 +8228,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 200.914 54.356 0)
+			(at 202.184 59.436 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7402,7 +8236,7 @@
 			)
 		)
 		(property "Footprint" "Mylib:Potentiometer_9mm_MP"
-			(at 196.85 58.42 0)
+			(at 198.12 63.5 0)
 			(hide yes)
 			(effects
 				(font
@@ -7411,7 +8245,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 196.85 58.42 0)
+			(at 198.12 63.5 0)
 			(hide yes)
 			(effects
 				(font
@@ -7420,7 +8254,7 @@
 			)
 		)
 		(property "Description" "Potentiometer with a mounting pin"
-			(at 196.85 58.42 0)
+			(at 198.12 63.5 0)
 			(hide yes)
 			(effects
 				(font
@@ -7429,7 +8263,7 @@
 			)
 		)
 		(property "Sim.Device" "R"
-			(at 196.85 58.42 0)
+			(at 198.12 63.5 0)
 			(hide yes)
 			(effects
 				(font
@@ -7438,7 +8272,7 @@
 			)
 		)
 		(property "Sim.Type" "POT"
-			(at 196.85 58.42 0)
+			(at 198.12 63.5 0)
 			(hide yes)
 			(effects
 				(font
@@ -7447,7 +8281,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=r0 2=wiper 3=r1"
-			(at 196.85 58.42 0)
+			(at 198.12 63.5 0)
 			(hide yes)
 			(effects
 				(font
@@ -7455,8 +8289,8 @@
 				)
 			)
 		)
-		(property "Sim.Params" "r=100k pos=1"
-			(at 196.85 58.42 0)
+		(property "Sim.Params" "r=100k"
+			(at 198.12 63.5 0)
 			(hide yes)
 			(effects
 				(font
