@@ -21,14 +21,29 @@
       "showGrid": true,
       "traces": [
         {
+          "color": "rgb(55, 126, 184)",
+          "signal": "V(BUF)",
+          "trace_type": 257
+        },
+        {
           "color": "rgb(163, 1, 26)",
           "signal": "V(IN)",
           "trace_type": 257
         },
         {
-          "color": "rgb(55, 126, 184)",
+          "color": "rgb(77, 175, 74)",
+          "signal": "V(NOT_BUF)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(228, 26, 28)",
           "signal": "V(OUT)",
           "trace_type": 257
+        },
+        {
+          "color": "rgb(152, 78, 163)",
+          "signal": "( V(BUF) + V(NOT_BUF) ) / 2",
+          "trace_type": 256
         }
       ]
     },
@@ -53,17 +68,24 @@
       "traces": [
         {
           "color": "rgb(228, 26, 28)",
-          "signal": "V(OUT) (phase)",
-          "trace_type": 517
-        },
-        {
-          "color": "rgb(228, 26, 28)",
           "signal": "V(OUT) (gain)",
           "trace_type": 521
         }
       ]
+    },
+    {
+      "analysis": "OP",
+      "commands": [
+        ".op",
+        ".kicad adjustpaths",
+        ".save all",
+        ".probe alli",
+        ".probe allp"
+      ]
     }
   ],
-  "user_defined_signals": [],
+  "user_defined_signals": [
+    "( V(BUF) + V(NOT_BUF) ) / 2"
+  ],
   "version": 7
 }
