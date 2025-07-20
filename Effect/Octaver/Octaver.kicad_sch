@@ -1000,6 +1000,237 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Mylib:MMBF5103"
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Q"
+				(at 5.08 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "MMBF5103"
+				(at 5.08 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 0 -15.24 0)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/mmbf5103-d.pdf"
+				(at 0 -17.78 0)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "MMBF5103"
+				(at 0 -12.7 0)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Library" "/home/torvalds/KiCad/sim/MMBF5103.lib"
+				(at -1.27 -20.32 0)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right)
+				)
+			)
+			(property "Sim.Name" "MMBF5103"
+				(at 1.27 -20.32 0)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Sim.Device" "NJFET"
+				(at 12.7 -20.32 0)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Sim.Type" "SHICHMANHODGES"
+				(at -1.27 -22.86 0)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right)
+				)
+			)
+			(property "Sim.Pins" "1=D 2=S 3=G"
+				(at 1.27 -22.86 0)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "ki_keywords" "transistor NJFET N-JFET"
+				(at 0 0 0)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MMBF5103_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy -1.016 0.381) (xy -1.016 -0.381) (xy 0 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.27 0)
+					(radius 2.8194)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.397) (xy 0.254 1.397)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 -1.27) (xy 0.254 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "MMBF5103_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 5.334)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Simulation_SPICE:VAM"
 			(pin_numbers
 				(hide yes)
@@ -1657,211 +1888,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Transistor_FET:MMBFJ112"
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "Q"
-				(at 5.08 1.905 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "MMBFJ112"
-				(at 5.08 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-				(at 5.08 -1.905 0)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(justify left)
-				)
-			)
-			(property "Datasheet" "https://www.onsemi.com/pub/Collateral/MMBFJ113-D.PDF"
-				(at 5.08 -3.81 0)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Description" "5mA min, 35V, 50mOhm max, 1-5V Vgs(off), N-Channel JFET, SOT-23"
-				(at 0 0 0)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "N-Channel FET Transistor"
-				(at 0 0 0)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "SOT?23*"
-				(at 0 0 0)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "MMBFJ112_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy -1.016 0.381) (xy -1.016 -0.381) (xy 0 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 1.905) (xy 0.254 -1.905)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 0) (xy -2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 1.27 0)
-					(radius 2.8194)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 2.54) (xy 2.54 1.397) (xy 0.254 1.397)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -2.54) (xy 2.54 -1.397) (xy 0.254 -1.397)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "MMBFJ112_1_1"
-				(pin input line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "G"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(name "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:GND"
 			(power global)
 			(pin_numbers
@@ -2215,19 +2241,19 @@
 		(uuid "a434e733-3588-4c3d-b380-0ac43bcfe2a3")
 	)
 	(junction
-		(at 181.61 50.8)
+		(at 163.83 50.8)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a9c07c4c-7494-4199-b020-235d24b9edd9")
 	)
 	(junction
-		(at 181.61 38.1)
+		(at 163.83 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "de5a8a1f-37a2-4b86-ad36-9e475775ef4f")
 	)
 	(junction
-		(at 168.91 44.45)
+		(at 151.13 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f0451f3f-7792-4b16-aaf9-703aad3bbe21")
@@ -2280,6 +2306,16 @@
 	)
 	(wire
 		(pts
+			(xy 180.34 50.8) (xy 186.69 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "109dea86-3feb-4912-b044-23365c3d0cf5")
+	)
+	(wire
+		(pts
 			(xy 242.57 40.64) (xy 248.92 40.64)
 		)
 		(stroke
@@ -2300,7 +2336,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 49.53) (xy 181.61 50.8)
+			(xy 163.83 49.53) (xy 163.83 50.8)
 		)
 		(stroke
 			(width 0)
@@ -2320,7 +2356,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 38.1) (xy 190.5 38.1)
+			(xy 163.83 38.1) (xy 171.45 38.1)
 		)
 		(stroke
 			(width 0)
@@ -2360,7 +2396,7 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 44.45) (xy 173.99 44.45)
+			(xy 151.13 44.45) (xy 156.21 44.45)
 		)
 		(stroke
 			(width 0)
@@ -2370,7 +2406,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 24.13) (xy 181.61 25.4)
+			(xy 163.83 24.13) (xy 163.83 25.4)
 		)
 		(stroke
 			(width 0)
@@ -2440,7 +2476,7 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 44.45) (xy 168.91 49.53)
+			(xy 151.13 44.45) (xy 151.13 49.53)
 		)
 		(stroke
 			(width 0)
@@ -2460,7 +2496,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 50.8) (xy 194.31 50.8)
+			(xy 163.83 50.8) (xy 172.72 50.8)
 		)
 		(stroke
 			(width 0)
@@ -2480,7 +2516,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 33.02) (xy 181.61 38.1)
+			(xy 163.83 33.02) (xy 163.83 38.1)
 		)
 		(stroke
 			(width 0)
@@ -2490,7 +2526,7 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 44.45) (xy 168.91 44.45)
+			(xy 146.05 44.45) (xy 151.13 44.45)
 		)
 		(stroke
 			(width 0)
@@ -2500,7 +2536,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 38.1) (xy 181.61 39.37)
+			(xy 163.83 38.1) (xy 163.83 39.37)
 		)
 		(stroke
 			(width 0)
@@ -2510,7 +2546,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 50.8) (xy 181.61 53.34)
+			(xy 163.83 50.8) (xy 163.83 53.34)
 		)
 		(stroke
 			(width 0)
@@ -2610,7 +2646,17 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 27.94) (xy 168.91 30.48)
+			(xy 179.07 38.1) (xy 182.88 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d93acaf4-3dd2-4ac4-8252-d3be01dc346c")
+	)
+	(wire
+		(pts
+			(xy 151.13 27.94) (xy 151.13 30.48)
 		)
 		(stroke
 			(width 0)
@@ -2630,7 +2676,7 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 38.1) (xy 168.91 44.45)
+			(xy 151.13 38.1) (xy 151.13 44.45)
 		)
 		(stroke
 			(width 0)
@@ -2682,7 +2728,7 @@
 	)
 	(global_label "BUF"
 		(shape input)
-		(at 194.31 50.8 0)
+		(at 186.69 50.8 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2692,7 +2738,7 @@
 		)
 		(uuid "02accab6-4d10-4ffe-8d69-d4cf16623fd9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 200.9843 50.8 0)
+			(at 193.3643 50.8 0)
 			(hide yes)
 			(effects
 				(font
@@ -2768,9 +2814,9 @@
 			)
 		)
 	)
-	(global_label "NOT_BUF"
+	(global_label "BUF_NOT"
 		(shape input)
-		(at 190.5 38.1 0)
+		(at 182.88 38.1 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2780,7 +2826,7 @@
 		)
 		(uuid "1640a09c-ea15-4c5a-bf0e-40b30d4aaaba")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 201.7705 38.1 0)
+			(at 194.1505 38.1 0)
 			(hide yes)
 			(effects
 				(font
@@ -2924,7 +2970,7 @@
 	)
 	(global_label "+V"
 		(shape input)
-		(at 168.91 27.94 90)
+		(at 151.13 27.94 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2934,7 +2980,7 @@
 		)
 		(uuid "9b4bb2d0-8033-4a8b-8142-03c99b0364d7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 168.91 22.2938 90)
+			(at 151.13 22.2938 90)
 			(hide yes)
 			(effects
 				(font
@@ -3010,7 +3056,7 @@
 			)
 		)
 	)
-	(global_label "NOT_BUF"
+	(global_label "BUF_NOT"
 		(shape input)
 		(at 72.39 113.03 0)
 		(fields_autoplaced yes)
@@ -3034,7 +3080,7 @@
 	)
 	(global_label "IN"
 		(shape input)
-		(at 163.83 44.45 180)
+		(at 146.05 44.45 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3044,7 +3090,7 @@
 		)
 		(uuid "d0fba0ca-ea3f-44aa-8e26-71a36a42e5f9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 158.9095 44.45 0)
+			(at 141.1295 44.45 0)
 			(hide yes)
 			(effects
 				(font
@@ -3078,7 +3124,7 @@
 	)
 	(global_label "+V"
 		(shape input)
-		(at 181.61 24.13 90)
+		(at 163.83 24.13 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3088,7 +3134,7 @@
 		)
 		(uuid "e691205f-2b58-4244-8a95-7850a06396c8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 181.61 18.4838 90)
+			(at 163.83 18.4838 90)
 			(hide yes)
 			(effects
 				(font
@@ -3757,6 +3803,316 @@
 		)
 	)
 	(symbol
+		(lib_id "Mylib:MMBF5103")
+		(at 161.29 44.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "322e8502-534a-46a8-9c64-a8a5f5aa414e")
+		(property "Reference" "Q1"
+			(at 166.37 43.1799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBF5103"
+			(at 166.37 45.7199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 161.29 59.69 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/mmbf5103-d.pdf"
+			(at 161.29 62.23 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "MMBF5103"
+			(at 161.29 57.15 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" "/home/torvalds/KiCad/sim/MMBF5103.lib"
+			(at 160.02 64.77 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Sim.Name" "MMBF5103"
+			(at 162.56 64.77 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Sim.Device" "NJFET"
+			(at 173.99 64.77 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Sim.Type" "SHICHMANHODGES"
+			(at 160.02 67.31 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Sim.Pins" "1=D 2=S 3=G"
+			(at 162.56 67.31 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "2"
+			(uuid "c3206632-2a6b-4c09-9bde-c65fe375ca25")
+		)
+		(pin "1"
+			(uuid "24756f9b-a89d-4cd4-b7e9-dc2079ec0c6c")
+		)
+		(pin "3"
+			(uuid "85223df9-900b-4aed-bc3e-270ba2043b5f")
+		)
+		(instances
+			(project ""
+				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 175.26 38.1 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "335bdd9b-562f-458c-bd2c-7b245e43938e")
+		(property "Reference" "R11"
+			(at 176.5301 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 173.99 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 175.26 39.878 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 175.26 38.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 175.26 38.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Availability" ""
+			(at 175.26 38.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Check_prices" ""
+			(at 175.26 38.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 175.26 38.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER_PART_NUMBER" ""
+			(at 175.26 38.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 175.26 38.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 175.26 38.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PROD_ID" ""
+			(at 175.26 38.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 175.26 38.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 175.26 38.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 175.26 38.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 175.26 38.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 175.26 38.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "VENDOR" ""
+			(at 175.26 38.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "97495c85-c785-4d35-95a2-33f6a3bbb262")
+		)
+		(pin "2"
+			(uuid "b7b9db51-0889-4d92-affe-93bb64672010")
+		)
+		(instances
+			(project "Octaver"
+				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
+					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Mylib:DMMT5551")
 		(at 55.88 113.03 0)
 		(mirror y)
@@ -4238,7 +4594,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 168.91 34.29 0)
+		(at 151.13 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4246,7 +4602,7 @@
 		(dnp no)
 		(uuid "5d3b1986-1691-43a3-b6cc-e9d4685bf0b7")
 		(property "Reference" "R2"
-			(at 171.45 33.0199 0)
+			(at 153.67 33.0199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4255,7 +4611,7 @@
 			)
 		)
 		(property "Value" "2MEG"
-			(at 171.45 35.56 0)
+			(at 153.67 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4264,7 +4620,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 167.132 34.29 90)
+			(at 149.352 34.29 90)
 			(hide yes)
 			(effects
 				(font
@@ -4273,7 +4629,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 168.91 34.29 0)
+			(at 151.13 34.29 0)
 			(hide yes)
 			(effects
 				(font
@@ -4282,7 +4638,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 168.91 34.29 0)
+			(at 151.13 34.29 0)
 			(hide yes)
 			(effects
 				(font
@@ -4291,7 +4647,7 @@
 			)
 		)
 		(property "Availability" ""
-			(at 168.91 34.29 0)
+			(at 151.13 34.29 0)
 			(hide yes)
 			(effects
 				(font
@@ -4300,7 +4656,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 168.91 34.29 0)
+			(at 151.13 34.29 0)
 			(hide yes)
 			(effects
 				(font
@@ -4309,7 +4665,7 @@
 			)
 		)
 		(property "Description_1" ""
-			(at 168.91 34.29 0)
+			(at 151.13 34.29 0)
 			(hide yes)
 			(effects
 				(font
@@ -4318,7 +4674,7 @@
 			)
 		)
 		(property "MANUFACTURER_PART_NUMBER" ""
-			(at 168.91 34.29 0)
+			(at 151.13 34.29 0)
 			(hide yes)
 			(effects
 				(font
@@ -4327,7 +4683,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 168.91 34.29 0)
+			(at 151.13 34.29 0)
 			(hide yes)
 			(effects
 				(font
@@ -4336,7 +4692,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 168.91 34.29 0)
+			(at 151.13 34.29 0)
 			(hide yes)
 			(effects
 				(font
@@ -4345,7 +4701,7 @@
 			)
 		)
 		(property "PROD_ID" ""
-			(at 168.91 34.29 0)
+			(at 151.13 34.29 0)
 			(hide yes)
 			(effects
 				(font
@@ -4354,7 +4710,7 @@
 			)
 		)
 		(property "Package" ""
-			(at 168.91 34.29 0)
+			(at 151.13 34.29 0)
 			(hide yes)
 			(effects
 				(font
@@ -4363,7 +4719,7 @@
 			)
 		)
 		(property "Price" ""
-			(at 168.91 34.29 0)
+			(at 151.13 34.29 0)
 			(hide yes)
 			(effects
 				(font
@@ -4372,7 +4728,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 168.91 34.29 0)
+			(at 151.13 34.29 0)
 			(hide yes)
 			(effects
 				(font
@@ -4381,7 +4737,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 168.91 34.29 0)
+			(at 151.13 34.29 0)
 			(hide yes)
 			(effects
 				(font
@@ -4390,7 +4746,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 168.91 34.29 0)
+			(at 151.13 34.29 0)
 			(hide yes)
 			(effects
 				(font
@@ -4399,7 +4755,7 @@
 			)
 		)
 		(property "VENDOR" ""
-			(at 168.91 34.29 0)
+			(at 151.13 34.29 0)
 			(hide yes)
 			(effects
 				(font
@@ -4424,7 +4780,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 181.61 29.21 0)
+		(at 163.83 29.21 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4432,7 +4788,7 @@
 		(dnp no)
 		(uuid "6bd101c9-c4e3-480b-bbb1-5ef8feddcc70")
 		(property "Reference" "R1"
-			(at 184.15 27.9399 0)
+			(at 166.37 27.9399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4441,7 +4797,7 @@
 			)
 		)
 		(property "Value" "3k3"
-			(at 184.15 30.48 0)
+			(at 166.37 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4450,7 +4806,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 179.832 29.21 90)
+			(at 162.052 29.21 90)
 			(hide yes)
 			(effects
 				(font
@@ -4459,7 +4815,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 29.21 0)
+			(at 163.83 29.21 0)
 			(hide yes)
 			(effects
 				(font
@@ -4468,7 +4824,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 181.61 29.21 0)
+			(at 163.83 29.21 0)
 			(hide yes)
 			(effects
 				(font
@@ -4477,7 +4833,7 @@
 			)
 		)
 		(property "Availability" ""
-			(at 181.61 29.21 0)
+			(at 163.83 29.21 0)
 			(hide yes)
 			(effects
 				(font
@@ -4486,7 +4842,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 181.61 29.21 0)
+			(at 163.83 29.21 0)
 			(hide yes)
 			(effects
 				(font
@@ -4495,7 +4851,7 @@
 			)
 		)
 		(property "Description_1" ""
-			(at 181.61 29.21 0)
+			(at 163.83 29.21 0)
 			(hide yes)
 			(effects
 				(font
@@ -4504,7 +4860,7 @@
 			)
 		)
 		(property "MANUFACTURER_PART_NUMBER" ""
-			(at 181.61 29.21 0)
+			(at 163.83 29.21 0)
 			(hide yes)
 			(effects
 				(font
@@ -4513,7 +4869,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 181.61 29.21 0)
+			(at 163.83 29.21 0)
 			(hide yes)
 			(effects
 				(font
@@ -4522,7 +4878,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 181.61 29.21 0)
+			(at 163.83 29.21 0)
 			(hide yes)
 			(effects
 				(font
@@ -4531,7 +4887,7 @@
 			)
 		)
 		(property "PROD_ID" ""
-			(at 181.61 29.21 0)
+			(at 163.83 29.21 0)
 			(hide yes)
 			(effects
 				(font
@@ -4540,7 +4896,7 @@
 			)
 		)
 		(property "Package" ""
-			(at 181.61 29.21 0)
+			(at 163.83 29.21 0)
 			(hide yes)
 			(effects
 				(font
@@ -4549,7 +4905,7 @@
 			)
 		)
 		(property "Price" ""
-			(at 181.61 29.21 0)
+			(at 163.83 29.21 0)
 			(hide yes)
 			(effects
 				(font
@@ -4558,7 +4914,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 181.61 29.21 0)
+			(at 163.83 29.21 0)
 			(hide yes)
 			(effects
 				(font
@@ -4567,7 +4923,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 181.61 29.21 0)
+			(at 163.83 29.21 0)
 			(hide yes)
 			(effects
 				(font
@@ -4576,7 +4932,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 181.61 29.21 0)
+			(at 163.83 29.21 0)
 			(hide yes)
 			(effects
 				(font
@@ -4585,7 +4941,7 @@
 			)
 		)
 		(property "VENDOR" ""
-			(at 181.61 29.21 0)
+			(at 163.83 29.21 0)
 			(hide yes)
 			(effects
 				(font
@@ -5372,7 +5728,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 168.91 57.15 0)
+		(at 151.13 57.15 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5381,7 +5737,7 @@
 		(fields_autoplaced yes)
 		(uuid "93faad5f-fbff-47ae-b48d-a6e070b073cd")
 		(property "Reference" "#PWR07"
-			(at 168.91 63.5 0)
+			(at 151.13 63.5 0)
 			(hide yes)
 			(effects
 				(font
@@ -5390,7 +5746,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 168.91 62.23 0)
+			(at 151.13 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5398,7 +5754,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 168.91 57.15 0)
+			(at 151.13 57.15 0)
 			(hide yes)
 			(effects
 				(font
@@ -5407,7 +5763,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 168.91 57.15 0)
+			(at 151.13 57.15 0)
 			(hide yes)
 			(effects
 				(font
@@ -5416,7 +5772,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 168.91 57.15 0)
+			(at 151.13 57.15 0)
 			(hide yes)
 			(effects
 				(font
@@ -5610,7 +5966,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 168.91 53.34 0)
+		(at 151.13 53.34 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5618,7 +5974,7 @@
 		(dnp no)
 		(uuid "a2a8fdac-18dc-45a4-9968-deb25d1005e3")
 		(property "Reference" "R3"
-			(at 171.45 52.0699 0)
+			(at 153.67 52.0699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5627,7 +5983,7 @@
 			)
 		)
 		(property "Value" "1MEG"
-			(at 171.45 54.61 0)
+			(at 153.67 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5636,7 +5992,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 167.132 53.34 90)
+			(at 149.352 53.34 90)
 			(hide yes)
 			(effects
 				(font
@@ -5645,7 +6001,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 168.91 53.34 0)
+			(at 151.13 53.34 0)
 			(hide yes)
 			(effects
 				(font
@@ -5654,7 +6010,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 168.91 53.34 0)
+			(at 151.13 53.34 0)
 			(hide yes)
 			(effects
 				(font
@@ -5663,7 +6019,7 @@
 			)
 		)
 		(property "Availability" ""
-			(at 168.91 53.34 0)
+			(at 151.13 53.34 0)
 			(hide yes)
 			(effects
 				(font
@@ -5672,7 +6028,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 168.91 53.34 0)
+			(at 151.13 53.34 0)
 			(hide yes)
 			(effects
 				(font
@@ -5681,7 +6037,7 @@
 			)
 		)
 		(property "Description_1" ""
-			(at 168.91 53.34 0)
+			(at 151.13 53.34 0)
 			(hide yes)
 			(effects
 				(font
@@ -5690,7 +6046,7 @@
 			)
 		)
 		(property "MANUFACTURER_PART_NUMBER" ""
-			(at 168.91 53.34 0)
+			(at 151.13 53.34 0)
 			(hide yes)
 			(effects
 				(font
@@ -5699,7 +6055,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 168.91 53.34 0)
+			(at 151.13 53.34 0)
 			(hide yes)
 			(effects
 				(font
@@ -5708,7 +6064,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 168.91 53.34 0)
+			(at 151.13 53.34 0)
 			(hide yes)
 			(effects
 				(font
@@ -5717,7 +6073,7 @@
 			)
 		)
 		(property "PROD_ID" ""
-			(at 168.91 53.34 0)
+			(at 151.13 53.34 0)
 			(hide yes)
 			(effects
 				(font
@@ -5726,7 +6082,7 @@
 			)
 		)
 		(property "Package" ""
-			(at 168.91 53.34 0)
+			(at 151.13 53.34 0)
 			(hide yes)
 			(effects
 				(font
@@ -5735,7 +6091,7 @@
 			)
 		)
 		(property "Price" ""
-			(at 168.91 53.34 0)
+			(at 151.13 53.34 0)
 			(hide yes)
 			(effects
 				(font
@@ -5744,7 +6100,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 168.91 53.34 0)
+			(at 151.13 53.34 0)
 			(hide yes)
 			(effects
 				(font
@@ -5753,7 +6109,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 168.91 53.34 0)
+			(at 151.13 53.34 0)
 			(hide yes)
 			(effects
 				(font
@@ -5762,7 +6118,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 168.91 53.34 0)
+			(at 151.13 53.34 0)
 			(hide yes)
 			(effects
 				(font
@@ -5771,7 +6127,7 @@
 			)
 		)
 		(property "VENDOR" ""
-			(at 168.91 53.34 0)
+			(at 151.13 53.34 0)
 			(hide yes)
 			(effects
 				(font
@@ -5796,7 +6152,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 181.61 60.96 0)
+		(at 163.83 60.96 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5805,7 +6161,7 @@
 		(fields_autoplaced yes)
 		(uuid "a9186fa4-73c1-4d2b-93f4-d63fb8efbf49")
 		(property "Reference" "#PWR08"
-			(at 181.61 67.31 0)
+			(at 163.83 67.31 0)
 			(hide yes)
 			(effects
 				(font
@@ -5814,7 +6170,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 181.61 66.04 0)
+			(at 163.83 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5822,7 +6178,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 181.61 60.96 0)
+			(at 163.83 60.96 0)
 			(hide yes)
 			(effects
 				(font
@@ -5831,7 +6187,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 60.96 0)
+			(at 163.83 60.96 0)
 			(hide yes)
 			(effects
 				(font
@@ -5840,7 +6196,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 181.61 60.96 0)
+			(at 163.83 60.96 0)
 			(hide yes)
 			(effects
 				(font
@@ -6107,6 +6463,193 @@
 			(project "Octaver"
 				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
 					(reference "#FLG02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 176.53 50.8 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c1e7d045-d485-4e7d-9674-b5904ee85b15")
+		(property "Reference" "R12"
+			(at 175.2599 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 177.8 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 176.53 49.022 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 176.53 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 176.53 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Availability" ""
+			(at 176.53 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Check_prices" ""
+			(at 176.53 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 176.53 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER_PART_NUMBER" ""
+			(at 176.53 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 176.53 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 176.53 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PROD_ID" ""
+			(at 176.53 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 176.53 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 176.53 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 176.53 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 176.53 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 176.53 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "VENDOR" ""
+			(at 176.53 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "575e105b-956f-476c-8336-1823dc0e666a")
+		)
+		(pin "2"
+			(uuid "c050dd01-da44-4e09-9c3f-371a020eea92")
+		)
+		(instances
+			(project "Octaver"
+				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -6911,7 +7454,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 181.61 57.15 0)
+		(at 163.83 57.15 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6919,7 +7462,7 @@
 		(dnp no)
 		(uuid "d73bef82-899d-452f-ae33-fdb2fe75870c")
 		(property "Reference" "R4"
-			(at 184.15 55.8799 0)
+			(at 166.37 55.8799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6928,7 +7471,7 @@
 			)
 		)
 		(property "Value" "3k3"
-			(at 184.15 58.42 0)
+			(at 166.37 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6937,7 +7480,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 179.832 57.15 90)
+			(at 162.052 57.15 90)
 			(hide yes)
 			(effects
 				(font
@@ -6946,7 +7489,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 57.15 0)
+			(at 163.83 57.15 0)
 			(hide yes)
 			(effects
 				(font
@@ -6955,7 +7498,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 181.61 57.15 0)
+			(at 163.83 57.15 0)
 			(hide yes)
 			(effects
 				(font
@@ -6964,7 +7507,7 @@
 			)
 		)
 		(property "Availability" ""
-			(at 181.61 57.15 0)
+			(at 163.83 57.15 0)
 			(hide yes)
 			(effects
 				(font
@@ -6973,7 +7516,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 181.61 57.15 0)
+			(at 163.83 57.15 0)
 			(hide yes)
 			(effects
 				(font
@@ -6982,7 +7525,7 @@
 			)
 		)
 		(property "Description_1" ""
-			(at 181.61 57.15 0)
+			(at 163.83 57.15 0)
 			(hide yes)
 			(effects
 				(font
@@ -6991,7 +7534,7 @@
 			)
 		)
 		(property "MANUFACTURER_PART_NUMBER" ""
-			(at 181.61 57.15 0)
+			(at 163.83 57.15 0)
 			(hide yes)
 			(effects
 				(font
@@ -7000,7 +7543,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 181.61 57.15 0)
+			(at 163.83 57.15 0)
 			(hide yes)
 			(effects
 				(font
@@ -7009,7 +7552,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 181.61 57.15 0)
+			(at 163.83 57.15 0)
 			(hide yes)
 			(effects
 				(font
@@ -7018,7 +7561,7 @@
 			)
 		)
 		(property "PROD_ID" ""
-			(at 181.61 57.15 0)
+			(at 163.83 57.15 0)
 			(hide yes)
 			(effects
 				(font
@@ -7027,7 +7570,7 @@
 			)
 		)
 		(property "Package" ""
-			(at 181.61 57.15 0)
+			(at 163.83 57.15 0)
 			(hide yes)
 			(effects
 				(font
@@ -7036,7 +7579,7 @@
 			)
 		)
 		(property "Price" ""
-			(at 181.61 57.15 0)
+			(at 163.83 57.15 0)
 			(hide yes)
 			(effects
 				(font
@@ -7045,7 +7588,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 181.61 57.15 0)
+			(at 163.83 57.15 0)
 			(hide yes)
 			(effects
 				(font
@@ -7054,7 +7597,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 181.61 57.15 0)
+			(at 163.83 57.15 0)
 			(hide yes)
 			(effects
 				(font
@@ -7063,7 +7606,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 181.61 57.15 0)
+			(at 163.83 57.15 0)
 			(hide yes)
 			(effects
 				(font
@@ -7072,7 +7615,7 @@
 			)
 		)
 		(property "VENDOR" ""
-			(at 181.61 57.15 0)
+			(at 163.83 57.15 0)
 			(hide yes)
 			(effects
 				(font
@@ -7596,127 +8139,6 @@
 			(project "Octaver"
 				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
 					(reference "#PWR06")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:MMBFJ112")
-		(at 179.07 44.45 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f99f4670-5b26-4d6e-ab36-81443630735f")
-		(property "Reference" "Q1"
-			(at 184.15 43.1799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MMBFJ201"
-			(at 184.15 45.7199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 184.15 46.355 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/MMBFJ113-D.PDF"
-			(at 184.15 48.26 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Description" "5mA min, 35V, 50mOhm max, 1-5V Vgs(off), N-Channel JFET, SOT-23"
-			(at 179.07 44.45 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Library" "/home/torvalds/KiCad/sim/mmbfj201.lib"
-			(at 179.07 44.45 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Name" "MMBFJ201"
-			(at 179.07 44.45 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "NJFET"
-			(at 179.07 44.45 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" "SHICHMANHODGES"
-			(at 179.07 44.45 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=D 2=S 3=G"
-			(at 179.07 44.45 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "fbb35aa7-40cf-48bf-84de-b7c38935b98e")
-		)
-		(pin "1"
-			(uuid "eff1eb1a-1eae-4881-9dd7-6303aabdb3fa")
-		)
-		(pin "2"
-			(uuid "76e81c84-81d5-4ec5-bcbf-579ba95cfe58")
-		)
-		(instances
-			(project "Octaver"
-				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615"
-					(reference "Q1")
 					(unit 1)
 				)
 			)
