@@ -420,6 +420,24 @@
 			)
 		)
 		(property "Sim.Device" "D"
+			(at -7.62 -12.7 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 -12.7 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" "/home/torvalds/KiCad/sim/BAT41.lib"
 			(at 0 -10.16 0)
 			(hide yes)
 			(effects
@@ -428,8 +446,8 @@
 				)
 			)
 		)
-		(property "Sim.Pins" "1=A 2=K"
-			(at 0 -12.7 0)
+		(property "Sim.Name" "BAT41"
+			(at 10.16 -12.7 0)
 			(hide yes)
 			(effects
 				(font
@@ -449,7 +467,7 @@
 		(symbol "BAT41ZFILM_0_1"
 			(polyline
 				(pts
-					(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
+					(xy -1.27 -1.27) (xy -1.27 1.27) (xy 1.27 0) (xy -1.27 -1.27)
 				)
 				(stroke
 					(width 0.254)
@@ -461,7 +479,7 @@
 			)
 			(polyline
 				(pts
-					(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					(xy 1.905 -0.635) (xy 1.905 -1.27) (xy 1.27 -1.27) (xy 1.27 1.27) (xy 0.635 1.27) (xy 0.635 0.635)
 				)
 				(stroke
 					(width 0.254)
@@ -476,14 +494,14 @@
 			(pin passive line
 				(at -3.81 0 0)
 				(length 2.54)
-				(name "K"
+				(name "A"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "1"
+				(number "2"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -494,14 +512,14 @@
 			(pin passive line
 				(at 3.81 0 180)
 				(length 2.54)
-				(name "A"
+				(name "K"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "2"
+				(number "1"
 					(effects
 						(font
 							(size 1.27 1.27)
