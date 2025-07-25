@@ -8,7 +8,6 @@
         ".tran 1u 15 0 10u",
         ".kicad adjustpaths",
         ".save all",
-        ".probe alli",
         ".kicad esavenone"
       ],
       "dottedSecondary": true,
@@ -22,13 +21,13 @@
       "showGrid": true,
       "traces": [
         {
-          "color": "rgb(252, 141, 98)",
+          "color": "rgb(10, 209, 255)",
           "signal": "V(CONTROL)",
           "trace_type": 257
         },
         {
           "color": "rgb(77, 175, 74)",
-          "signal": "V(JFETBIAS)",
+          "signal": "V(IN)",
           "trace_type": 257
         },
         {
@@ -39,11 +38,6 @@
         {
           "color": "rgb(31, 64, 26)",
           "signal": "V(RECT)",
-          "trace_type": 257
-        },
-        {
-          "color": "rgb(141, 160, 203)",
-          "signal": "V(SIGNAL)",
           "trace_type": 257
         }
       ]
@@ -68,16 +62,6 @@
       "showGrid": true,
       "traces": [
         {
-          "color": "rgb(77, 175, 74)",
-          "signal": "V(BUF) (gain)",
-          "trace_type": 521
-        },
-        {
-          "color": "rgb(55, 126, 184)",
-          "signal": "V(BUF_NOT) (gain)",
-          "trace_type": 521
-        },
-        {
           "color": "rgb(228, 26, 28)",
           "signal": "V(CONTROL) (gain)",
           "trace_type": 521
@@ -95,6 +79,8 @@
       ]
     }
   ],
-  "user_defined_signals": [],
+  "user_defined_signals": [
+    "V(Net-_Q1-G_) - V(Net-_Q1-S_)"
+  ],
   "version": 7
 }
