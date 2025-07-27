@@ -21,11 +21,6 @@
       "showGrid": true,
       "traces": [
         {
-          "color": "rgb(10, 209, 255)",
-          "signal": "V(CONTROL)",
-          "trace_type": 257
-        },
-        {
           "color": "rgb(77, 175, 74)",
           "signal": "V(IN)",
           "trace_type": 257
@@ -45,7 +40,62 @@
     {
       "analysis": "AC",
       "commands": [
-        ".ac dec 50 10 100k",
+        ".ac dec 50 10 40k",
+        ".kicad adjustpaths",
+        ".save all",
+        ".probe alli",
+        ".probe allp"
+      ],
+      "dottedSecondary": true,
+      "margins": {
+        "bottom": 45,
+        "left": 70,
+        "right": 70,
+        "top": 30
+      },
+      "measurements": [],
+      "showGrid": true,
+      "traces": [
+        {
+          "color": "rgb(55, 126, 184)",
+          "signal": "V(OUT) (phase)",
+          "trace_type": 517
+        },
+        {
+          "color": "rgb(55, 126, 184)",
+          "cursor1": {
+            "position": 19.95375314318644,
+            "x_format": "3~Hz",
+            "y_format": "3~dB"
+          },
+          "cursor2": {
+            "position": 20046.354043253938,
+            "x_format": "3~Hz",
+            "y_format": "3~dB"
+          },
+          "cursorD": {
+            "x_format": "3~Hz",
+            "y_format": "3~dB"
+          },
+          "signal": "V(OUT) (gain)",
+          "trace_type": 521
+        }
+      ]
+    },
+    {
+      "analysis": "OP",
+      "commands": [
+        ".op",
+        ".kicad adjustpaths",
+        ".save all",
+        ".probe alli",
+        ".probe allp"
+      ]
+    },
+    {
+      "analysis": "DC",
+      "commands": [
+        ".dc V6 -2.7 0 1m",
         ".kicad adjustpaths",
         ".save all",
         ".probe alli",
@@ -63,24 +113,12 @@
       "traces": [
         {
           "color": "rgb(228, 26, 28)",
-          "signal": "V(CONTROL) (gain)",
-          "trace_type": 521
+          "signal": "V(V_TEST)",
+          "trace_type": 2049
         }
-      ]
-    },
-    {
-      "analysis": "OP",
-      "commands": [
-        ".op",
-        ".kicad adjustpaths",
-        ".save all",
-        ".probe alli",
-        ".probe allp"
       ]
     }
   ],
-  "user_defined_signals": [
-    "V(Net-_Q1-G_) - V(Net-_Q1-S_)"
-  ],
+  "user_defined_signals": [],
   "version": 7
 }
