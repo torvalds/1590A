@@ -5,7 +5,7 @@
     {
       "analysis": "TRAN",
       "commands": [
-        ".tran 1u 10 0 10u uic",
+        ".tran 1u 10 0 10u",
         ".kicad adjustpaths",
         ".save all",
         ".kicad esavenone"
@@ -27,13 +27,22 @@
         },
         {
           "color": "rgb(255, 0, 44)",
+          "cursor1": {
+            "position": 1.0,
+            "x_format": "3~s",
+            "y_format": "3~V"
+          },
+          "cursor2": {
+            "position": 2.0,
+            "x_format": "3~s",
+            "y_format": "3~V"
+          },
+          "cursorD": {
+            "x_format": "3~s",
+            "y_format": "3~V"
+          },
           "signal": "V(SIGNAL)",
           "trace_type": 257
-        },
-        {
-          "color": "rgb(77, 175, 74)",
-          "signal": "( V(BUF) + V(BUF_NOT) ) / 2",
-          "trace_type": 256
         }
       ]
     },
