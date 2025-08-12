@@ -8,6 +8,7 @@
         ".tran 1u 15 0 10u",
         ".kicad adjustpaths",
         ".save all",
+        ".probe alli",
         ".kicad esavenone"
       ],
       "dottedSecondary": true,
@@ -81,7 +82,37 @@
     {
       "analysis": "DC",
       "commands": [
-        ".dc V6 -2.7 0 1m",
+        ".dc V7 -2.7 0 1m",
+        ".kicad adjustpaths",
+        ".save all",
+        ".probe alli",
+        ".probe allp"
+      ],
+      "dottedSecondary": true,
+      "fixedY1scale": {
+        "max": 1.0,
+        "min": 0.0
+      },
+      "margins": {
+        "bottom": 45,
+        "left": 70,
+        "right": 70,
+        "top": 30
+      },
+      "measurements": [],
+      "showGrid": true,
+      "traces": [
+        {
+          "color": "rgb(228, 26, 28)",
+          "signal": "V(V_TEST)",
+          "trace_type": 2049
+        }
+      ]
+    },
+    {
+      "analysis": "FFT",
+      "commands": [
+        "linearize V(IN) V(OUT)\nfft V(IN) V(OUT)",
         ".kicad adjustpaths",
         ".save all",
         ".probe alli",
@@ -99,8 +130,13 @@
       "traces": [
         {
           "color": "rgb(228, 26, 28)",
-          "signal": "V(V_TEST)",
-          "trace_type": 2049
+          "signal": "V(IN)",
+          "trace_type": 513
+        },
+        {
+          "color": "rgb(55, 126, 184)",
+          "signal": "V(OUT)",
+          "trace_type": 513
         }
       ]
     }
