@@ -5,7 +5,7 @@
     {
       "analysis": "TRAN",
       "commands": [
-        ".tran 1u 3 0 10u uic",
+        ".tran 1u 5 0 10u",
         ".kicad adjustpaths",
         ".save all",
         ".kicad esavenone"
@@ -21,12 +21,17 @@
       "showGrid": true,
       "traces": [
         {
-          "color": "rgb(55, 126, 184)",
-          "signal": "V(ON_HIGH)",
+          "color": "rgb(152, 78, 163)",
+          "signal": "V(INCONN)",
           "trace_type": 257
         },
         {
-          "color": "rgb(229, 196, 148)",
+          "color": "rgb(228, 26, 28)",
+          "signal": "V(OUTCONN)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(55, 126, 184)",
           "signal": "V(SW2)",
           "trace_type": 257
         }
