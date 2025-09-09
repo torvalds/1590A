@@ -1125,7 +1125,7 @@
 		)
 		(uuid "c09eab2f-bf02-4d94-87b8-7d9a6831bee8")
 	)
-	(text_box "Simulate effect power use: 9V over 150 Ohm is 60mA.\nPower rail has 60Hz ripple, 2.5kHz DC converter noise\n\nSimulating the effect board as a no-op to verify signal path\n\nLED simulated on"
+	(text_box "Simulate effect power use: 9V over 150 Ohm is 60mA.\nPower rail has 60Hz ripple, 2.5kHz DC converter noise\n\nLED simulated on for random current check"
 		(exclude_from_sim no)
 		(at 13.97 14.605 0)
 		(size 81.28 103.505)
@@ -1167,7 +1167,17 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 78.74) (xy 59.69 78.74)
+			(xy 57.15 80.01) (xy 59.69 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "013d11f7-1098-4e08-b539-b9009ae560b9")
+	)
+	(wire
+		(pts
+			(xy 57.15 68.58) (xy 59.69 68.58)
 		)
 		(stroke
 			(width 0)
@@ -1197,7 +1207,7 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 78.74) (xy 69.85 78.74)
+			(xy 67.31 68.58) (xy 69.85 68.58)
 		)
 		(stroke
 			(width 0)
@@ -1264,6 +1274,16 @@
 			(type default)
 		)
 		(uuid "f0bde4b0-22e9-4217-970a-d1934e84d32f")
+	)
+	(wire
+		(pts
+			(xy 67.31 80.01) (xy 69.85 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5cce63d-e661-4617-b38d-29b95b4780ac")
 	)
 	(global_label "IN_TRI"
 		(shape input)
@@ -1421,7 +1441,7 @@
 	)
 	(global_label "IN^{EFF}"
 		(shape input)
-		(at 57.15 78.74 180)
+		(at 57.15 68.58 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1431,7 +1451,7 @@
 		)
 		(uuid "8284bdb5-7fb4-4858-a640-d567756ef223")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 49.5177 78.74 0)
+			(at 49.5177 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1443,7 +1463,7 @@
 	)
 	(global_label "OUT^{EFF}"
 		(shape input)
-		(at 69.85 78.74 0)
+		(at 69.85 80.01 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1453,7 +1473,7 @@
 		)
 		(uuid "8eab2cde-ed1b-4df8-8ab7-99c06d66a3f6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 79.1756 78.74 0)
+			(at 79.1756 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1503,6 +1523,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "IN_TRI"
+		(shape input)
+		(at 57.15 80.01 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b0129d8b-8387-4145-ba36-9539130322f3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 48.4195 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -2269,6 +2311,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 69.85 68.58 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7cfe25cc-b049-4d9e-8163-d08fa1f429b1")
+		(property "Reference" "#PWR0301"
+			(at 76.2 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 73.66 68.5799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 69.85 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 69.85 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 69.85 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "469be1f4-8229-4fa2-9bde-4ef39991d3e5")
+		)
+		(instances
+			(project "DaisySeed"
+				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615/a1084b87-85fd-4b63-8fe4-8749c999d338"
+					(reference "#PWR0301")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Simulation_SPICE:VPULSE")
 		(at 128.27 50.8 0)
 		(unit 1)
@@ -2822,7 +2931,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 63.5 78.74 270)
+		(at 63.5 68.58 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -2831,7 +2940,7 @@
 		(fields_autoplaced yes)
 		(uuid "e1d62d97-d17d-4d27-90ed-7649ecbda037")
 		(property "Reference" "R19"
-			(at 63.5 72.39 90)
+			(at 63.5 62.23 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2839,7 +2948,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 63.5 74.93 90)
+			(at 63.5 64.77 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2847,7 +2956,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 63.5 76.962 90)
+			(at 63.5 66.802 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2856,7 +2965,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 63.5 78.74 0)
+			(at 63.5 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2865,7 +2974,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 63.5 78.74 0)
+			(at 63.5 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2949,6 +3058,74 @@
 			(project "Buffered"
 				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615/a1084b87-85fd-4b63-8fe4-8749c999d338"
 					(reference "#PWR026")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 63.5 80.01 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp yes)
+		(fields_autoplaced yes)
+		(uuid "eb2037c0-e112-4540-926d-f484ae51fc36")
+		(property "Reference" "R301"
+			(at 63.5 73.66 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100R"
+			(at 63.5 76.2 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 63.5 78.232 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 63.5 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 63.5 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "23c8485c-9536-4ca1-9399-2ea626a0f88a")
+		)
+		(pin "2"
+			(uuid "2b3ecc01-fd27-4aa6-b91f-ac677608dcdc")
+		)
+		(instances
+			(project "DaisySeed"
+				(path "/9e337e0b-885b-4d2b-99a2-62cdd082c615/a1084b87-85fd-4b63-8fe4-8749c999d338"
+					(reference "R301")
 					(unit 1)
 				)
 			)
