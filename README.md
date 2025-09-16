@@ -113,16 +113,16 @@ actually taking up noticeable amounts of board space in some cases.
 
 Electro-mechanical:
 
- - Tayda A-6976: 1/4" thread lock panel mount mono jack CK635008
+ - [Tayda A-6976: 1/4" thread lock panel mount mono jack CK635008](https://www.taydaelectronics.com/6-35-mm-1-4-righ-angle-mono-female-connector-thread-lock-panel-mount.html)
 
- - Tayda A-1848 etc: ALPHA 9mm PCB-mount potentiometers
+ - [Tayda A-1848 etc: ALPHA 9mm PCB-mount potentiometers](https://www.taydaelectronics.com/100k-ohm-linear-taper-potentiometer-round-shaft-pcb-9mm.html)
 
- - Tayda A-4191: ALPHA 3PDT latching stomp switch.
+ - [Tayda A-4191: ALPHA 3PDT latching stomp switch.](https://www.taydaelectronics.com/alpha-3pdt-stomp-foot-pedal-switch.html)
 
- - Tayda A-3670 etc: 1M series mini toggle switches and the sub-mini 2M
+ - Tayda A-3670 etc: [1M series mini toggle switches](https://www.taydaelectronics.com/mini-toggle-switch-1m-series-spdt-on-off-on-short-lever.html) and the [sub-mini 2M](https://www.taydaelectronics.com/sub-mini-toggle-switch-2m-series-spdt-on-off-on-short-lever.html)
    series for the side switch.
 
- - Wuerth 694106301002 9V DC power jack
+ - [Wuerth 694106301002 9V DC power jack](https://www.we-online.com/components/products/datasheet/694106301002.pdf)
 
  - Hammond 1590A enclosure. There are drill patterns that work here:
    ["Tayda drill patterns"](/Tayda/Enclosure-drill-holes)
