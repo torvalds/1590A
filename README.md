@@ -124,5 +124,5 @@ Electro-mechanical:
 
  - [Wuerth 694106301002 9V DC power jack](https://www.we-online.com/components/products/datasheet/694106301002.pdf)
 
- - Hammond 1590A enclosure. There are drill patterns that work here:
+ - [Hammond 1590A enclosure.](https://www.hammfg.com/electronics/small-case/diecast/1590) There are drill patterns that work here:
    ["Tayda drill patterns"](/Tayda/Enclosure-drill-holes)
