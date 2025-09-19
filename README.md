@@ -1,5 +1,8 @@
 ## Random guitar pedal board designs for 1590A enclosures
 
+> [!NOTE]
+> This repository is no longer maintained in favor for [GuitarPedal](https://github.com/torvalds/GuitarPedal).
+
 ### Electrical
 
 These are not at all useful, but having done guitar pedal board kit
